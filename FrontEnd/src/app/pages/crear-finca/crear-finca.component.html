@@ -1,0 +1,102 @@
+<div class="header">
+    <h2 class="title">Crear Finca</h2>
+    <button class="btn-new" (click)="openFarmModal()">Agregar Nueva Finca</button>
+  </div>
+  
+  <div class="card-wrapper">
+    <div class="card" *ngFor="let farm of farms">
+      <div class="card-body">
+        <h5 class="card-title">{{ farm.name }}</h5>
+        <p class="card-text">Descripción: {{ farm.description }}</p>
+        <p class="card-text">Tamaño: {{ farm.sizeMeter }} m²</p>
+        <p class="card-text">Coordenadas: {{ farm.coordinate }}</p>
+        <p class="card-text">Código: {{ farm.codeUnique }}</p>
+        <p class="card-text">Persona: {{ getPersonName(farm.personId) }}</p>
+        <p class="card-text">Ciudad: {{ getCityName(farm.cityId) }}</p>
+        <p class="card-text">Estado: <input type="checkbox" [checked]="farm.state" disabled /></p>
+        <button class="btn-icon edit" (click)="editFarm(farm)">Modificar</button>
+        <button class="btn-icon delete" (click)="deleteFarm(farm.id)">Eliminar</button>
+        <button class="btn-icon add-lot" (click)="openLotModal(farm.id)">Agregar Lote</button>
+        
+      </div>
+    </div>
+  </div>
+  
+  <!-- Modal para Finca -->
+  <ng-template #farmModal let-modal>
+    <div class="modal-header">
+      <h5 class="modal-title">Formulario de Finca</h5>
+      <button type="button" class="close" (click)="modal.dismiss('Cross click')">
+        <span>&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <form #farmForm="ngForm" (ngSubmit)="onSubmit(farmForm)" class="farm-form">
+        <div class="form-group">
+          <label for="name">Nombre</label>
+          <input type="text" id="name" [(ngModel)]="farm.name" name="name" class="input-field" required>
+        </div>
+        <div class="form-group">
+          <label for="description">Descripción</label>
+          <textarea id="description" [(ngModel)]="farm.description" name="description" class="input-field" required></textarea>
+        </div>
+        <div class="form-group">
+          <label for="sizeMeter">Tamaño (m²)</label>
+          <input type="number" id="sizeMeter" [(ngModel)]="farm.sizeMeter" name="sizeMeter" class="input-field" required>
+        </div>
+        <div class="form-group">
+          <label for="coordinate">Coordenadas</label>
+          <input type="text" id="coordinate" [(ngModel)]="farm.coordinate" name="coordinate" class="input-field" required>
+        </div>
+        <div class="form-group">
+          <label for="personId">Persona</label>
+          <select id="personId" [(ngModel)]="farm.personId" name="personId" class="select-field" required>
+            <option *ngFor="let person of persons" [value]="person.id">
+              {{ person.firstName }}  {{ person.secondLastName }} - {{ person.numberDocument }}
+            </option>
+          </select>
+        </div>
+        
+        
+        <div class="form-group">
+          <label for="cityId">Ciudad</label>
+          <select id="cityId" [(ngModel)]="farm.cityId" name="cityId" class="select-field" required>
+            <option *ngFor="let city of cities" [value]="city.id">{{ city.name }}</option>
+          </select>
+        </div>
+        <button type="submit" class="btn-submit">{{ farm.id === 0 ? 'Agregar' : 'Actualizar' }} Finca</button>
+      </form>
+    </div>
+  </ng-template>
+  
+  <!-- Modal para Lote -->
+  <ng-template #lotModal let-modal>
+    <div class="modal-header">
+      <h5 class="modal-title">Formulario de Lote</h5>
+      <button type="button" class="close" (click)="modal.dismiss('Cross click')">
+        <span>&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <form #lotForm="ngForm" (ngSubmit)="onSubmitLot(lotForm)" class="lot-form">
+        <div class="form-group">
+          <label for="name">Nombre</label>
+          <input type="text" id="name" [(ngModel)]="lot.name" name="name" class="input-field" required>
+        </div>
+        <div class="form-group">
+          <label for="description">Descripción</label>
+          <textarea id="description" [(ngModel)]="lot.description" name="description" class="input-field" required></textarea>
+        </div>
+        <div class="form-group">
+          <label for="sizeMeters">Tamaño (m²)</label>
+          <input type="number" id="sizeMeters" [(ngModel)]="lot.sizeMeters" name="sizeMeters" class="input-field" required>
+        </div>
+        <div class="form-group">
+          <label for="farmId">Finca</label>
+          <input type="text" id="farmId" [value]="farmId" class="input-field" disabled>
+        </div>
+        <button type="submit" class="btn-submit">{{ lot.id === 0 ? 'Agregar' : 'Actualizar' }} Lote</button>
+      </form>
+    </div>
+  </ng-template>
+  

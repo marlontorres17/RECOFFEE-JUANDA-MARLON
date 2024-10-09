@@ -1,0 +1,92 @@
+<div class="main-wrapper">
+  <nav class="sidebar">
+    <div class="logo-container">
+      <h1 class="logo">
+        <app-svgs></app-svgs>
+      </h1>
+    </div>
+    <div class="line"></div>
+    <div class="finca-text">Fincas</div>
+    <ul class="menu">
+      <!-- Submenú de Seguridad -->
+      <li class="dropdown" (click)="toggleDropdown('security')">
+        <a class="dropdown-toggle">
+          <i class="fa fa-shield-alt"></i> Security
+        </a>
+        <ul class="submenu" *ngIf="isDropdownOpen('security')">
+          <li><a routerLink="homeAdmin" (click)="$event.stopPropagation()"><i class="fa fa-home"></i> Home</a></li>
+          <li><a routerLink="role" (click)="$event.stopPropagation()"><i class="fa fa-users"></i> Role</a></li>
+          <li><a routerLink="modulo" (click)="$event.stopPropagation()"><i class="fa fa-cube"></i> Module</a></li>
+          <li><a routerLink="person" (click)="$event.stopPropagation()"><i class="fa fa-user"></i> Person</a></li>
+          <li><a routerLink="view" (click)="$event.stopPropagation()"><i class="fa fa-eye"></i> View</a></li>
+          <li><a routerLink="user" (click)="$event.stopPropagation()"><i class="fa fa-user-circle"></i> User</a></li>
+          <li><a routerLink="userRol" (click)="$event.stopPropagation()"><i class="fa fa-user-tag"></i> User Role</a></li>
+          <li><a routerLink="rovi" (click)="$event.stopPropagation()"><i class="fa fa-eye"></i> Role View</a></li>
+        </ul>
+      </li>
+
+      <!-- Submenú de Parámetros -->
+      <li class="dropdown" (click)="toggleDropdown('parameter')">
+        <a class="dropdown-toggle">
+          <i class="fa fa-cog"></i> Parameter
+        </a>
+        <ul class="submenu" *ngIf="isDropdownOpen('parameter')">
+          <li><a routerLink="country" (click)="$event.stopPropagation()"><i class="fa fa-globe"></i> Country</a></li>
+          <li><a routerLink="department" (click)="$event.stopPropagation()"><i class="fa fa-building"></i> Department</a></li>
+          <li><a routerLink="city" (click)="$event.stopPropagation()"><i class="fa fa-city"></i> City</a></li>
+        </ul>
+      </li>
+
+      <!-- Submenú de Operacional -->
+      <li class="dropdown" (click)="toggleDropdown('operational')">
+        <a class="dropdown-toggle">
+          <i class="fa fa-edit"></i> Operational
+        </a>
+        <ul class="submenu" *ngIf="isDropdownOpen('operational')">
+          <li><a routerLink="farm" (click)="$event.stopPropagation()"><i class="fa fa-tractor"></i> Farm</a></li>
+          <li><a routerLink="lot" (click)="$event.stopPropagation()"><i class="fa fa-th-large"></i> Lot</a></li>
+          <li><a routerLink="benefit" (click)="$event.stopPropagation()"><i class="fa fa-hand-holding-usd"></i> Benefit</a></li>
+          <li><a routerLink="person-benefit" (click)="$event.stopPropagation()"><i class="fa fa-user-tie"></i> Person Benefit</a></li>
+          <li><a routerLink="harvest" (click)="$event.stopPropagation()"><i class="fa fa-seedling"></i> Harvest</a></li>
+          <li><a routerLink="liquidation" (click)="$event.stopPropagation()"><i class="fa fa-balance-scale"></i> Liquidation</a></li>
+          <li><a routerLink="collection-detail" (click)="$event.stopPropagation()"><i class="fa fa-file-invoice-dollar"></i> Collection Detail</a></li>
+        </ul>
+      </li>
+
+      <!-- Submenú de RECOFFEE -->
+      <li class="dropdown" (click)="toggleDropdown('recogee')">
+        <a class="dropdown-toggle">
+          <i class="fa fa-edit"></i> RECOFFEE
+        </a>
+        <ul class="submenu" *ngIf="isDropdownOpen('recogee')">
+          <li><a routerLink="crear-finca" (click)="$event.stopPropagation()"><i class="fa fa-tractor"></i> Crear Finca</a></li>
+          <li><a routerLink="ver-finca" (click)="$event.stopPropagation()"><i class="fa fa-tractor"></i> Ver Finca</a></li>
+        </ul>
+      </li>
+    </ul>
+
+    <!-- Botón de cierre de sesión -->
+    <button (click)="logout()" class="logout-button">Cerrar Sesión</button>
+  </nav>
+
+  <!-- Contenedor de contenido -->
+  <div class="content-wrapper">
+    <div class="header">
+      <div class="header-content">
+        <div class="profile-selector">
+          <div class="profile-circle" (click)="toggleProfileMenu()">
+            <img src="man_cafe.jpg" alt="Profile" />
+          </div>
+          <div class="profile-menu" *ngIf="isProfileMenuOpen">
+            <ul>
+              <li><a routerLink="profile">Mi Perfil</a></li>
+              <li><a (click)="logout()">Cerrar Sesión</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <router-outlet></router-outlet>
+  </div>
+</div>

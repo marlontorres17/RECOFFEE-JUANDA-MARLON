@@ -1,0 +1,86 @@
+body {
+  background-image: url('../../assets/images/cafe2.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: block;
+  overflow: hidden;
+  color: white; /* Cambia todas las letras a blanco */
+}
+
+.register-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 50%;
+  max-height: 90vh;
+  height: 90vh;
+  padding: 2rem;
+  position: relative;
+  overflow-y: scroll;
+  backdrop-filter: blur(30px);
+  margin-left: 0;
+  scrollbar-width: none; /* Oculta la barra de scroll en Firefox */
+}
+
+.register-container::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.register-container h2 {
+  margin-bottom: 4rem;
+  text-align: center;
+  font-family: 'BebasNeue', sans-serif;
+  font-size: 3rem;
+  color: white;
+  line-height: 1.2;
+}
+
+.input-field {
+  font-size: 1.2rem; 
+  padding: 1rem;
+  outline: none;
+  border: 2px solid #ffffff;
+  background-color: rgba(255, 255, 255, 0.1); /* Fondo semitransparente */
+  border-radius: 20px;
+  width: 100%;
+  box-sizing: border-box;
+  color: white; /* Texto blanco */
+}
+
+::placeholder {
+  color: rgba(255, 255, 255, 0.7); /* Placeholder blanco translúcido */
+}
+
+/* Estilos específicos para los select */
+select.input-field {
+  appearance: none; /* Eliminamos la apariencia por defecto */
+  -webkit-appearance: none; /* Para Safari */
+  background-color: rgba(255, 255, 255, 0.1); /* Fondo semi-transparente */
+  padding-right: 2rem; /* Añade espacio para la flecha */
+  color: white; /* Texto blanco */
+}
+
+select.input-field option {
+  color: black; /* Cambia el color del texto en las opciones */
+}
+
+.btn {
+  max-width: 400px;
+  width: 100%;
+  padding: 1rem;
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}

@@ -1,0 +1,45 @@
+<div class="flex flex-col min-h-screen bg-gray-100">
+    <div class="flex-grow flex items-center justify-center">
+      <div class="bg-white shadow-md rounded-lg p-8 w-full max-w-md">
+        <h2 class="text-2xl font-semibold text-center mb-6 text-gray-800">Recolectores de la Finca</h2>
+        <form (ngSubmit)="fetchCollectors()" class="space-y-4">
+          <div class="form-group">
+            <label for="farmCode" class="block text-gray-700">Código de la Finca</label>
+            <input 
+              type="text" 
+              id="farmCode" 
+              [(ngModel)]="farmCode" 
+              name="farmCode" 
+              class="input-field border rounded w-full py-2 px-3 focus:outline-none focus:ring focus:ring-purple-300" 
+              required
+            >
+          </div>
+  
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary w-full bg-purple-600 text-white py-2 rounded hover:bg-purple-700 transition duration-300">Buscar Recolectores</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  
+    <div class="container mx-auto p-4">
+      <div *ngIf="collectors.length > 0" class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+        <div *ngFor="let collector of collectors" class="bg-white shadow-md rounded-lg p-4">
+          <h3 class="font-semibold text-lg">{{ collector.firstName }} {{ collector.firstLastName }}</h3>
+          <p><strong>Documento:</strong> {{ collector.numberDocument }}</p>
+          <p><strong>Género:</strong> {{ collector.gender }}</p>
+          <p><strong>Fecha de Nacimiento:</strong> {{ collector.dateOfBirth | date }}</p>
+          <p><strong>Fecha de Inicio:</strong> {{ collector.dateStart | date }}</p>
+        </div>
+      </div>
+  
+      <div *ngIf="collectors.length === 0" class="text-center mt-4">
+        <p class="text-gray-600">No hay recolectores asociados a este código de finca.</p>
+      </div>
+    </div>
+  
+    <footer class="bg-gray-800 text-center py-4">
+      <p class="text-white text-lg" style="color: purple;">&#64;Recoffee</p>
+    </footer>
+  </div>
+  

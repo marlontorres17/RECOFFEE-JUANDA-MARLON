@@ -1,0 +1,74 @@
+<div class="header">
+  <h2 class="title">Usuarios</h2>
+  <button class="btn-new" (click)="openModal()">Agregar Nuevo Usuario</button>
+</div>
+
+<div class="table-wrapper">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Nombre de Usuario</th>
+        <th>Contraseña</th>
+        <th>Persona</th>
+        <th>Estado</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users">
+        <td>{{ user.userName }}</td>
+        <td>{{ user.password }}</td>
+        <td>{{ getPersonName(user.personId) }}</td>
+        <td><input type="checkbox" [checked]="user.state" disabled /></td>
+        <td>
+          <button class="btn-icon edit" (click)="editUser(user)">
+            <i class="fas fa-edit"></i>
+          </button>
+          <button class="btn-icon delete" (click)="deleteUser(user.id)">
+            <i class="fas fa-trash-alt"></i>
+          </button>
+        </td>
+      </tr>
+      <tr *ngIf="users.length === 0">
+        <td colspan="5" class="no-results">No se encontraron usuarios</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- Modal -->
+<ng-template #userModal let-modal>
+  <div class="modal-header">
+    <h5 class="modal-title">Formulario de Usuario</h5>
+    <button type="button" class="close" (click)="modal.dismiss('Cross click')">
+      <span>&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm)" class="user-form">
+      <div class="form-group">
+        <label for="userName">Nombre de Usuario</label>
+        <input type="text" id="userName" [(ngModel)]="user.userName" name="userName" class="input-field" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Contraseña</label>
+        <input type="password" id="password" [(ngModel)]="user.password" name="password" class="input-field" required>
+      </div>
+      <div class="form-group">
+        <label for="personId">Seleccionar Persona</label>
+        <select id="personId" [(ngModel)]="user.personId" name="personId" class="select-field" required>
+          <option value="" disabled selected>Seleccionar una persona</option>
+          <option *ngFor="let person of persons" [value]="person.id">{{ person.firstName }} {{ person.firstLastName }}</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="state">Activo</label>
+        <input type="checkbox" id="state" [(ngModel)]="user.state" name="state" class="checkbox-field">
+      </div>
+      <div class="modal-footer">
+        <button type="submit" class="btn btn-primary">{{ user.id === 0 ? 'Crear' : 'Actualizar' }}</button>
+        <button type="button" class="btn btn-secondary" (click)="modal.dismiss('Cancelar')">Cancelar</button>
+      </div>
+    </form>
+  </div>
+</ng-template>

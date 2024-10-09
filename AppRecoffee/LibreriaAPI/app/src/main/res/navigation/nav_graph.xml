@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.sena.libreriaapi.HomeFragment"
+        android:label="Home" />
+    <fragment
+        android:id="@+id/gestionFragment"
+        android:name="com.sena.libreriaapi.GestionFragment"
+        android:label="Gestión" />
+    <fragment
+        android:id="@+id/reportesFragment"
+        android:name="com.sena.libreriaapi.ReportesFragment"
+        android:label="Reportes" />
+
+    <fragment
+        android:id="@+id/crearFincaFragment"
+        android:name="com.sena.libreriaapi.CreateFarmFragment"
+        android:label="Crear Finca" />
+
+    <fragment
+        android:id="@+id/recoleccionesFragment"
+        android:name="com.sena.libreriaapi.CreateHarvestFragment"
+        android:label="Recolecciones" />
+    <fragment
+        android:id="@+id/createLotFragment"
+        android:name="com.sena.libreriaapi.CreateLotFragment"
+        android:label="lotes" />
+
+    <fragment
+        android:id="@+id/createCollectionDetailFragment"
+        android:name="com.sena.libreriaapi.CreateCollectionDetailFragment"
+        android:label="detalles recolecion" />
+
+    <fragment
+        android:id="@+id/createBenefitFragment"
+        android:name="com.sena.libreriaapi.CreateBenefitFragment"
+        android:label="beneficios" />
+    <fragment
+        android:id="@+id/createPersonBenefitFragment"
+        android:name="com.sena.libreriaapi.CreatePersonBenefitFragment"
+        android:label="servicios x persona" />
+
+    <fragment
+        android:id="@+id/createLiquidationFragment"
+        android:name="com.sena.libreriaapi.CreateLiquidationFragment"
+        android:label="liquidación" />
+
+    <fragment
+        android:id="@+id/listLiquidationsFragment"
+        android:name="com.sena.libreriaapi.ListLiquidationsFragment"
+        android:label="ver liquidación" />
+
+    <fragment
+        android:id="@+id/listHarvestsFragment"
+        android:name="com.sena.libreriaapi.ListHarvestsFragment"
+        android:label="ver recolecciones" />
+
+    <fragment
+        android:id="@+id/listPersonBenefitsFragment"
+        android:name="com.sena.libreriaapi.ListPersonBenefitsFragment"
+        android:label="ver personas x servicio" />
+
+    <fragment
+        android:id="@+id/listBenefitsFragment"
+        android:name="com.sena.libreriaapi.ListBenefitsFragment"
+        android:label="ver servicios" />
+
+    <fragment
+        android:id="@+id/listCollectionDetailsFragment"
+        android:name="com.sena.libreriaapi.ListCollectionDetailsFragment"
+        android:label="ver servicios" />
+
+    <fragment
+        android:id="@+id/listLotsFragment"
+        android:name="com.sena.libreriaapi.ListLotsFragment"
+        android:label="ver lotes" />
+
+    <fragment
+        android:id="@+id/listFarmsFragment"
+        android:name="com.sena.libreriaapi.ListFarmsFragment"
+        android:label="ver fincas" />
+
+    <fragment
+        android:id="@+id/joinFarmFragment"
+        android:name="com.sena.libreriaapi.JoinFarmFragment"
+        android:label="ver fincas" />
+
+    <fragment
+        android:id="@+id/collectorFarmFragment"
+        android:name="com.sena.libreriaapi.CollectorFarmFragment"
+        android:label="ver fincas" />
+
+</navigation>

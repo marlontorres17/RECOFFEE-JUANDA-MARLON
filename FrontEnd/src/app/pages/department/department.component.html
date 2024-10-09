@@ -1,0 +1,80 @@
+<div class="header">
+  <h2 class="title">Departamentos</h2>
+  <button class="btn-new" (click)="openModal()">Agregar Nuevo Departamento</button>
+</div>
+
+<div class="table-wrapper">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Código</th>
+        <th>Descripción</th>
+        <th>País</th>
+        <th>Estado</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let department of departments">
+        <td>{{ department.name }}</td>
+        <td>{{ department.code }}</td>
+        <td>{{ department.description }}</td>
+        <td>{{ getCountryName(department.countryId) }}</td>
+        <td><input type="checkbox" [checked]="department.state" disabled /></td>
+        <td>
+          <button class="btn-icon edit" (click)="editDepartment(department)">
+            <i class="fas fa-edit"></i>
+          </button>
+          <button class="btn-icon delete" (click)="deleteDepartment(department.id)">
+            <i class="fas fa-trash-alt"></i>
+          </button>
+        </td>
+      </tr>
+      <tr *ngIf="departments.length === 0">
+        <td colspan="6" class="no-results">No se encontraron departamentos</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- Modal -->
+<ng-template #departmentModal let-modal>
+  <div class="modal-header">
+    <h5 class="modal-title">Formulario de Departamento</h5>
+    <button type="button" class="close" (click)="modal.dismiss('Cross click')">
+      <span>&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <form #departmentForm="ngForm" (ngSubmit)="onSubmit(departmentForm)" class="department-form">
+      <div class="form-group">
+        <label for="name">Nombre</label>
+        <input type="text" id="name" [(ngModel)]="department.name" name="name" class="input-field" required>
+      </div>
+      <div class="form-group">
+        <label for="code">Código</label>
+        <input type="text" id="code" [(ngModel)]="department.code" name="code" class="input-field" required>
+      </div>
+      <div class="form-group">
+        <label for="description">Descripción</label>
+        <textarea id="description" [(ngModel)]="department.description" name="description" class="input-field" required></textarea>
+      </div>
+      <div class="form-group">
+        <label for="countryId">Seleccionar País</label>
+        <select id="countryId" [(ngModel)]="department.countryId" name="countryId" class="select-field" required>
+          <option value="" disabled selected>Selecciona un país</option>
+          <option *ngFor="let country of countries" [value]="country.id">{{ country.name }}</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="state">Activo</label>
+        <input type="checkbox" id="state" [(ngModel)]="department.state" name="state" class="checkbox-field">
+      </div>
+      <div class="modal-footer">
+        <button type="submit" class="btn btn-primary">{{ department.id === 0 ? 'Crear' : 'Actualizar' }}</button>
+        <button type="button" class="btn btn-secondary" (click)="modal.dismiss('Cancel')">Cancelar</button>
+      </div>
+    </form>
+  </div>
+</ng-template>

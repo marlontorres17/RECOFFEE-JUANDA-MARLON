@@ -1,0 +1,44 @@
+<div class="main-wrapper">
+    <nav class="sidebar">
+      <h1 class="logo"><app-svgs></app-svgs></h1>
+      <div class="line"></div>
+      <div class="finca-text">Fincas</div>
+      <ul class="menu">
+        <li class="dropdown" (click)="toggleDropdown('security')">
+          <a class="dropdown-toggle">
+            <i class="fa fa-shield-alt"></i> Recolector
+          </a>
+          <ul class="submenu" *ngIf="isDropdownOpen('security')">
+            <li><a routerLink="homeRecolector"><i class="fa fa-home"></i> Home</a></li>
+            <li><a routerLink="person-benefit"><i class="fa fa-user-tie"></i> Person Benefit</a></li>
+            <li><a routerLink="liquidation"><i class="fa fa-balance-scale"></i> Liquidation</a></li>
+            <li><a routerLink="benefit"><i class="fa fa-user-tie"></i> Beneficios</a></li>
+          </ul>
+        </li>
+      </ul>
+  
+      <!-- Botón de cierre de sesión -->
+      <button (click)="logout()" class="logout-button">Cerrar Sesión</button>
+    </nav>
+  
+    <div class="content-wrapper">
+      <div class="header">
+        <div class="header-content">
+          <div class="profile-selector">
+            <div class="profile-circle" (click)="toggleProfileMenu()">
+              <img src="man_cafe.jpg" alt="Profile" />
+            </div>
+            <div class="profile-menu" *ngIf="isProfileMenuOpen">
+              <ul>
+                <li><a routerLink="profile">Mi Perfil</a></li>
+                <li><a (click)="logout()">Cerrar Sesión</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+  

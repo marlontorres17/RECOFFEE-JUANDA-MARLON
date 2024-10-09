@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/rounded_background_card"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:layout_marginBottom="8dp"
+    android:gravity="start">
+
+    <TextView
+        android:id="@+id/collectorName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#FAF5F5"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/collectorDocument"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#555" />
+
+    <TextView
+        android:id="@+id/collectorGender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#555" />
+
+    <TextView
+        android:id="@+id/collectorBirthDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#555" />
+
+    <TextView
+        android:id="@+id/collectorStartDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#555" />
+</LinearLayout>

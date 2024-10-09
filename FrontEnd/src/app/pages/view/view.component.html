@@ -1,0 +1,80 @@
+<div class="header">
+  <h2 class="title">Vistas</h2>
+  <button class="btn-new" (click)="openModal()">Agregar Nueva Vista</button>
+</div>
+
+<div class="table-wrapper">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Descripción</th>
+        <th>Ruta</th>
+        <th>Módulo</th>
+        <th>Estado</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let view of views">
+        <td>{{ view.name }}</td>
+        <td>{{ view.description }}</td>
+        <td>{{ view.route }}</td>
+        <td>{{ getModuleName(view.moduleId) }}</td>
+        <td><input type="checkbox" [checked]="view.state" disabled /></td>
+        <td>
+          <button class="btn-icon edit" (click)="editView(view)">
+            <i class="fas fa-edit"></i>
+          </button>
+          <button class="btn-icon delete" (click)="deleteView(view.id)">
+            <i class="fas fa-trash-alt"></i>
+          </button>
+        </td>
+      </tr>
+      <tr *ngIf="views.length === 0">
+        <td colspan="6" class="no-results">No se encontraron vistas</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- Modal -->
+<ng-template #viewModal let-modal>
+  <div class="modal-header">
+    <h5 class="modal-title">Formulario de Vista</h5>
+    <button type="button" class="close" (click)="modal.dismiss('Cross click')">
+      <span>&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <form #viewForm="ngForm" (ngSubmit)="onSubmit(viewForm)" class="view-form">
+      <div class="form-group">
+        <label for="name">Nombre</label>
+        <input type="text" id="name" [(ngModel)]="view.name" name="name" class="input-field" required>
+      </div>
+      <div class="form-group">
+        <label for="description">Descripción</label>
+        <textarea id="description" [(ngModel)]="view.description" name="description" class="input-field" required></textarea>
+      </div>
+      <div class="form-group">
+        <label for="route">Ruta</label>
+        <input type="text" id="route" [(ngModel)]="view.route" name="route" class="input-field" required>
+      </div>
+      <div class="form-group">
+        <label for="moduleId">Seleccionar Módulo</label>
+        <select id="moduleId" [(ngModel)]="view.moduleId" name="moduleId" class="select-field" required>
+          <option value="" disabled selected>Seleccionar un módulo</option>
+          <option *ngFor="let module of modules" [value]="module.id">{{ module.name }}</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="state">Activo</label>
+        <input type="checkbox" id="state" [(ngModel)]="view.state" name="state" class="checkbox-field">
+      </div>
+      <div class="modal-footer">
+        <button type="submit" class="btn btn-primary">{{ view.id === 0 ? 'Crear' : 'Actualizar' }}</button>
+        <button type="button" class="btn btn-secondary" (click)="modal.dismiss('Cancelar')">Cancelar</button>
+      </div>
+    </form>
+  </div>
+</ng-template>

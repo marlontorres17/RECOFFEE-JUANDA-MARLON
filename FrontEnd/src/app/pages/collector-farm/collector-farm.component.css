@@ -1,0 +1,33 @@
+/* Estilos personalizados para el componente CollectorFarmComponent */
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .bg-purple-600 {
+    background-color: #6b46c1;
+  }
+  
+  .shadow-md {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .btn-primary {
+    background-color: #6b46c1;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .btn-primary:hover {
+    background-color: #553c9a;
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
+  .mt-4 {
+    margin-top: 1rem;
+  }
+  
