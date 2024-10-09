@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:layout_margin="8dp"
+    android:background="@drawable/card_background"
+    android:elevation="6dp">
+
+<TextView
+            android:id="@+id/textView_person"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Persona"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView_benefit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Beneficio"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/textView_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fecha"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/textView_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Precio"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/textView_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cantidad"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+

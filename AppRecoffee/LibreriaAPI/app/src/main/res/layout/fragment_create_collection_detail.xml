@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#121212"
+    tools:context=".CreateCollectionDetailFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="16dp">
+
+                <ImageView
+                    android:id="@+id/icono_coleccion_detalle"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginEnd="8dp"
+                    android:contentDescription="Icono de Colección Detalle"
+                    android:src="@drawable/create" />
+
+                <TextView
+                    android:id="@+id/tv_titulo_coleccion_detalle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Crear detalle de recolección"
+                    android:textColor="@android:color/white"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!-- Campo Kilo -->
+            <TextView
+                android:id="@+id/textView_kilo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Kilo:"
+                android:textColor="#F0F0F0"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/et_kilo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Ingrese el kilo"
+                android:background="@drawable/edit_text_background"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#888888"
+                android:padding="12dp"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Campo Etapa -->
+            <TextView
+                android:id="@+id/textView_stage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Jornada:"
+                android:textColor="#F0F0F0"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/spinner_stage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="12dp"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Campo Cosecha -->
+            <TextView
+                android:id="@+id/textView_harvest"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Recolección:"
+                android:textColor="#F0F0F0"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/spinner_harvest"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="12dp"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Campo Persona -->
+            <TextView
+                android:id="@+id/textView_person"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Persona:"
+                android:textColor="#F0F0F0"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/spinner_person"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="12dp"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Botón Crear Detalle de Colección -->
+            <Button
+                android:id="@+id/btn_create_collection_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="#8F2BED"
+                android:padding="12dp"
+                android:text="Crear detalle de recolección"
+                android:textColor="#FFFFFF" />
+
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>
