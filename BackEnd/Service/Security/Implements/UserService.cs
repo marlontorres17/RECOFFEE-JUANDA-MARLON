@@ -7,6 +7,9 @@ using Repository.Security.Interface;
 using Service.Security.Interface;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using BCrypt.Net;
+using Service.Operational.Implements;
+using Service.Operational.Interface;
 
 namespace Service.Security.Implements
 {
@@ -17,14 +20,17 @@ namespace Service.Security.Implements
         private readonly IPersonRepository _personRepository; // Añadir repositorio de personas
         private readonly IUserRoleRepository _userRoleRepository; // Repositorio para UserRole
         private readonly IMapper _mapper;
+        private readonly IEmailService _emailService;
 
-        public UserService(IUserRepository userRepository, IPersonRepository personRepository, IUserRoleRepository userRoleRepository, IMapper mapper)
+        public UserService(IUserRepository userRepository, IPersonRepository personRepository, IUserRoleRepository userRoleRepository,
+            IMapper mapper, IEmailService emailService)
         {
             _userRepository = userRepository;
             
             _personRepository = personRepository; // Inicializar repositorio de personas
             _userRoleRepository = userRoleRepository; // Inicializar repositorio de UserRole
             _mapper = mapper;
+            _emailService = emailService;
         }
 
         public async Task<IEnumerable<UserDto>> GetAll()
@@ -127,15 +133,84 @@ namespace Service.Security.Implements
             await _userRepository.ChangePassword(user, newPassword);
         }
 
-        public string GenerateResetCode()
-        {
-            var random = new Random();
-            return random.Next(100000, 999999).ToString(); // Código de 6 dígitos
-        }
+        //public string GenerateResetCode()
+        //{
+        //    var random = new Random();
+        //    return random.Next(100000, 999999).ToString(); // Código de 6 dígitos
+        //}
 
         public async Task<User> GetByEmail(string email)
         {
             return await _userRepository.GetByEmail(email);
+        }
+
+        // Hash de la contraseña utilizando BCrypt
+        private string HashPassword(string password)
+        {
+            return BCrypt.Net.BCrypt.HashPassword(password);
+        }
+
+        // Verificación de la contraseña hasheada
+        private bool VerifyPassword(string password, string hashedPassword)
+        {
+            return BCrypt.Net.BCrypt.Verify(password, hashedPassword);
+        }
+
+        public string GenerateResetCode()
+        {
+            var random = new Random();
+            return random.Next(100000, 999999).ToString(); // Genera un código de 6 dígitos
+        }
+
+        // Enviar código de restablecimiento por correo electrónico
+        public async Task<bool> SendResetCode(string email)
+        {
+            var user = await _userRepository.GetByEmail(email);
+            if (user == null) return false;
+
+            // Genera el código de restablecimiento
+            string resetCode = GenerateResetCode();
+
+            // Asignar el código y establecer la fecha de expiración
+            user.ResetCode = resetCode;
+            user.ResetCodeExpiration = DateTime.UtcNow.AddHours(1); // Expira en 1 hora
+            await _userRepository.Update(user);
+
+            // Envía el código al correo del usuario
+            await _emailService.SendEmailAsync(email, "Restablecimiento de Contraseña",
+                $"Tu código de restablecimiento es: {resetCode}");
+
+            return true;
+        }
+
+        // Validación del código de restablecimiento
+        public async Task<bool> ValidateResetCode(string email, string resetCode)
+        {
+            var user = await _userRepository.GetByEmail(email);
+            if (user == null || user.ResetCodeExpiration == null || user.ResetCodeExpiration < DateTime.UtcNow)
+            {
+                return false; // Código inválido o expirado
+            }
+
+            return user.ResetCode == resetCode;
+        }
+
+        // Restablecimiento de contraseña
+        public async Task<bool> ResetPassword(string email, string newPassword, string resetCode)
+        {
+            var user = await _userRepository.GetByEmail(email);
+            if (user == null || !await ValidateResetCode(email, resetCode))
+            {
+                return false;
+            }
+
+            // Hashear la nueva contraseña
+            user.Password = HashPassword(newPassword);
+            user.ResetCode = null; // Limpiar el código de restablecimiento
+            user.ResetCodeExpiration = null; // Limpiar la fecha de expiración
+
+            await _userRepository.Update(user);
+            return true;
         }
 
 

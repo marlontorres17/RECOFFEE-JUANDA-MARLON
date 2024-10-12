@@ -30,6 +30,7 @@ import { CollectorFarmComponent } from './pages/collector-farm/collector-farm.co
 import { LandingComponent } from './pages/landing/landing.component';
 import { HomeUsuarioComponent } from './pages/home-usuario/home-usuario.component';
 import { UsuarioDashboardComponent } from './usuario-dashboard/usuario-dashboard.component';
+import { ResetPasswordComponent } from './pages/reset-password/reset-password.component';
 
 export const routes: Routes = [
   {
@@ -87,6 +88,7 @@ export const routes: Routes = [
   { path: 'join-farm', component: JoinFarmComponent },
   {path: 'landing', component: LandingComponent},
   { path: 'register-user', component: RegisterUserComponent },
+  { path: 'reset-password', component: ResetPasswordComponent },
   { path: 'login', component: LoginComponent },
   { path: '', redirectTo: '/landing', pathMatch: 'full' },  
   { path: '**', redirectTo: '/landing' } 

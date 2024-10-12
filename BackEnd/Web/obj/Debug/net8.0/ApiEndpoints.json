@@ -637,7 +637,7 @@
   },
   {
     "ContainingType": "Web.Controllers.Operational.Implements.EmailController",
-    "Method": "SendEmail",
+    "Method": "SendMailAsync",
     "RelativePath": "api/Email",
     "HttpMethod": "POST",
     "IsController": true,
@@ -1722,6 +1722,22 @@
   },
   {
     "ContainingType": "Web.Controller.Implements.UserController",
+    "Method": "ForgotPassword",
+    "RelativePath": "api/User/forgot-password",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Web.Controller.Implements.UserController\u002BForgotPasswordRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Web.Controller.Implements.UserController",
     "Method": "AddUserAndPerson",
     "RelativePath": "api/User/register",
     "HttpMethod": "POST",
@@ -1731,6 +1747,22 @@
       {
         "Name": "userAndPersonDto",
         "Type": "Entity.DTO.UserPersonRoleDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Web.Controller.Implements.UserController",
+    "Method": "ResetPassword",
+    "RelativePath": "api/User/reset-password",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "Entity.DTO.Operational.ResetPasswordDto",
         "IsRequired": true
       }
     ],

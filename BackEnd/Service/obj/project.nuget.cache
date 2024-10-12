@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "yiUkc3iBtqo=",
+  "dgSpecHash": "4E7co+GHsNY=",
   "success": true,
-  "projectFilePath": "C:\\Users\\marlo\\Documents\\RECOFFEE-BACK-FRONT-APP\\BackEnd\\Service\\Service.csproj",
+  "projectFilePath": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Service\\Service.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\marlo\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\marlo\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\marlo\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
+    "C:\\Users\\marlo\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\marlo\\.nuget\\packages\\dapper\\2.1.35\\dapper.2.1.35.nupkg.sha512",
     "C:\\Users\\marlo\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\marlo\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

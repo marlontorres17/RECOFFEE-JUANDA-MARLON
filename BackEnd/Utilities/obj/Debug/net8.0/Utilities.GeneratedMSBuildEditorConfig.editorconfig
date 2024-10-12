@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Utilities
-build_property.ProjectDir = C:\Users\marlo\Documents\RECOFFEE-BACK-FRONT-APP\BackEnd\Utilities\
+build_property.ProjectDir = C:\Users\marlo\Documents\Git\RECOFFEE-JUANDA-MARLON\BackEnd\Utilities\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

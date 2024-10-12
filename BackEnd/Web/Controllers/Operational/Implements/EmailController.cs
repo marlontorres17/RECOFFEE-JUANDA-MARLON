@@ -7,7 +7,7 @@ namespace Web.Controllers.Operational.Implements
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class EmailController : IEmailController // Implementación de la interfaz
+    public class EmailController : ControllerBase, IEmailController // Implementación de la interfaz
     {
         private readonly IEmailService _emailService;
 
@@ -17,23 +17,21 @@ namespace Web.Controllers.Operational.Implements
         }
 
         [HttpPost]
-        public IActionResult SendEmail([FromBody] EmailDto emailDto)
+        public async Task<IActionResult> SendMailAsync([FromBody] EmailDto emailDto) // Cambiar a async
         {
             // Validación manual
             if (string.IsNullOrWhiteSpace(emailDto.Name) ||
                 string.IsNullOrWhiteSpace(emailDto.Gmail) ||
                 string.IsNullOrWhiteSpace(emailDto.Message) ||
-                !IsValidEmail(emailDto.Gmail)) // Asegúrate de validar el Gmail en lugar del Email
+                !IsValidEmail(emailDto.Gmail)) // Validación del correo
             {
-                // Crea y devuelve un BadRequest manualmente
-                return new BadRequestObjectResult("El nombre, correo y mensaje son obligatorios, y el correo debe ser válido.");
+                return BadRequest("El nombre, correo y mensaje son obligatorios, y el correo debe ser válido.");
             }
 
-            // Llama al servicio para enviar el correo
-            _emailService.SendEmail(emailDto);
+            // Llama al servicio para enviar el correo usando el método asíncrono
+            await _emailService.SendEmailAsync(emailDto.Gmail, "Asunto del correo", emailDto.Message);
 
-            // Crea y devuelve un Ok manualmente
-            return new OkObjectResult("Correo enviado exitosamente");
+            return Ok("Correo enviado exitosamente");
         }
 
         // Método para validar el formato del correo

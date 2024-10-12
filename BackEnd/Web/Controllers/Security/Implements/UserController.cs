@@ -1,4 +1,5 @@
 ﻿using Entity.DTO;
+using Entity.DTO.Operational;
 using Entity.DTO.Security;
 using Microsoft.AspNetCore.Mvc;
 using Service.Security.Interface;
@@ -95,9 +96,50 @@ namespace Web.Controller.Implements
             }
         }
 
+        // Endpoint para solicitar el restablecimiento de contraseña
+        public class ForgotPasswordRequest
+        {
+            public string Email { get; set; }
+        }
+
+        [HttpPost("forgot-password")]
+        public async Task<IActionResult> ForgotPassword([FromBody] ForgotPasswordRequest request)
+        {
+            if (string.IsNullOrWhiteSpace(request.Email))
+            {
+                return BadRequest("El correo electrónico no puede estar vacío.");
+            }
+
+            var result = await _userService.SendResetCode(request.Email);
+            if (!result)
+            {
+                return NotFound("No se encontró un usuario con ese correo.");
+            }
+
+            return Ok("Se ha enviado un código de restablecimiento a tu correo electrónico.");
+        }
+
+        // Endpoint para restablecer la contraseña
+        [HttpPost("reset-password")]
+        public async Task<IActionResult> ResetPassword([FromBody] ResetPasswordDto model)
+        {
+            if (string.IsNullOrWhiteSpace(model.Email) || string.IsNullOrWhiteSpace(model.ResetCode) || string.IsNullOrWhiteSpace(model.NewPassword))
+            {
+                return BadRequest("Todos los campos son obligatorios.");
+            }
+
+            var result = await _userService.ResetPassword(model.Email, model.NewPassword, model.ResetCode);
+            if (!result)
+            {
+                return BadRequest("El código de restablecimiento es inválido o ha expirado.");
+            }
+
+            return Ok("La contraseña ha sido restablecida exitosamente.");
+        }
 
 
 
+        
 
     }
 }

@@ -661,6 +661,12 @@ namespace Entity.Migrations
                     b.Property<int>("PersonId")
                         .HasColumnType("int");
 
+                    b.Property<string>("ResetCode")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("ResetCodeExpiration")
+                        .HasColumnType("datetime2");
+
                     b.Property<bool>("State")
                         .HasColumnType("bit");
 
