@@ -20,6 +20,7 @@ export class ResetPasswordComponent {
   resetForm: FormGroup;
   resetCodeSent: boolean = false;
   errorMessage: string = '';
+  userEmail: string = ''; // Almacenar el email del usuario
   private apiUrl = 'http://localhost:9191/api/user'; // Cambia esto a la URL de tu API
 
   constructor(
@@ -34,7 +35,7 @@ export class ResetPasswordComponent {
 
     // Validaciones para restablecer la contraseña
     this.resetForm = this.fb.group({
-      email: ['', [Validators.required, Validators.email]],
+      email: [{ value: '', disabled: true }, [Validators.required, Validators.email]], // Email deshabilitado
       resetCode: ['', [Validators.required, Validators.pattern('^[0-9]{6}$')]], // 6 números
       newPassword: ['', [Validators.required, Validators.minLength(8), this.passwordValidator]],
     });
@@ -65,10 +66,14 @@ export class ResetPasswordComponent {
   onRequestReset() {
     if (this.requestForm.invalid) return;
 
-    const email = this.requestForm.value.email;
-    this.http.post(`${this.apiUrl}/forgot-password`, { email }, { responseType: 'text' })
+    this.userEmail = this.requestForm.value.email; // Guardar el email ingresado
+
+    this.http.post(`${this.apiUrl}/forgot-password`, { email: this.userEmail }, { responseType: 'text' })
       .subscribe({
-        next: () => this.resetCodeSent = true,
+        next: () => {
+          this.resetCodeSent = true;
+          this.resetForm.get('email')?.setValue(this.userEmail); // Asignar email al segundo formulario
+        },
         error: () => this.errorMessage = 'No se pudo enviar el código. Verifica el correo.'
       });
   }
@@ -78,7 +83,7 @@ export class ResetPasswordComponent {
     if (this.resetForm.invalid) return;
 
     const body = {
-      email: this.resetForm.value.email,
+      email: this.userEmail, // Reutilizar el email guardado
       resetCode: this.resetForm.value.resetCode,
       newPassword: this.resetForm.value.newPassword
     };
@@ -92,6 +97,4 @@ export class ResetPasswordComponent {
         error: () => this.errorMessage = 'El código es inválido o ha expirado.'
       });
   }
-
-
 }

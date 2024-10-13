@@ -176,12 +176,46 @@ namespace Service.Security.Implements
             user.ResetCodeExpiration = DateTime.UtcNow.AddHours(1); // Expira en 1 hora
             await _userRepository.Update(user);
 
+            // Cuerpo del mensaje en formato HTML
+            string messageBody = $@"
+<div style='font-family: Arial, sans-serif; background-color: #f4f4f4; padding: 20px;'>
+    <div style='max-width: 600px; margin: auto; background-color: #fff; padding: 20px; border-radius: 10px;'>
+        <div style='text-align: center;'>
+            <h1 style='color: #B34BFF; font-size: 36px; font-family: Avegreat; margin-bottom: 20px;'>Recoffee</h1>
+        </div>
+        <h2 style='color: #333;'>Solicitud para Restablecer tu Contraseña</h2>
+        <p style='color: #555;'>Hola {user.UserName},</p>
+        <p style='color: #555;'>
+            Hemos recibido una solicitud para restablecer la contraseña de tu cuenta. Por favor, utiliza el siguiente código de verificación para completar el proceso:
+        </p>
+        <div style='text-align: center; font-size: 24px; font-weight: bold; color: #B34BFF; margin: 20px 0;'>
+            {resetCode}
+        </div>
+        <p style='color: #555; text-align: center;'>
+            Tienes <strong>1 hora</strong> para utilizar este código antes de que expire.
+        </p>
+        
+        <hr style='border: none; border-top: 1px solid #ccc; margin: 20px 0;' />
+        <p style='color: #555; text-align: center;'>
+            Este correo fue enviado porque solicitaste restablecer tu contraseña. Si no fuiste tú, por favor, ignora este mensaje o 
+            <a href='recooffee@gmail.com' style='color: #B34BFF; text-decoration: none;'>infórmanos</a>.
+        </p>
+        <div style='background-color: #f3f3f3; padding: 10px; margin-top: 20px; font-size: 12px; color: #777;'>
+            <p style='text-align: center;'>© {DateTime.Now.Year} Recoffee. Todos los derechos reservados.</p>
+            <p style='color: #777; text-align: center; font-size: 12px;'>
+                ¿Tienes algún problema? <a href='recooffee@gmail.com' style='color: #B34BFF; text-decoration: none;'>Contáctanos</a>.
+            </p>
+        </div>
+    </div>
+</div>";
+
+
             // Envía el código al correo del usuario
-            await _emailService.SendEmailAsync(email, "Restablecimiento de Contraseña",
-                $"Tu código de restablecimiento es: {resetCode}");
+            await _emailService.SendEmailAsync(email, "Restablecimiento de Contraseña", messageBody, true); // true para HTML
 
             return true;
         }
+
 
         // Validación del código de restablecimiento
         public async Task<bool> ValidateResetCode(string email, string resetCode)

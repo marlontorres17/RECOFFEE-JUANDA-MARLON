@@ -26,7 +26,7 @@ public class EmailService : IEmailService
         _smtpPass = configuration["SmtpSettings:Password"];
     }
 
-    public async Task SendEmailAsync(string toEmail, string subject, string body)
+    public async Task SendEmailAsync(string toEmail, string subject, string body, bool isHtml = false)
     {
         // Crea el cliente SMTP
         using (var smtpClient = new SmtpClient(_smtpServer, _smtpPort))
@@ -40,7 +40,7 @@ public class EmailService : IEmailService
                 From = new MailAddress(_smtpUser),
                 Subject = subject,
                 Body = body,
-                IsBodyHtml = true,
+                IsBodyHtml = isHtml, // Esto define si el correo es HTML o no
             };
 
             mailMessage.To.Add(toEmail);

@@ -15,7 +15,8 @@ namespace Service.Operational.Interface
         /// <param name="toEmail">El correo electrónico del destinatario.</param>
         /// <param name="subject">El asunto del correo.</param>
         /// <param name="body">El cuerpo del mensaje.</param>
+        /// <param name="isHtml">Indica si el cuerpo del mensaje es HTML.</param>
         /// <returns>Una tarea que representa la operación de envío del correo.</returns>
-        Task SendEmailAsync(string toEmail, string subject, string body);
+        Task SendEmailAsync(string toEmail, string subject, string body, bool isHtml = false);
     }
 }
