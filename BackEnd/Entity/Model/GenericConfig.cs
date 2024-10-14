@@ -33,6 +33,23 @@ namespace YourNamespace.Configurations
         {
             base.Configure(builder);
             builder.HasIndex(p => p.NumberDocument).IsUnique();
+            builder.HasIndex(p => p.Email).IsUnique();
         }
     }
+
+    public class UserConfig : GenericConfig<User>
+    {
+        public override void Configure(EntityTypeBuilder<User> builder)
+        {
+            base.Configure(builder);
+
+            // Definir el índice único para UserName y establecer longitud máxima
+            builder.Property(u => u.UserName)
+                .IsRequired() // Indica que el campo es obligatorio
+                .HasMaxLength(20); // Limita la longitud del UserName a 50 caracteres
+
+            builder.HasIndex(u => u.UserName).IsUnique();
+        }
+    }
+
 }

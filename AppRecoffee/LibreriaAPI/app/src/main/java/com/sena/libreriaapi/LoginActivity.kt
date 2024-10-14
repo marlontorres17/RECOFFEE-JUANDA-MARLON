@@ -45,6 +45,14 @@ class LoginActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        val resetPassword: TextView = findViewById(R.id.reset_password) // Asegúrate de que el ID sea correcto
+
+        resetPassword.setOnClickListener {
+            val intent = Intent(this, ResetPasswordActivity::class.java)
+            startActivity(intent)
+        }
+
+
         val btnCrearUsuario = findViewById<Button>(R.id.crear)
 
         // Listener para el botón

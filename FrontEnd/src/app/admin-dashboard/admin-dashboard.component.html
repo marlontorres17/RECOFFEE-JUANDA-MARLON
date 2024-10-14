@@ -22,6 +22,7 @@
           <li><a routerLink="user" (click)="$event.stopPropagation()"><i class="fa fa-user-circle"></i> User</a></li>
           <li><a routerLink="userRol" (click)="$event.stopPropagation()"><i class="fa fa-user-tag"></i> User Role</a></li>
           <li><a routerLink="rovi" (click)="$event.stopPropagation()"><i class="fa fa-eye"></i> Role View</a></li>
+
         </ul>
       </li>
 
@@ -44,6 +45,7 @@
         </a>
         <ul class="submenu" *ngIf="isDropdownOpen('operational')">
           <li><a routerLink="farm" (click)="$event.stopPropagation()"><i class="fa fa-tractor"></i> Farm</a></li>
+          <li><a routerLink="account" (click)="$event.stopPropagation()"><i class="fa fa-tractor"></i> cuenta</a></li>
           <li><a routerLink="lot" (click)="$event.stopPropagation()"><i class="fa fa-th-large"></i> Lot</a></li>
           <li><a routerLink="benefit" (click)="$event.stopPropagation()"><i class="fa fa-hand-holding-usd"></i> Benefit</a></li>
           <li><a routerLink="person-benefit" (click)="$event.stopPropagation()"><i class="fa fa-user-tie"></i> Person Benefit</a></li>

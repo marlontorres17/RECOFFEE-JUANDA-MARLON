@@ -31,6 +31,7 @@ import { LandingComponent } from './pages/landing/landing.component';
 import { HomeUsuarioComponent } from './pages/home-usuario/home-usuario.component';
 import { UsuarioDashboardComponent } from './usuario-dashboard/usuario-dashboard.component';
 import { ResetPasswordComponent } from './pages/reset-password/reset-password.component';
+import { AccountComponent } from './pages/account/account.component';
 
 export const routes: Routes = [
   {
@@ -58,6 +59,7 @@ export const routes: Routes = [
       { path: 'collection-detail', component: CollectionDetailComponent },
       { path: 'crear-finca', component: CrearFincaComponent },
       { path: 'ver-finca', component: CollectorFarmComponent },
+      { path: 'account', component: AccountComponent },
       { path: '', redirectTo: 'homeAdmin', pathMatch: 'full' } // Redirección por defecto
     ]
   },
@@ -71,7 +73,9 @@ export const routes: Routes = [
       { path: 'benefit', component: BenefitComponent },
       { path: 'person-benefit', component: PersonBenefitComponent },
       { path: 'liquidation', component: LiquidationComponent },
+      { path: 'account', component: AccountComponent },
       { path: '', redirectTo: 'homeRecolector', pathMatch: 'full' }
+      
     ]
   },
 
@@ -89,6 +93,7 @@ export const routes: Routes = [
   {path: 'landing', component: LandingComponent},
   { path: 'register-user', component: RegisterUserComponent },
   { path: 'reset-password', component: ResetPasswordComponent },
+   
   { path: 'login', component: LoginComponent },
   { path: '', redirectTo: '/landing', pathMatch: 'full' },  
   { path: '**', redirectTo: '/landing' } 

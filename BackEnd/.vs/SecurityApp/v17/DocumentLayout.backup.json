@@ -3,12 +3,52 @@
   "WorkspaceRootPath": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9C48F1DB-1BF3-4426-9DF3-A20A8EC07DFA}|Service\\Service.csproj|c:\\users\\marlo\\documents\\git\\recoffee-juanda-marlon\\backend\\service\\security\\interface\\ipersonservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9C48F1DB-1BF3-4426-9DF3-A20A8EC07DFA}|Service\\Service.csproj|solutionrelative:service\\security\\interface\\ipersonservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Entity\\Migrations\\20241013213349_has.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Entity\\Migrations\\20241013213349_has.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9C48F1DB-1BF3-4426-9DF3-A20A8EC07DFA}|Service\\Service.csproj|c:\\users\\marlo\\documents\\git\\recoffee-juanda-marlon\\backend\\service\\security\\implements\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9C48F1DB-1BF3-4426-9DF3-A20A8EC07DFA}|Service\\Service.csproj|solutionrelative:service\\security\\implements\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{92D11A13-2828-4C5E-B011-49FA530D0E44}|Web\\Web.csproj|c:\\users\\marlo\\documents\\git\\recoffee-juanda-marlon\\backend\\web\\controllers\\security\\interface\\iusercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{92D11A13-2828-4C5E-B011-49FA530D0E44}|Web\\Web.csproj|solutionrelative:web\\controllers\\security\\interface\\iusercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{92D11A13-2828-4C5E-B011-49FA530D0E44}|Web\\Web.csproj|c:\\users\\marlo\\documents\\git\\recoffee-juanda-marlon\\backend\\web\\controllers\\security\\implements\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{92D11A13-2828-4C5E-B011-49FA530D0E44}|Web\\Web.csproj|solutionrelative:web\\controllers\\security\\implements\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C48F1DB-1BF3-4426-9DF3-A20A8EC07DFA}|Service\\Service.csproj|c:\\users\\marlo\\documents\\git\\recoffee-juanda-marlon\\backend\\service\\security\\interface\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C48F1DB-1BF3-4426-9DF3-A20A8EC07DFA}|Service\\Service.csproj|solutionrelative:service\\security\\interface\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4789B938-6934-4FA3-B825-A5C66DD7BED8}|Repository\\Repository.csproj|c:\\users\\marlo\\documents\\git\\recoffee-juanda-marlon\\backend\\repository\\security\\interface\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4789B938-6934-4FA3-B825-A5C66DD7BED8}|Repository\\Repository.csproj|solutionrelative:repository\\security\\interface\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4789B938-6934-4FA3-B825-A5C66DD7BED8}|Repository\\Repository.csproj|c:\\users\\marlo\\documents\\git\\recoffee-juanda-marlon\\backend\\repository\\security\\implements\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4789B938-6934-4FA3-B825-A5C66DD7BED8}|Repository\\Repository.csproj|solutionrelative:repository\\security\\implements\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68601FCB-5653-4C62-87A3-3C3A198C5538}|Entity\\Entity.csproj|c:\\users\\marlo\\documents\\git\\recoffee-juanda-marlon\\backend\\entity\\model\\security\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{68601FCB-5653-4C62-87A3-3C3A198C5538}|Entity\\Entity.csproj|solutionrelative:entity\\model\\security\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68601FCB-5653-4C62-87A3-3C3A198C5538}|Entity\\Entity.csproj|c:\\users\\marlo\\documents\\git\\recoffee-juanda-marlon\\backend\\entity\\dto\\security\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{68601FCB-5653-4C62-87A3-3C3A198C5538}|Entity\\Entity.csproj|solutionrelative:entity\\dto\\security\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{68601FCB-5653-4C62-87A3-3C3A198C5538}|Entity\\Entity.csproj|c:\\users\\marlo\\documents\\git\\recoffee-juanda-marlon\\backend\\entity\\model\\genericconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{68601FCB-5653-4C62-87A3-3C3A198C5538}|Entity\\Entity.csproj|solutionrelative:entity\\model\\genericconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{92D11A13-2828-4C5E-B011-49FA530D0E44}|Web\\Web.csproj|c:\\users\\marlo\\documents\\git\\recoffee-juanda-marlon\\backend\\web\\controllers\\security\\implements\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{92D11A13-2828-4C5E-B011-49FA530D0E44}|Web\\Web.csproj|solutionrelative:web\\controllers\\security\\implements\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C48F1DB-1BF3-4426-9DF3-A20A8EC07DFA}|Service\\Service.csproj|c:\\users\\marlo\\documents\\git\\recoffee-juanda-marlon\\backend\\service\\security\\interface\\ipersonservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C48F1DB-1BF3-4426-9DF3-A20A8EC07DFA}|Service\\Service.csproj|solutionrelative:service\\security\\interface\\ipersonservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9C48F1DB-1BF3-4426-9DF3-A20A8EC07DFA}|Service\\Service.csproj|c:\\users\\marlo\\documents\\git\\recoffee-juanda-marlon\\backend\\service\\operational\\implements\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -43,10 +83,6 @@
       "RelativeMoniker": "D:0:0:{9C48F1DB-1BF3-4426-9DF3-A20A8EC07DFA}|Service\\Service.csproj|solutionrelative:service\\operational\\interface\\icollectorfarmservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{68601FCB-5653-4C62-87A3-3C3A198C5538}|Entity\\Entity.csproj|c:\\users\\marlo\\documents\\git\\recoffee-juanda-marlon\\backend\\entity\\model\\security\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{68601FCB-5653-4C62-87A3-3C3A198C5538}|Entity\\Entity.csproj|solutionrelative:entity\\model\\security\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{68601FCB-5653-4C62-87A3-3C3A198C5538}|Entity\\Entity.csproj|c:\\users\\marlo\\documents\\git\\recoffee-juanda-marlon\\backend\\entity\\entity.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{68601FCB-5653-4C62-87A3-3C3A198C5538}|Entity\\Entity.csproj|solutionrelative:entity\\entity.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
@@ -55,24 +91,12 @@
       "RelativeMoniker": "D:0:0:{68601FCB-5653-4C62-87A3-3C3A198C5538}|Entity\\Entity.csproj|solutionrelative:entity\\context\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9C48F1DB-1BF3-4426-9DF3-A20A8EC07DFA}|Service\\Service.csproj|c:\\users\\marlo\\documents\\git\\recoffee-juanda-marlon\\backend\\service\\security\\interface\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9C48F1DB-1BF3-4426-9DF3-A20A8EC07DFA}|Service\\Service.csproj|solutionrelative:service\\security\\interface\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{92D11A13-2828-4C5E-B011-49FA530D0E44}|Web\\Web.csproj|c:\\users\\marlo\\documents\\git\\recoffee-juanda-marlon\\backend\\web\\controllers\\operational\\implements\\emailcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{92D11A13-2828-4C5E-B011-49FA530D0E44}|Web\\Web.csproj|solutionrelative:web\\controllers\\operational\\implements\\emailcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{92D11A13-2828-4C5E-B011-49FA530D0E44}|Web\\Web.csproj|c:\\users\\marlo\\documents\\git\\recoffee-juanda-marlon\\backend\\web\\controllers\\operational\\interface\\iemailcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{92D11A13-2828-4C5E-B011-49FA530D0E44}|Web\\Web.csproj|solutionrelative:web\\controllers\\operational\\interface\\iemailcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{92D11A13-2828-4C5E-B011-49FA530D0E44}|Web\\Web.csproj|c:\\users\\marlo\\documents\\git\\recoffee-juanda-marlon\\backend\\web\\controllers\\security\\implements\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{92D11A13-2828-4C5E-B011-49FA530D0E44}|Web\\Web.csproj|solutionrelative:web\\controllers\\security\\implements\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{92D11A13-2828-4C5E-B011-49FA530D0E44}|Web\\Web.csproj|c:\\users\\marlo\\documents\\git\\recoffee-juanda-marlon\\backend\\web\\controllers\\security\\implements\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{92D11A13-2828-4C5E-B011-49FA530D0E44}|Web\\Web.csproj|solutionrelative:web\\controllers\\security\\implements\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{92D11A13-2828-4C5E-B011-49FA530D0E44}|Web\\Web.csproj|c:\\users\\marlo\\documents\\git\\recoffee-juanda-marlon\\backend\\web\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
@@ -87,16 +111,8 @@
       "RelativeMoniker": "D:0:0:{68601FCB-5653-4C62-87A3-3C3A198C5538}|Entity\\Entity.csproj|solutionrelative:entity\\migrations\\20241012140032_null.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{68601FCB-5653-4C62-87A3-3C3A198C5538}|Entity\\Entity.csproj|c:\\users\\marlo\\documents\\git\\recoffee-juanda-marlon\\backend\\entity\\model\\genericconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{68601FCB-5653-4C62-87A3-3C3A198C5538}|Entity\\Entity.csproj|solutionrelative:entity\\model\\genericconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{68601FCB-5653-4C62-87A3-3C3A198C5538}|Entity\\Entity.csproj|c:\\users\\marlo\\documents\\git\\recoffee-juanda-marlon\\backend\\entity\\migrations\\20241012125437_email.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{68601FCB-5653-4C62-87A3-3C3A198C5538}|Entity\\Entity.csproj|solutionrelative:entity\\migrations\\20241012125437_email.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{68601FCB-5653-4C62-87A3-3C3A198C5538}|Entity\\Entity.csproj|c:\\users\\marlo\\documents\\git\\recoffee-juanda-marlon\\backend\\entity\\dto\\security\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{68601FCB-5653-4C62-87A3-3C3A198C5538}|Entity\\Entity.csproj|solutionrelative:entity\\dto\\security\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{68601FCB-5653-4C62-87A3-3C3A198C5538}|Entity\\Entity.csproj|c:\\users\\marlo\\documents\\git\\recoffee-juanda-marlon\\backend\\entity\\dto\\operational\\resetpassworddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -115,20 +131,8 @@
       "RelativeMoniker": "D:0:0:{4789B938-6934-4FA3-B825-A5C66DD7BED8}|Repository\\Repository.csproj|solutionrelative:repository\\operational\\implements\\emailrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{92D11A13-2828-4C5E-B011-49FA530D0E44}|Web\\Web.csproj|c:\\users\\marlo\\documents\\git\\recoffee-juanda-marlon\\backend\\web\\controllers\\security\\interface\\iusercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{92D11A13-2828-4C5E-B011-49FA530D0E44}|Web\\Web.csproj|solutionrelative:web\\controllers\\security\\interface\\iusercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{9C48F1DB-1BF3-4426-9DF3-A20A8EC07DFA}|Service\\Service.csproj|c:\\users\\marlo\\documents\\git\\recoffee-juanda-marlon\\backend\\service\\security\\interface\\iuserroleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9C48F1DB-1BF3-4426-9DF3-A20A8EC07DFA}|Service\\Service.csproj|solutionrelative:service\\security\\interface\\iuserroleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4789B938-6934-4FA3-B825-A5C66DD7BED8}|Repository\\Repository.csproj|c:\\users\\marlo\\documents\\git\\recoffee-juanda-marlon\\backend\\repository\\security\\interface\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4789B938-6934-4FA3-B825-A5C66DD7BED8}|Repository\\Repository.csproj|solutionrelative:repository\\security\\interface\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4789B938-6934-4FA3-B825-A5C66DD7BED8}|Repository\\Repository.csproj|c:\\users\\marlo\\documents\\git\\recoffee-juanda-marlon\\backend\\repository\\security\\implements\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4789B938-6934-4FA3-B825-A5C66DD7BED8}|Repository\\Repository.csproj|solutionrelative:repository\\security\\implements\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{68601FCB-5653-4C62-87A3-3C3A198C5538}|Entity\\Entity.csproj|c:\\users\\marlo\\documents\\git\\recoffee-juanda-marlon\\backend\\entity\\migrations\\20241009183513_tres.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -714,8 +718,60 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "20241013213349_has.cs",
+              "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Entity\\Migrations\\20241013213349_has.cs",
+              "RelativeDocumentMoniker": "Entity\\Migrations\\20241013213349_has.cs",
+              "ToolTip": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Entity\\Migrations\\20241013213349_has.cs",
+              "RelativeToolTip": "Entity\\Migrations\\20241013213349_has.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAAgwDIAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-13T21:33:49.726Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Web\\Controllers\\Security\\Implements\\UserController.cs",
+              "RelativeDocumentMoniker": "Web\\Controllers\\Security\\Implements\\UserController.cs",
+              "ToolTip": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Web\\Controllers\\Security\\Implements\\UserController.cs",
+              "RelativeToolTip": "Web\\Controllers\\Security\\Implements\\UserController.cs",
+              "ViewState": "AgIAAHUAAAAAAAAAAAAUwJEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-18T00:03:15.443Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IUserController.cs",
+              "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Web\\Controllers\\Security\\Interface\\IUserController.cs",
+              "RelativeDocumentMoniker": "Web\\Controllers\\Security\\Interface\\IUserController.cs",
+              "ToolTip": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Web\\Controllers\\Security\\Interface\\IUserController.cs",
+              "RelativeToolTip": "Web\\Controllers\\Security\\Interface\\IUserController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-18T00:03:26.202Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IUserService.cs",
+              "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Service\\Security\\Interface\\IUserService.cs",
+              "RelativeDocumentMoniker": "Service\\Security\\Interface\\IUserService.cs",
+              "ToolTip": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Service\\Security\\Interface\\IUserService.cs",
+              "RelativeToolTip": "Service\\Security\\Interface\\IUserService.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAowB0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-18T00:02:57.734Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 1,
@@ -724,7 +780,7 @@
               "RelativeDocumentMoniker": "Service\\Security\\Implements\\UserService.cs",
               "ToolTip": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Service\\Security\\Implements\\UserService.cs",
               "RelativeToolTip": "Service\\Security\\Implements\\UserService.cs",
-              "ViewState": "AgIAAKUAAAAAAAAAAAAiwNUAAAA9AAAAAAAAAA==",
+              "ViewState": "AgIAADsAAAAAAAAAAAAUwEMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-18T00:02:45.842Z",
               "EditorCaption": ""
@@ -732,30 +788,70 @@
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "CollectionDetailService.cs",
-              "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Service\\Operational\\Implements\\CollectionDetailService.cs",
-              "RelativeDocumentMoniker": "Service\\Operational\\Implements\\CollectionDetailService.cs",
-              "ToolTip": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Service\\Operational\\Implements\\CollectionDetailService.cs",
-              "RelativeToolTip": "Service\\Operational\\Implements\\CollectionDetailService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADMAAAAAAAAAAAAAAA==",
+              "Title": "IUserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Repository\\Security\\Interface\\IUserRepository.cs",
+              "RelativeDocumentMoniker": "Repository\\Security\\Interface\\IUserRepository.cs",
+              "ToolTip": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Repository\\Security\\Interface\\IUserRepository.cs",
+              "RelativeToolTip": "Repository\\Security\\Interface\\IUserRepository.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAmwBoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-17T18:49:55.591Z"
+              "WhenOpened": "2024-09-18T00:02:29.91Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "LiquidationService.cs",
-              "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Service\\Operational\\Implements\\LiquidationService.cs",
-              "RelativeDocumentMoniker": "Service\\Operational\\Implements\\LiquidationService.cs",
-              "ToolTip": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Service\\Operational\\Implements\\LiquidationService.cs",
-              "RelativeToolTip": "Service\\Operational\\Implements\\LiquidationService.cs",
-              "ViewState": "AgIAADMAAAAAAAAAAAAqwFIAAAAJAAAAAAAAAA==",
+              "DocumentIndex": 6,
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Repository\\Security\\Implements\\UserRepository.cs",
+              "RelativeDocumentMoniker": "Repository\\Security\\Implements\\UserRepository.cs",
+              "ToolTip": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Repository\\Security\\Implements\\UserRepository.cs",
+              "RelativeToolTip": "Repository\\Security\\Implements\\UserRepository.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAAAswEQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-17T19:05:04.614Z"
+              "WhenOpened": "2024-09-18T00:02:00.204Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 7,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Entity\\Model\\Security\\User.cs",
+              "RelativeDocumentMoniker": "Entity\\Model\\Security\\User.cs",
+              "ToolTip": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Entity\\Model\\Security\\User.cs",
+              "RelativeToolTip": "Entity\\Model\\Security\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-17T13:38:37.392Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "UserDto.cs",
+              "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Entity\\DTO\\Security\\UserDto.cs",
+              "RelativeDocumentMoniker": "Entity\\DTO\\Security\\UserDto.cs",
+              "ToolTip": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Entity\\DTO\\Security\\UserDto.cs",
+              "RelativeToolTip": "Entity\\DTO\\Security\\UserDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-17T13:39:30.028Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "IPersonService.cs",
+              "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Service\\Security\\Interface\\IPersonService.cs",
+              "RelativeDocumentMoniker": "Service\\Security\\Interface\\IPersonService.cs",
+              "ToolTip": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Service\\Security\\Interface\\IPersonService.cs",
+              "RelativeToolTip": "Service\\Security\\Interface\\IPersonService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-17T23:55:52.074Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
               "Title": "BenefitService.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Service\\Operational\\Implements\\BenefitService.cs",
               "RelativeDocumentMoniker": "Service\\Operational\\Implements\\BenefitService.cs",
@@ -767,20 +863,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "IPersonService.cs",
-              "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Service\\Security\\Interface\\IPersonService.cs",
-              "RelativeDocumentMoniker": "Service\\Security\\Interface\\IPersonService.cs",
-              "ToolTip": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Service\\Security\\Interface\\IPersonService.cs",
-              "RelativeToolTip": "Service\\Security\\Interface\\IPersonService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-17T23:55:52.074Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 16,
               "Title": "IEmailService.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Service\\Operational\\Interface\\IEmailService.cs",
               "RelativeDocumentMoniker": "Service\\Operational\\Interface\\IEmailService.cs",
@@ -792,7 +875,57 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 10,
+              "Title": "LoginController.cs",
+              "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Web\\Controllers\\Security\\Implements\\LoginController.cs",
+              "RelativeDocumentMoniker": "Web\\Controllers\\Security\\Implements\\LoginController.cs",
+              "ToolTip": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Web\\Controllers\\Security\\Implements\\LoginController.cs",
+              "RelativeToolTip": "Web\\Controllers\\Security\\Implements\\LoginController.cs",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAAwFQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-22T01:55:08.885Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "GenericConfig.cs",
+              "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Entity\\Model\\GenericConfig.cs",
+              "RelativeDocumentMoniker": "Entity\\Model\\GenericConfig.cs",
+              "ToolTip": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Entity\\Model\\GenericConfig.cs",
+              "RelativeToolTip": "Entity\\Model\\GenericConfig.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAADwvysAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-26T02:15:51.408Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "LiquidationService.cs",
+              "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Service\\Operational\\Implements\\LiquidationService.cs",
+              "RelativeDocumentMoniker": "Service\\Operational\\Implements\\LiquidationService.cs",
+              "ToolTip": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Service\\Operational\\Implements\\LiquidationService.cs",
+              "RelativeToolTip": "Service\\Operational\\Implements\\LiquidationService.cs",
+              "ViewState": "AgIAADMAAAAAAAAAAAAqwFIAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-17T19:05:04.614Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "CollectionDetailService.cs",
+              "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Service\\Operational\\Implements\\CollectionDetailService.cs",
+              "RelativeDocumentMoniker": "Service\\Operational\\Implements\\CollectionDetailService.cs",
+              "ToolTip": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Service\\Operational\\Implements\\CollectionDetailService.cs",
+              "RelativeToolTip": "Service\\Operational\\Implements\\CollectionDetailService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-17T18:49:55.591Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
               "Title": "EmailService.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Service\\Operational\\Implements\\EmailService.cs",
               "RelativeDocumentMoniker": "Service\\Operational\\Implements\\EmailService.cs",
@@ -804,7 +937,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 19,
               "Title": "ICollectorFarmService.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Service\\Operational\\Interface\\ICollectorFarmService.cs",
               "RelativeDocumentMoniker": "Service\\Operational\\Interface\\ICollectorFarmService.cs",
@@ -816,31 +949,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Entity\\Model\\Security\\User.cs",
-              "RelativeDocumentMoniker": "Entity\\Model\\Security\\User.cs",
-              "ToolTip": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Entity\\Model\\Security\\User.cs",
-              "RelativeToolTip": "Entity\\Model\\Security\\User.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAgwBgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-17T13:38:37.392Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "IUserService.cs",
-              "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Service\\Security\\Interface\\IUserService.cs",
-              "RelativeDocumentMoniker": "Service\\Security\\Interface\\IUserService.cs",
-              "ToolTip": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Service\\Security\\Interface\\IUserService.cs",
-              "RelativeToolTip": "Service\\Security\\Interface\\IUserService.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAxwB0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-18T00:02:57.734Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 18,
               "Title": "Utilities.csproj",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Utilities\\Utilities.csproj",
               "RelativeDocumentMoniker": "Utilities\\Utilities.csproj",
@@ -852,7 +961,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 17,
               "Title": "IRoleViewService.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Service\\Security\\Interface\\IRoleViewService.cs",
               "RelativeDocumentMoniker": "Service\\Security\\Interface\\IRoleViewService.cs",
@@ -864,7 +973,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 22,
               "Title": "EmailController.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Web\\Controllers\\Operational\\Implements\\EmailController.cs",
               "RelativeDocumentMoniker": "Web\\Controllers\\Operational\\Implements\\EmailController.cs",
@@ -876,7 +985,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 23,
               "Title": "IEmailController.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Web\\Controllers\\Operational\\Interface\\IEmailController.cs",
               "RelativeDocumentMoniker": "Web\\Controllers\\Operational\\Interface\\IEmailController.cs",
@@ -888,7 +997,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 21,
               "Title": "ApplicationDbContext.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Entity\\Context\\ApplicationDbContext.cs",
               "RelativeDocumentMoniker": "Entity\\Context\\ApplicationDbContext.cs",
@@ -900,7 +1009,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 20,
               "Title": "Entity.csproj",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Entity\\Entity.csproj",
               "RelativeDocumentMoniker": "Entity\\Entity.csproj",
@@ -912,19 +1021,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "LoginController.cs",
-              "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Web\\Controllers\\Security\\Implements\\LoginController.cs",
-              "RelativeDocumentMoniker": "Web\\Controllers\\Security\\Implements\\LoginController.cs",
-              "ToolTip": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Web\\Controllers\\Security\\Implements\\LoginController.cs",
-              "RelativeToolTip": "Web\\Controllers\\Security\\Implements\\LoginController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAA8AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-22T01:55:08.885Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 24,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Web\\appsettings.json",
               "RelativeDocumentMoniker": "Web\\appsettings.json",
@@ -936,7 +1033,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 27,
               "Title": "20241012125437_email.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Entity\\Migrations\\20241012125437_email.cs",
               "RelativeDocumentMoniker": "Entity\\Migrations\\20241012125437_email.cs",
@@ -948,31 +1045,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "GenericConfig.cs",
-              "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Entity\\Model\\GenericConfig.cs",
-              "RelativeDocumentMoniker": "Entity\\Model\\GenericConfig.cs",
-              "ToolTip": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Entity\\Model\\GenericConfig.cs",
-              "RelativeToolTip": "Entity\\Model\\GenericConfig.cs",
-              "ViewState": "AgIAABoAAAAAAAAAAAAwwCYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-26T02:15:51.408Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "UserController.cs",
-              "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Web\\Controllers\\Security\\Implements\\UserController.cs",
-              "RelativeDocumentMoniker": "Web\\Controllers\\Security\\Implements\\UserController.cs",
-              "ToolTip": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Web\\Controllers\\Security\\Implements\\UserController.cs",
-              "RelativeToolTip": "Web\\Controllers\\Security\\Implements\\UserController.cs",
-              "ViewState": "AgIAAF4AAAAAAAAAAAAswHEAAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-18T00:03:15.443Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 25,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Web\\Program.cs",
               "RelativeDocumentMoniker": "Web\\Program.cs",
@@ -984,7 +1057,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 26,
               "Title": "20241012140032_null.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Entity\\Migrations\\20241012140032_null.cs",
               "RelativeDocumentMoniker": "Entity\\Migrations\\20241012140032_null.cs",
@@ -996,7 +1069,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 28,
               "Title": "ResetPasswordDto.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Entity\\DTO\\Operational\\ResetPasswordDto.cs",
               "RelativeDocumentMoniker": "Entity\\DTO\\Operational\\ResetPasswordDto.cs",
@@ -1008,19 +1081,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "UserDto.cs",
-              "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Entity\\DTO\\Security\\UserDto.cs",
-              "RelativeDocumentMoniker": "Entity\\DTO\\Security\\UserDto.cs",
-              "ToolTip": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Entity\\DTO\\Security\\UserDto.cs",
-              "RelativeToolTip": "Entity\\DTO\\Security\\UserDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-17T13:39:30.028Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 29,
               "Title": "EmailDto.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Entity\\DTO\\Operational\\EmailDto.cs",
               "RelativeDocumentMoniker": "Entity\\DTO\\Operational\\EmailDto.cs",
@@ -1032,7 +1093,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 30,
               "Title": "IEmailRepository.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Repository\\Operational\\Interface\\IEmailRepository.cs",
               "RelativeDocumentMoniker": "Repository\\Operational\\Interface\\IEmailRepository.cs",
@@ -1044,7 +1105,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 31,
               "Title": "EmailRepository.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Repository\\Operational\\Implements\\EmailRepository.cs",
               "RelativeDocumentMoniker": "Repository\\Operational\\Implements\\EmailRepository.cs",
@@ -1056,19 +1117,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "IUserController.cs",
-              "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Web\\Controllers\\Security\\Interface\\IUserController.cs",
-              "RelativeDocumentMoniker": "Web\\Controllers\\Security\\Interface\\IUserController.cs",
-              "ToolTip": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Web\\Controllers\\Security\\Interface\\IUserController.cs",
-              "RelativeToolTip": "Web\\Controllers\\Security\\Interface\\IUserController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-18T00:03:26.202Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 32,
               "Title": "IUserRoleService.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Service\\Security\\Interface\\IUserRoleService.cs",
               "RelativeDocumentMoniker": "Service\\Security\\Interface\\IUserRoleService.cs",
@@ -1080,31 +1129,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "IUserRepository.cs",
-              "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Repository\\Security\\Interface\\IUserRepository.cs",
-              "RelativeDocumentMoniker": "Repository\\Security\\Interface\\IUserRepository.cs",
-              "ToolTip": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Repository\\Security\\Interface\\IUserRepository.cs",
-              "RelativeToolTip": "Repository\\Security\\Interface\\IUserRepository.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAYwBoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-18T00:02:29.91Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "UserRepository.cs",
-              "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Repository\\Security\\Implements\\UserRepository.cs",
-              "RelativeDocumentMoniker": "Repository\\Security\\Implements\\UserRepository.cs",
-              "ToolTip": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Repository\\Security\\Implements\\UserRepository.cs",
-              "RelativeToolTip": "Repository\\Security\\Implements\\UserRepository.cs",
-              "ViewState": "AgIAACwAAAAAAAAAAAAqwEQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-18T00:02:00.204Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 33,
               "Title": "20241009183513_tres.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Entity\\Migrations\\20241009183513_tres.cs",
               "RelativeDocumentMoniker": "Entity\\Migrations\\20241009183513_tres.cs",
@@ -1116,7 +1141,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 47,
               "Title": "CollectorFarmRepository.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Repository\\Operational\\Implements\\CollectorFarmRepository.cs",
               "RelativeDocumentMoniker": "Repository\\Operational\\Implements\\CollectorFarmRepository.cs",
@@ -1128,7 +1153,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 42,
               "Title": "Farm.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Entity\\Model\\Operational\\Farm.cs",
               "RelativeDocumentMoniker": "Entity\\Model\\Operational\\Farm.cs",
@@ -1140,7 +1165,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 41,
               "Title": "FarmDto.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Entity\\DTO\\Operational\\FarmDto.cs",
               "RelativeDocumentMoniker": "Entity\\DTO\\Operational\\FarmDto.cs",
@@ -1152,7 +1177,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 40,
               "Title": "FarmRepository.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Repository\\Operational\\Implements\\FarmRepository.cs",
               "RelativeDocumentMoniker": "Repository\\Operational\\Implements\\FarmRepository.cs",
@@ -1164,7 +1189,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 39,
               "Title": "FarmService.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Service\\Operational\\Implements\\FarmService.cs",
               "RelativeDocumentMoniker": "Service\\Operational\\Implements\\FarmService.cs",
@@ -1176,7 +1201,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 38,
               "Title": "FarmController.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Web\\Controllers\\Operational\\Implements\\FarmController.cs",
               "RelativeDocumentMoniker": "Web\\Controllers\\Operational\\Implements\\FarmController.cs",
@@ -1188,7 +1213,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 37,
               "Title": "LotController.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Web\\Controllers\\Operational\\Implements\\LotController.cs",
               "RelativeDocumentMoniker": "Web\\Controllers\\Operational\\Implements\\LotController.cs",
@@ -1200,7 +1225,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 36,
               "Title": "LotService.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Service\\Operational\\Implements\\LotService.cs",
               "RelativeDocumentMoniker": "Service\\Operational\\Implements\\LotService.cs",
@@ -1212,7 +1237,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 34,
               "Title": "Lot.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Entity\\Model\\Operational\\Lot.cs",
               "RelativeDocumentMoniker": "Entity\\Model\\Operational\\Lot.cs",
@@ -1224,7 +1249,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 43,
               "Title": "CollectorFarmController.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Web\\Controllers\\Operational\\Implements\\CollectorFarmController.cs",
               "RelativeDocumentMoniker": "Web\\Controllers\\Operational\\Implements\\CollectorFarmController.cs",
@@ -1236,7 +1261,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 35,
               "Title": "LotDto.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Entity\\DTO\\Operational\\LotDto.cs",
               "RelativeDocumentMoniker": "Entity\\DTO\\Operational\\LotDto.cs",
@@ -1248,7 +1273,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 45,
               "Title": "CollectorFarm.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Entity\\Model\\Operational\\CollectorFarm.cs",
               "RelativeDocumentMoniker": "Entity\\Model\\Operational\\CollectorFarm.cs",
@@ -1260,7 +1285,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 46,
               "Title": "CollectionDetail.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Entity\\Model\\Operational\\CollectionDetail.cs",
               "RelativeDocumentMoniker": "Entity\\Model\\Operational\\CollectionDetail.cs",
@@ -1272,7 +1297,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 48,
               "Title": "CollectorFarmService.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Service\\Operational\\Implements\\CollectorFarmService.cs",
               "RelativeDocumentMoniker": "Service\\Operational\\Implements\\CollectorFarmService.cs",
@@ -1284,7 +1309,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 44,
               "Title": "CollectorFarmDto.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Entity\\DTO\\Operational\\CollectorFarmDto.cs",
               "RelativeDocumentMoniker": "Entity\\DTO\\Operational\\CollectorFarmDto.cs",
@@ -1296,7 +1321,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 176,
+              "DocumentIndex": 177,
               "Title": "20241009155440_dos.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Entity\\Migrations\\20241009155440_dos.cs",
               "RelativeDocumentMoniker": "Entity\\Migrations\\20241009155440_dos.cs",
@@ -1308,7 +1333,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
+              "DocumentIndex": 49,
               "Title": "ICollectorFarmRepository.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Repository\\Operational\\Interface\\ICollectorFarmRepository.cs",
               "RelativeDocumentMoniker": "Repository\\Operational\\Interface\\ICollectorFarmRepository.cs",
@@ -1320,7 +1345,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 49,
+              "DocumentIndex": 50,
               "Title": "PersonService.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Service\\Security\\Implements\\PersonService.cs",
               "RelativeDocumentMoniker": "Service\\Security\\Implements\\PersonService.cs",
@@ -1332,7 +1357,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 50,
+              "DocumentIndex": 51,
               "Title": "HarvestController.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Web\\Controllers\\Operational\\Implements\\HarvestController.cs",
               "RelativeDocumentMoniker": "Web\\Controllers\\Operational\\Implements\\HarvestController.cs",
@@ -1344,7 +1369,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 52,
+              "DocumentIndex": 53,
               "Title": "IUserRoleRepository.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Repository\\Security\\Interface\\IUserRoleRepository.cs",
               "RelativeDocumentMoniker": "Repository\\Security\\Interface\\IUserRoleRepository.cs",
@@ -1356,7 +1381,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 53,
+              "DocumentIndex": 54,
               "Title": "ViewService.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Service\\Security\\Implements\\ViewService.cs",
               "RelativeDocumentMoniker": "Service\\Security\\Implements\\ViewService.cs",
@@ -1368,7 +1393,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 51,
+              "DocumentIndex": 52,
               "Title": "UserRoleRepository.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Repository\\Security\\Implements\\UserRoleRepository.cs",
               "RelativeDocumentMoniker": "Repository\\Security\\Implements\\UserRoleRepository.cs",
@@ -1380,7 +1405,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 55,
+              "DocumentIndex": 56,
               "Title": "UserRoleDto.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Entity\\DTO\\Security\\UserRoleDto.cs",
               "RelativeDocumentMoniker": "Entity\\DTO\\Security\\UserRoleDto.cs",
@@ -1392,7 +1417,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 54,
+              "DocumentIndex": 55,
               "Title": "UserPersonRole.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Entity\\DTO\\Security\\UserPersonRole.cs",
               "RelativeDocumentMoniker": "Entity\\DTO\\Security\\UserPersonRole.cs",
@@ -1404,7 +1429,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 56,
+              "DocumentIndex": 57,
               "Title": "PersonBenefitDto.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Entity\\DTO\\Operational\\PersonBenefitDto.cs",
               "RelativeDocumentMoniker": "Entity\\DTO\\Operational\\PersonBenefitDto.cs",
@@ -1416,7 +1441,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 57,
+              "DocumentIndex": 58,
               "Title": "20241008204934_ocho.cs",
               "DocumentMoniker": "C:\\Users\\JuanDa\\source\\repos\\SecurityApp\\SecurityApp\\Entity\\Migrations\\20241008204934_ocho.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\JuanDa\\source\\repos\\SecurityApp\\SecurityApp\\Entity\\Migrations\\20241008204934_ocho.cs",
@@ -1427,7 +1452,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 175,
+              "DocumentIndex": 176,
               "Title": "20241008220109_uno.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Entity\\Migrations\\20241008220109_uno.cs",
               "RelativeDocumentMoniker": "Entity\\Migrations\\20241008220109_uno.cs",
@@ -1439,7 +1464,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 59,
+              "DocumentIndex": 60,
               "Title": "UserRole.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Entity\\Model\\Security\\UserRole.cs",
               "RelativeDocumentMoniker": "Entity\\Model\\Security\\UserRole.cs",
@@ -1451,7 +1476,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 58,
+              "DocumentIndex": 59,
               "Title": "LotRepository.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Repository\\Operational\\Implements\\LotRepository.cs",
               "RelativeDocumentMoniker": "Repository\\Operational\\Implements\\LotRepository.cs",
@@ -1463,7 +1488,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 60,
+              "DocumentIndex": 61,
               "Title": "UserRoleService.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Service\\Security\\Implements\\UserRoleService.cs",
               "RelativeDocumentMoniker": "Service\\Security\\Implements\\UserRoleService.cs",
@@ -1475,7 +1500,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 61,
+              "DocumentIndex": 62,
               "Title": "IFarmService.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Service\\Operational\\Interface\\IFarmService.cs",
               "RelativeDocumentMoniker": "Service\\Operational\\Interface\\IFarmService.cs",
@@ -1487,7 +1512,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 62,
+              "DocumentIndex": 63,
               "Title": "IFarmRepository.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Repository\\Operational\\Interface\\IFarmRepository.cs",
               "RelativeDocumentMoniker": "Repository\\Operational\\Interface\\IFarmRepository.cs",
@@ -1499,7 +1524,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 63,
+              "DocumentIndex": 64,
               "Title": "Person.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Entity\\Model\\Security\\Person.cs",
               "RelativeDocumentMoniker": "Entity\\Model\\Security\\Person.cs",
@@ -1511,7 +1536,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 64,
+              "DocumentIndex": 65,
               "Title": "ViewDto.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Entity\\DTO\\Security\\ViewDto.cs",
               "RelativeDocumentMoniker": "Entity\\DTO\\Security\\ViewDto.cs",
@@ -1523,7 +1548,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 66,
+              "DocumentIndex": 67,
               "Title": "UserRoleController.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Web\\Controllers\\Security\\Implements\\UserRoleController.cs",
               "RelativeDocumentMoniker": "Web\\Controllers\\Security\\Implements\\UserRoleController.cs",
@@ -1535,7 +1560,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 67,
+              "DocumentIndex": 68,
               "Title": "Role.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Entity\\Model\\Security\\Role.cs",
               "RelativeDocumentMoniker": "Entity\\Model\\Security\\Role.cs",
@@ -1547,7 +1572,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 65,
+              "DocumentIndex": 66,
               "Title": "RoleViewController.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Web\\Controllers\\Security\\Implements\\RoleViewController.cs",
               "RelativeDocumentMoniker": "Web\\Controllers\\Security\\Implements\\RoleViewController.cs",
@@ -1559,7 +1584,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 68,
+              "DocumentIndex": 69,
               "Title": "PersonDto.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Entity\\DTO\\Security\\PersonDto.cs",
               "RelativeDocumentMoniker": "Entity\\DTO\\Security\\PersonDto.cs",
@@ -1571,7 +1596,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 69,
+              "DocumentIndex": 70,
               "Title": "PersonController.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Web\\Controllers\\Security\\Implements\\PersonController.cs",
               "RelativeDocumentMoniker": "Web\\Controllers\\Security\\Implements\\PersonController.cs",
@@ -1583,7 +1608,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 71,
+              "DocumentIndex": 72,
               "Title": "IRoleController.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Web\\Controllers\\Security\\Interface\\IRoleController.cs",
               "RelativeDocumentMoniker": "Web\\Controllers\\Security\\Interface\\IRoleController.cs",
@@ -1595,7 +1620,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 72,
+              "DocumentIndex": 73,
               "Title": "PersonRepository.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Repository\\Security\\Implements\\PersonRepository.cs",
               "RelativeDocumentMoniker": "Repository\\Security\\Implements\\PersonRepository.cs",
@@ -1607,7 +1632,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 73,
+              "DocumentIndex": 74,
               "Title": "IPersonRepository.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Repository\\Security\\Interface\\IPersonRepository.cs",
               "RelativeDocumentMoniker": "Repository\\Security\\Interface\\IPersonRepository.cs",
@@ -1619,7 +1644,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 70,
+              "DocumentIndex": 71,
               "Title": "IPersonController.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Web\\Controllers\\Security\\Interface\\IPersonController.cs",
               "RelativeDocumentMoniker": "Web\\Controllers\\Security\\Interface\\IPersonController.cs",
@@ -1631,7 +1656,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 74,
+              "DocumentIndex": 75,
               "Title": "CollectionDetailController.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Web\\Controllers\\Operational\\Implements\\CollectionDetailController.cs",
               "RelativeDocumentMoniker": "Web\\Controllers\\Operational\\Implements\\CollectionDetailController.cs",
@@ -1643,7 +1668,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 79,
+              "DocumentIndex": 80,
               "Title": "Email.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Entity\\Model\\Operational\\Email.cs",
               "RelativeDocumentMoniker": "Entity\\Model\\Operational\\Email.cs",
@@ -1655,7 +1680,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 75,
+              "DocumentIndex": 76,
               "Title": "ICollectionDetailController.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Web\\Controllers\\Operational\\Interface\\ICollectionDetailController.cs",
               "RelativeDocumentMoniker": "Web\\Controllers\\Operational\\Interface\\ICollectionDetailController.cs",
@@ -1667,7 +1692,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 81,
+              "DocumentIndex": 82,
               "Title": "BaseEntity.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Entity\\Model\\BaseEntity.cs",
               "RelativeDocumentMoniker": "Entity\\Model\\BaseEntity.cs",
@@ -1679,7 +1704,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 80,
+              "DocumentIndex": 81,
               "Title": "BenefitRepository.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Repository\\Operational\\Implements\\BenefitRepository.cs",
               "RelativeDocumentMoniker": "Repository\\Operational\\Implements\\BenefitRepository.cs",
@@ -1691,7 +1716,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 78,
+              "DocumentIndex": 79,
               "Title": "BenefitDto.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Entity\\DTO\\Operational\\BenefitDto.cs",
               "RelativeDocumentMoniker": "Entity\\DTO\\Operational\\BenefitDto.cs",
@@ -1703,7 +1728,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 77,
+              "DocumentIndex": 78,
               "Title": "BaseDto.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Entity\\DTO\\BaseDto.cs",
               "RelativeDocumentMoniker": "Entity\\DTO\\BaseDto.cs",
@@ -1715,7 +1740,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 76,
+              "DocumentIndex": 77,
               "Title": "CollectionDetailDto.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Entity\\DTO\\Operational\\CollectionDetailDto.cs",
               "RelativeDocumentMoniker": "Entity\\DTO\\Operational\\CollectionDetailDto.cs",
@@ -1727,7 +1752,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 174,
+              "DocumentIndex": 175,
               "Title": "CollectorDto.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Entity\\DTO\\Operational\\CollectorDto.cs",
               "RelativeDocumentMoniker": "Entity\\DTO\\Operational\\CollectorDto.cs",
@@ -1739,7 +1764,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 82,
+              "DocumentIndex": 83,
               "Title": "ICollectorFarmController.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Web\\Controllers\\Operational\\Interface\\ICollectorFarmController.cs",
               "RelativeDocumentMoniker": "Web\\Controllers\\Operational\\Interface\\ICollectorFarmController.cs",
@@ -1751,7 +1776,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 83,
+              "DocumentIndex": 84,
               "Title": "CollectionDetailRepository.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Repository\\Operational\\Implements\\CollectionDetailRepository.cs",
               "RelativeDocumentMoniker": "Repository\\Operational\\Implements\\CollectionDetailRepository.cs",
@@ -1763,7 +1788,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 84,
+              "DocumentIndex": 85,
               "Title": "JoinFarmPersonController.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Web\\Controllers\\Security\\Implements\\JoinFarmPersonController.cs",
               "RelativeDocumentMoniker": "Web\\Controllers\\Security\\Implements\\JoinFarmPersonController.cs",
@@ -1775,7 +1800,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 85,
+              "DocumentIndex": 86,
               "Title": "ILiquidationService.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Service\\Operational\\Interface\\ILiquidationService.cs",
               "RelativeDocumentMoniker": "Service\\Operational\\Interface\\ILiquidationService.cs",
@@ -1787,7 +1812,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 88,
+              "DocumentIndex": 89,
               "Title": "Liquidation.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Entity\\Model\\Operational\\Liquidation.cs",
               "RelativeDocumentMoniker": "Entity\\Model\\Operational\\Liquidation.cs",
@@ -1799,7 +1824,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 90,
+              "DocumentIndex": 91,
               "Title": "ICollectionDetailRepository.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Repository\\Operational\\Interface\\ICollectionDetailRepository.cs",
               "RelativeDocumentMoniker": "Repository\\Operational\\Interface\\ICollectionDetailRepository.cs",
@@ -1811,7 +1836,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 86,
+              "DocumentIndex": 87,
               "Title": "RoleDto.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Entity\\DTO\\Security\\RoleDto.cs",
               "RelativeDocumentMoniker": "Entity\\DTO\\Security\\RoleDto.cs",
@@ -1823,7 +1848,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 87,
+              "DocumentIndex": 88,
               "Title": "LiquidationDto.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Entity\\DTO\\Operational\\LiquidationDto.cs",
               "RelativeDocumentMoniker": "Entity\\DTO\\Operational\\LiquidationDto.cs",
@@ -1835,7 +1860,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 89,
+              "DocumentIndex": 90,
               "Title": "LiquidationController.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Web\\Controllers\\Operational\\Implements\\LiquidationController.cs",
               "RelativeDocumentMoniker": "Web\\Controllers\\Operational\\Implements\\LiquidationController.cs",
@@ -1847,7 +1872,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 91,
+              "DocumentIndex": 92,
               "Title": "IPersonBenefitRepository.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Repository\\Operational\\Interface\\IPersonBenefitRepository.cs",
               "RelativeDocumentMoniker": "Repository\\Operational\\Interface\\IPersonBenefitRepository.cs",
@@ -1859,7 +1884,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 92,
+              "DocumentIndex": 93,
               "Title": "PersonBenefitRepository.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Repository\\Operational\\Implements\\PersonBenefitRepository.cs",
               "RelativeDocumentMoniker": "Repository\\Operational\\Implements\\PersonBenefitRepository.cs",
@@ -1871,7 +1896,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 94,
+              "DocumentIndex": 95,
               "Title": "LiquidationRepository.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Repository\\Operational\\Implements\\LiquidationRepository.cs",
               "RelativeDocumentMoniker": "Repository\\Operational\\Implements\\LiquidationRepository.cs",
@@ -1883,7 +1908,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 95,
+              "DocumentIndex": 96,
               "Title": "ILiquidationRepository.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Repository\\Operational\\Interface\\ILiquidationRepository.cs",
               "RelativeDocumentMoniker": "Repository\\Operational\\Interface\\ILiquidationRepository.cs",
@@ -1895,7 +1920,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 93,
+              "DocumentIndex": 94,
               "Title": "PersonBenefitService.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Service\\Operational\\Implements\\PersonBenefitService.cs",
               "RelativeDocumentMoniker": "Service\\Operational\\Implements\\PersonBenefitService.cs",
@@ -1907,7 +1932,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 96,
+              "DocumentIndex": 97,
               "Title": "LiquidationController.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Web\\Controllers\\Operational\\Interface\\LiquidationController.cs",
               "RelativeDocumentMoniker": "Web\\Controllers\\Operational\\Interface\\LiquidationController.cs",
@@ -1919,7 +1944,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 97,
+              "DocumentIndex": 98,
               "Title": "IPersonBenefitService.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Service\\Operational\\Interface\\IPersonBenefitService.cs",
               "RelativeDocumentMoniker": "Service\\Operational\\Interface\\IPersonBenefitService.cs",
@@ -1931,7 +1956,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 98,
+              "DocumentIndex": 99,
               "Title": "PersonBenefit.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Entity\\Model\\Operational\\PersonBenefit.cs",
               "RelativeDocumentMoniker": "Entity\\Model\\Operational\\PersonBenefit.cs",
@@ -1943,7 +1968,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 99,
+              "DocumentIndex": 100,
               "Title": "Harvest.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Entity\\Model\\Operational\\Harvest.cs",
               "RelativeDocumentMoniker": "Entity\\Model\\Operational\\Harvest.cs",
@@ -1955,7 +1980,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 100,
+              "DocumentIndex": 101,
               "Title": "HarvestDto.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Entity\\DTO\\Operational\\HarvestDto.cs",
               "RelativeDocumentMoniker": "Entity\\DTO\\Operational\\HarvestDto.cs",
@@ -1967,7 +1992,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 101,
+              "DocumentIndex": 102,
               "Title": "IPersonBenefitController.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Web\\Controllers\\Operational\\Interface\\IPersonBenefitController.cs",
               "RelativeDocumentMoniker": "Web\\Controllers\\Operational\\Interface\\IPersonBenefitController.cs",
@@ -1979,7 +2004,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 102,
+              "DocumentIndex": 103,
               "Title": "PersonBenefitController.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Web\\Controllers\\Operational\\Implements\\PersonBenefitController.cs",
               "RelativeDocumentMoniker": "Web\\Controllers\\Operational\\Implements\\PersonBenefitController.cs",
@@ -1991,7 +2016,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 103,
+              "DocumentIndex": 104,
               "Title": "IBenefitController.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Web\\Controllers\\Operational\\Interface\\IBenefitController.cs",
               "RelativeDocumentMoniker": "Web\\Controllers\\Operational\\Interface\\IBenefitController.cs",
@@ -2003,7 +2028,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 104,
+              "DocumentIndex": 105,
               "Title": "BenefitController.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Web\\Controllers\\Operational\\Implements\\BenefitController.cs",
               "RelativeDocumentMoniker": "Web\\Controllers\\Operational\\Implements\\BenefitController.cs",
@@ -2015,7 +2040,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 105,
+              "DocumentIndex": 106,
               "Title": "IBenefitService.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Service\\Operational\\Interface\\IBenefitService.cs",
               "RelativeDocumentMoniker": "Service\\Operational\\Interface\\IBenefitService.cs",
@@ -2027,7 +2052,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 106,
+              "DocumentIndex": 107,
               "Title": "IBenefitRepository.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Repository\\Operational\\Interface\\IBenefitRepository.cs",
               "RelativeDocumentMoniker": "Repository\\Operational\\Interface\\IBenefitRepository.cs",
@@ -2039,7 +2064,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 107,
+              "DocumentIndex": 108,
               "Title": "Benefit.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Entity\\Model\\Operational\\Benefit.cs",
               "RelativeDocumentMoniker": "Entity\\Model\\Operational\\Benefit.cs",
@@ -2051,7 +2076,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 108,
+              "DocumentIndex": 109,
               "Title": "IFarmController.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Web\\Controllers\\Operational\\Interface\\IFarmController.cs",
               "RelativeDocumentMoniker": "Web\\Controllers\\Operational\\Interface\\IFarmController.cs",
@@ -2063,7 +2088,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 109,
+              "DocumentIndex": 110,
               "Title": "MappingProfile.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Utilities\\Mappings\\MappingProfile.cs",
               "RelativeDocumentMoniker": "Utilities\\Mappings\\MappingProfile.cs",
@@ -2075,7 +2100,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 110,
+              "DocumentIndex": 111,
               "Title": "IViewService.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Service\\Security\\Interface\\IViewService.cs",
               "RelativeDocumentMoniker": "Service\\Security\\Interface\\IViewService.cs",
@@ -2087,7 +2112,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 111,
+              "DocumentIndex": 112,
               "Title": "RoleController.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Web\\Controllers\\Security\\Implements\\RoleController.cs",
               "RelativeDocumentMoniker": "Web\\Controllers\\Security\\Implements\\RoleController.cs",
@@ -2099,7 +2124,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 112,
+              "DocumentIndex": 113,
               "Title": "CityDto.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Entity\\DTO\\Parameter\\CityDto.cs",
               "RelativeDocumentMoniker": "Entity\\DTO\\Parameter\\CityDto.cs",
@@ -2111,7 +2136,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 113,
+              "DocumentIndex": 114,
               "Title": "Service.csproj",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Service\\Service.csproj",
               "RelativeDocumentMoniker": "Service\\Service.csproj",
@@ -2123,7 +2148,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 115,
+              "DocumentIndex": 116,
               "Title": "ILotController.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Web\\Controllers\\Operational\\Interface\\ILotController.cs",
               "RelativeDocumentMoniker": "Web\\Controllers\\Operational\\Interface\\ILotController.cs",
@@ -2135,7 +2160,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 116,
+              "DocumentIndex": 117,
               "Title": "ILotService.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Service\\Operational\\Interface\\ILotService.cs",
               "RelativeDocumentMoniker": "Service\\Operational\\Interface\\ILotService.cs",
@@ -2147,7 +2172,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 117,
+              "DocumentIndex": 118,
               "Title": "ILotRepository.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Repository\\Operational\\Interface\\ILotRepository.cs",
               "RelativeDocumentMoniker": "Repository\\Operational\\Interface\\ILotRepository.cs",
@@ -2159,7 +2184,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 118,
+              "DocumentIndex": 119,
               "Title": "IHarvestController.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Web\\Controllers\\Operational\\Interface\\IHarvestController.cs",
               "RelativeDocumentMoniker": "Web\\Controllers\\Operational\\Interface\\IHarvestController.cs",
@@ -2171,7 +2196,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 119,
+              "DocumentIndex": 120,
               "Title": "IHarvestService.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Service\\Operational\\Interface\\IHarvestService.cs",
               "RelativeDocumentMoniker": "Service\\Operational\\Interface\\IHarvestService.cs",
@@ -2183,7 +2208,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 120,
+              "DocumentIndex": 121,
               "Title": "HarvestService.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Service\\Operational\\Implements\\HarvestService.cs",
               "RelativeDocumentMoniker": "Service\\Operational\\Implements\\HarvestService.cs",
@@ -2195,7 +2220,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 121,
+              "DocumentIndex": 122,
               "Title": "IHarvestRepository.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Repository\\Operational\\Interface\\IHarvestRepository.cs",
               "RelativeDocumentMoniker": "Repository\\Operational\\Interface\\IHarvestRepository.cs",
@@ -2207,7 +2232,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 122,
+              "DocumentIndex": 123,
               "Title": "HarvestRepository.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Repository\\Operational\\Implements\\HarvestRepository.cs",
               "RelativeDocumentMoniker": "Repository\\Operational\\Implements\\HarvestRepository.cs",
@@ -2219,7 +2244,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 123,
+              "DocumentIndex": 124,
               "Title": "ICollectionDetailService.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Service\\Operational\\Interface\\ICollectionDetailService.cs",
               "RelativeDocumentMoniker": "Service\\Operational\\Interface\\ICollectionDetailService.cs",
@@ -2231,7 +2256,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 124,
+              "DocumentIndex": 125,
               "Title": "IRoleService.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Service\\Security\\Interface\\IRoleService.cs",
               "RelativeDocumentMoniker": "Service\\Security\\Interface\\IRoleService.cs",
@@ -2243,7 +2268,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 125,
+              "DocumentIndex": 126,
               "Title": "RoleService.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Service\\Security\\Implements\\RoleService.cs",
               "RelativeDocumentMoniker": "Service\\Security\\Implements\\RoleService.cs",
@@ -2255,7 +2280,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 126,
+              "DocumentIndex": 127,
               "Title": "IRoleRepository.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Repository\\Security\\Interface\\IRoleRepository.cs",
               "RelativeDocumentMoniker": "Repository\\Security\\Interface\\IRoleRepository.cs",
@@ -2267,7 +2292,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 127,
+              "DocumentIndex": 128,
               "Title": "RoleRepository.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Repository\\Security\\Implements\\RoleRepository.cs",
               "RelativeDocumentMoniker": "Repository\\Security\\Implements\\RoleRepository.cs",
@@ -2279,7 +2304,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 128,
+              "DocumentIndex": 129,
               "Title": "ICityController.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Web\\Controllers\\Parameter\\Interface\\ICityController.cs",
               "RelativeDocumentMoniker": "Web\\Controllers\\Parameter\\Interface\\ICityController.cs",
@@ -2291,7 +2316,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 129,
+              "DocumentIndex": 130,
               "Title": "CityController.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Web\\Controllers\\Parameter\\Implements\\CityController.cs",
               "RelativeDocumentMoniker": "Web\\Controllers\\Parameter\\Implements\\CityController.cs",
@@ -2303,7 +2328,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 130,
+              "DocumentIndex": 131,
               "Title": "ICityService.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Service\\Parameter\\Interface\\ICityService.cs",
               "RelativeDocumentMoniker": "Service\\Parameter\\Interface\\ICityService.cs",
@@ -2315,7 +2340,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 131,
+              "DocumentIndex": 132,
               "Title": "CityService.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Service\\Parameter\\Implements\\CityService.cs",
               "RelativeDocumentMoniker": "Service\\Parameter\\Implements\\CityService.cs",
@@ -2327,7 +2352,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 132,
+              "DocumentIndex": 133,
               "Title": "ICityRepository.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Repository\\Parameter\\Interface\\ICityRepository.cs",
               "RelativeDocumentMoniker": "Repository\\Parameter\\Interface\\ICityRepository.cs",
@@ -2339,7 +2364,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 133,
+              "DocumentIndex": 134,
               "Title": "CityRepository.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Repository\\Parameter\\Implements\\CityRepository.cs",
               "RelativeDocumentMoniker": "Repository\\Parameter\\Implements\\CityRepository.cs",
@@ -2351,7 +2376,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 134,
+              "DocumentIndex": 135,
               "Title": "IDepartmentController.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Web\\Controllers\\Parameter\\Interface\\IDepartmentController.cs",
               "RelativeDocumentMoniker": "Web\\Controllers\\Parameter\\Interface\\IDepartmentController.cs",
@@ -2363,7 +2388,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 135,
+              "DocumentIndex": 136,
               "Title": "DepartmentController.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Web\\Controllers\\Parameter\\Implements\\DepartmentController.cs",
               "RelativeDocumentMoniker": "Web\\Controllers\\Parameter\\Implements\\DepartmentController.cs",
@@ -2375,7 +2400,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 136,
+              "DocumentIndex": 137,
               "Title": "IDepartmentService.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Service\\Parameter\\Interface\\IDepartmentService.cs",
               "RelativeDocumentMoniker": "Service\\Parameter\\Interface\\IDepartmentService.cs",
@@ -2387,7 +2412,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 137,
+              "DocumentIndex": 138,
               "Title": "DepartmentService.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Service\\Parameter\\Implements\\DepartmentService.cs",
               "RelativeDocumentMoniker": "Service\\Parameter\\Implements\\DepartmentService.cs",
@@ -2399,7 +2424,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 138,
+              "DocumentIndex": 139,
               "Title": "IDepartmentRepository.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Repository\\Parameter\\Interface\\IDepartmentRepository.cs",
               "RelativeDocumentMoniker": "Repository\\Parameter\\Interface\\IDepartmentRepository.cs",
@@ -2411,7 +2436,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 139,
+              "DocumentIndex": 140,
               "Title": "DepartmentRepository.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Repository\\Parameter\\Implements\\DepartmentRepository.cs",
               "RelativeDocumentMoniker": "Repository\\Parameter\\Implements\\DepartmentRepository.cs",
@@ -2423,7 +2448,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 140,
+              "DocumentIndex": 141,
               "Title": "ICountryController.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Web\\Controllers\\Parameter\\Interface\\ICountryController.cs",
               "RelativeDocumentMoniker": "Web\\Controllers\\Parameter\\Interface\\ICountryController.cs",
@@ -2435,7 +2460,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 141,
+              "DocumentIndex": 142,
               "Title": "CountryController.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Web\\Controllers\\Parameter\\Implements\\CountryController.cs",
               "RelativeDocumentMoniker": "Web\\Controllers\\Parameter\\Implements\\CountryController.cs",
@@ -2447,7 +2472,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 142,
+              "DocumentIndex": 143,
               "Title": "ICountryService.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Service\\Parameter\\Interface\\ICountryService.cs",
               "RelativeDocumentMoniker": "Service\\Parameter\\Interface\\ICountryService.cs",
@@ -2459,7 +2484,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 143,
+              "DocumentIndex": 144,
               "Title": "CountryService.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Service\\Parameter\\Implements\\CountryService.cs",
               "RelativeDocumentMoniker": "Service\\Parameter\\Implements\\CountryService.cs",
@@ -2471,7 +2496,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 144,
+              "DocumentIndex": 145,
               "Title": "ICountryRepository.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Repository\\Parameter\\Interface\\ICountryRepository.cs",
               "RelativeDocumentMoniker": "Repository\\Parameter\\Interface\\ICountryRepository.cs",
@@ -2483,7 +2508,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 145,
+              "DocumentIndex": 146,
               "Title": "CountryRepository.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Repository\\Parameter\\Implements\\CountryRepository.cs",
               "RelativeDocumentMoniker": "Repository\\Parameter\\Implements\\CountryRepository.cs",
@@ -2495,7 +2520,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 146,
+              "DocumentIndex": 147,
               "Title": "IViewController.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Web\\Controllers\\Security\\Interface\\IViewController.cs",
               "RelativeDocumentMoniker": "Web\\Controllers\\Security\\Interface\\IViewController.cs",
@@ -2507,7 +2532,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 147,
+              "DocumentIndex": 148,
               "Title": "ViewController.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Web\\Controllers\\Security\\Implements\\ViewController.cs",
               "RelativeDocumentMoniker": "Web\\Controllers\\Security\\Implements\\ViewController.cs",
@@ -2519,7 +2544,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 148,
+              "DocumentIndex": 149,
               "Title": "IViewRepository.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Repository\\Security\\Interface\\IViewRepository.cs",
               "RelativeDocumentMoniker": "Repository\\Security\\Interface\\IViewRepository.cs",
@@ -2531,7 +2556,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 149,
+              "DocumentIndex": 150,
               "Title": "ViewRepository.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Repository\\Security\\Implements\\ViewRepository.cs",
               "RelativeDocumentMoniker": "Repository\\Security\\Implements\\ViewRepository.cs",
@@ -2543,7 +2568,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 150,
+              "DocumentIndex": 151,
               "Title": "IUserRoleController.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Web\\Controllers\\Security\\Interface\\IUserRoleController.cs",
               "RelativeDocumentMoniker": "Web\\Controllers\\Security\\Interface\\IUserRoleController.cs",
@@ -2555,7 +2580,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 151,
+              "DocumentIndex": 152,
               "Title": "IRoleViewController.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Web\\Controllers\\Security\\Interface\\IRoleViewController.cs",
               "RelativeDocumentMoniker": "Web\\Controllers\\Security\\Interface\\IRoleViewController.cs",
@@ -2567,7 +2592,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 152,
+              "DocumentIndex": 153,
               "Title": "RoleViewService.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Service\\Security\\Implements\\RoleViewService.cs",
               "RelativeDocumentMoniker": "Service\\Security\\Implements\\RoleViewService.cs",
@@ -2579,7 +2604,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 153,
+              "DocumentIndex": 154,
               "Title": "IRoleViewRepository.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Repository\\Security\\Interface\\IRoleViewRepository.cs",
               "RelativeDocumentMoniker": "Repository\\Security\\Interface\\IRoleViewRepository.cs",
@@ -2591,7 +2616,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 154,
+              "DocumentIndex": 155,
               "Title": "RoleViewRepository.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Repository\\Security\\Implements\\RoleViewRepository.cs",
               "RelativeDocumentMoniker": "Repository\\Security\\Implements\\RoleViewRepository.cs",
@@ -2603,7 +2628,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 155,
+              "DocumentIndex": 156,
               "Title": "IModuleController.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Web\\Controllers\\Security\\Interface\\IModuleController.cs",
               "RelativeDocumentMoniker": "Web\\Controllers\\Security\\Interface\\IModuleController.cs",
@@ -2615,7 +2640,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 156,
+              "DocumentIndex": 157,
               "Title": "ModuleController.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Web\\Controllers\\Security\\Implements\\ModuleController.cs",
               "RelativeDocumentMoniker": "Web\\Controllers\\Security\\Implements\\ModuleController.cs",
@@ -2627,7 +2652,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 157,
+              "DocumentIndex": 158,
               "Title": "IModuleService.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Service\\Security\\Interface\\IModuleService.cs",
               "RelativeDocumentMoniker": "Service\\Security\\Interface\\IModuleService.cs",
@@ -2639,7 +2664,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 158,
+              "DocumentIndex": 159,
               "Title": "ModuleService.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Service\\Security\\Implements\\ModuleService.cs",
               "RelativeDocumentMoniker": "Service\\Security\\Implements\\ModuleService.cs",
@@ -2651,7 +2676,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 159,
+              "DocumentIndex": 160,
               "Title": "IModuleRepository.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Repository\\Security\\Interface\\IModuleRepository.cs",
               "RelativeDocumentMoniker": "Repository\\Security\\Interface\\IModuleRepository.cs",
@@ -2663,7 +2688,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 160,
+              "DocumentIndex": 161,
               "Title": "ModuleRepository.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Repository\\Security\\Implements\\ModuleRepository.cs",
               "RelativeDocumentMoniker": "Repository\\Security\\Implements\\ModuleRepository.cs",
@@ -2675,7 +2700,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 161,
+              "DocumentIndex": 162,
               "Title": "RoleViewDto.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Entity\\DTO\\Security\\RoleViewDto.cs",
               "RelativeDocumentMoniker": "Entity\\DTO\\Security\\RoleViewDto.cs",
@@ -2687,7 +2712,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 162,
+              "DocumentIndex": 163,
               "Title": "ModuleDto.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Entity\\DTO\\Security\\ModuleDto.cs",
               "RelativeDocumentMoniker": "Entity\\DTO\\Security\\ModuleDto.cs",
@@ -2699,7 +2724,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 163,
+              "DocumentIndex": 164,
               "Title": "DepartmentDto.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Entity\\DTO\\Parameter\\DepartmentDto.cs",
               "RelativeDocumentMoniker": "Entity\\DTO\\Parameter\\DepartmentDto.cs",
@@ -2711,7 +2736,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 164,
+              "DocumentIndex": 165,
               "Title": "CountryDto.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Entity\\DTO\\Parameter\\CountryDto.cs",
               "RelativeDocumentMoniker": "Entity\\DTO\\Parameter\\CountryDto.cs",
@@ -2723,7 +2748,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 165,
+              "DocumentIndex": 166,
               "Title": "Web.http",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Web\\Web.http",
               "RelativeDocumentMoniker": "Web\\Web.http",
@@ -2735,7 +2760,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 166,
+              "DocumentIndex": 167,
               "Title": "View.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Entity\\Model\\Security\\View.cs",
               "RelativeDocumentMoniker": "Entity\\Model\\Security\\View.cs",
@@ -2747,7 +2772,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 168,
+              "DocumentIndex": 169,
               "Title": "Module.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Entity\\Model\\Security\\Module.cs",
               "RelativeDocumentMoniker": "Entity\\Model\\Security\\Module.cs",
@@ -2759,7 +2784,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 167,
+              "DocumentIndex": 168,
               "Title": "RoleView.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Entity\\Model\\Security\\RoleView.cs",
               "RelativeDocumentMoniker": "Entity\\Model\\Security\\RoleView.cs",
@@ -2771,7 +2796,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 171,
+              "DocumentIndex": 172,
               "Title": "Department.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Entity\\Model\\Parameter\\Department.cs",
               "RelativeDocumentMoniker": "Entity\\Model\\Parameter\\Department.cs",
@@ -2783,7 +2808,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 173,
+              "DocumentIndex": 174,
               "Title": "City.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Entity\\Model\\Parameter\\City.cs",
               "RelativeDocumentMoniker": "Entity\\Model\\Parameter\\City.cs",
@@ -2795,7 +2820,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 172,
+              "DocumentIndex": 173,
               "Title": "Country.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Entity\\Model\\Parameter\\Country.cs",
               "RelativeDocumentMoniker": "Entity\\Model\\Parameter\\Country.cs",
@@ -2807,7 +2832,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 114,
+              "DocumentIndex": 115,
               "Title": "20240922015941_inicial.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\C#\\SecurityApp\\Entity\\Migrations\\20240922015941_inicial.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\C#\\SecurityApp\\Entity\\Migrations\\20240922015941_inicial.cs",
@@ -2818,7 +2843,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 170,
+              "DocumentIndex": 171,
               "Title": "20240917194549_full.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\C#\\SecurityApp\\Entity\\Migrations\\20240917194549_full.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\C#\\SecurityApp\\Entity\\Migrations\\20240917194549_full.cs",
@@ -2829,7 +2854,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 169,
+              "DocumentIndex": 170,
               "Title": "20240917194748_inicial.cs",
               "DocumentMoniker": "C:\\Users\\marlo\\Documents\\C#\\SecurityApp\\Entity\\Migrations\\20240917194748_inicial.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\C#\\SecurityApp\\Entity\\Migrations\\20240917194748_inicial.cs",

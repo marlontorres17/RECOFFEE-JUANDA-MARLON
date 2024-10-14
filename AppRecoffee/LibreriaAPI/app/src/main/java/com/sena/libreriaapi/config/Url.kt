@@ -1,7 +1,7 @@
 package com.sena.libreriaapi.config
 
 object Url {
-    const val BASE_URL = "http://10.192.89.211:9191/api/"
+    const val BASE_URL = "http://10.192.88.20:9191/api/"
     const val PERSON_URL = BASE_URL + "Person"
     const val CITY_URL = BASE_URL + "City"
     const val FARM_URL = BASE_URL + "Farm"
@@ -16,4 +16,6 @@ object Url {
     const val JOIN_FARM_URL = BASE_URL + "JoinFarmPerson/join"
     const val USER_REGISTER_URL = BASE_URL + "User/register"
     const val COLLECTOR_FARM_URL = BASE_URL + "CollectorFarm/collectorsByFarmCode"
+    const val FORGOT_PASSWORD_URL = BASE_URL + "User/Forgot-password"
+    const val RESET_PASSWORD_URL = BASE_URL + "User/Reset-password"
 }

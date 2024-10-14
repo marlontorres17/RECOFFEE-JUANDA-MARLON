@@ -535,7 +535,7 @@ namespace Entity.Migrations
 
                     b.Property<string>("Email")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("FirstLastName")
                         .IsRequired()
@@ -574,6 +574,9 @@ namespace Entity.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("CityId");
+
+                    b.HasIndex("Email")
+                        .IsUnique();
 
                     b.HasIndex("NumberDocument")
                         .IsUnique();
@@ -675,11 +678,15 @@ namespace Entity.Migrations
 
                     b.Property<string>("UserName")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(20)
+                        .HasColumnType("nvarchar(20)");
 
                     b.HasKey("Id");
 
                     b.HasIndex("PersonId");
+
+                    b.HasIndex("UserName")
+                        .IsUnique();
 
                     b.ToTable("users");
                 });

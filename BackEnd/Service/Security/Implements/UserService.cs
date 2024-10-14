@@ -48,6 +48,10 @@ namespace Service.Security.Implements
         public async Task Add(UserDto userDto)
         {
             var user = _mapper.Map<User>(userDto);
+
+            // Hashear la contraseña antes de guardarla
+            user.Password = HashPassword(userDto.Password);
+
             await _userRepository.Add(user);
         }
 
@@ -73,6 +77,10 @@ namespace Service.Security.Implements
             userDto.PersonId = person.Id;
 
             var user = _mapper.Map<User>(userDto);
+
+            // Hashear la contraseña antes de guardar el usuario
+            user.Password = HashPassword(userDto.Password);
+
             await _userRepository.Add(user);
 
             var role = await _userRoleRepository.GetRoleByName(roleName);
@@ -89,6 +97,7 @@ namespace Service.Security.Implements
 
             await _userRoleRepository.Add(userRole);
         }
+
 
         public async Task UpdateUserRole(int userId, string newRoleName)
         {
@@ -130,14 +139,13 @@ namespace Service.Security.Implements
 
         public async Task ChangePassword(User user, string newPassword)
         {
-            await _userRepository.ChangePassword(user, newPassword);
+            // Hashear la nueva contraseña
+            user.Password = HashPassword(newPassword);
+
+            await _userRepository.ChangePassword(user, user.Password);
         }
 
-        //public string GenerateResetCode()
-        //{
-        //    var random = new Random();
-        //    return random.Next(100000, 999999).ToString(); // Código de 6 dígitos
-        //}
+
 
         public async Task<User> GetByEmail(string email)
         {
