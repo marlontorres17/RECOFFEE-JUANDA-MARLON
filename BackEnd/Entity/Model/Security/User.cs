@@ -15,9 +15,9 @@ namespace Entity.Model.Security
         public int PersonId { get; set; }
         public Person Person { get; set; }
 
-        // Campos para el proceso de restablecimiento de contraseña
         public string? ResetCode { get; set; } // Código de restablecimiento
-        public DateTime? ResetCodeExpiration { get; set; } // Fecha de expiración del código
+        public DateTime? ResetCodeExpiration { get; set; }
+
 
 
     }

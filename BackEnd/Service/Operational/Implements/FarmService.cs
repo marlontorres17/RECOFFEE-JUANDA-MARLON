@@ -81,5 +81,10 @@ namespace Service.Operational.Implements
         {
             return await _farmRepository.GetFarmByPersonIdAsync(personId);
         }
+
+        public async Task<List<Farm>> GetFarmsByPersonsIdAsync(int personId)
+        {
+            return await _farmRepository.GetFarmsByPersonsIdAsync(personId);
+        }
     }
 }

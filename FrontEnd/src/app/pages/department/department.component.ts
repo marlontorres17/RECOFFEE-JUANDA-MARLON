@@ -61,6 +61,9 @@ export class DepartmentComponent implements OnInit {
   }
 
   onSubmit(form: NgForm): void {
+    if(!this.isFormValid){
+      return
+    }
     const departmentDto = { ...this.department };
 
     if (this.department.id === 0) {
@@ -68,14 +71,14 @@ export class DepartmentComponent implements OnInit {
         this.getDepartments();
         form.resetForm();
         this.resetForm();
-        Swal.fire('Success', 'Departamento creado exitosamente', 'success');
+        Swal.fire('Éxito', 'Departamento creado exitosamente', 'success');
       });
     } else {
       this.http.put(`${this.apiUrl}/${this.department.id}`, departmentDto).subscribe(() => {
         this.getDepartments();
         form.resetForm();
         this.resetForm();
-        Swal.fire('Success', 'Departamento actualizado exitosamente', 'success');
+        Swal.fire('Éxito', 'Departamento actualizado exitosamente', 'success');
       });
     }
   }
@@ -107,7 +110,7 @@ export class DepartmentComponent implements OnInit {
       if (result.isConfirmed) {
         this.http.delete(`${this.apiUrl}/${id}`).subscribe(() => {
           this.getDepartments();
-          Swal.fire('Deleted!', 'Departamento eliminado.', 'success');
+          Swal.fire('Eliminado!', 'Departamento eliminado.', 'success');
         });
       }
     });
@@ -130,5 +133,25 @@ export class DepartmentComponent implements OnInit {
   getCountryName(countryId: number): string {
     const country = this.countries.find(c => c.id === countryId);
     return country ? country.name : 'N/A';
+  }
+
+  areAllFieldsFilled(): boolean {
+    return (
+      this.department.name.trim() !== '' &&
+      this.department.description.trim() !== '' &&
+      this.department.countryId != null && // Verifica que no sea null o undefined
+      this.department.countryId > 0 &&
+      this.department.code.trim() !== ''
+    );
+  }
+
+  isFormValid(): boolean {
+
+    if (!this.areAllFieldsFilled()) {
+      Swal.fire('Error', 'Por favor, complete todos los campos.', 'error');
+      return false;
+    }
+
+    return true;
   }
 }

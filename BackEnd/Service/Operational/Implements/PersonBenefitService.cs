@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Entity.DTO;
 using Entity.DTO.Operational;
 using Entity.Model.Operational;
 using Repository.Operational.Implements;
@@ -83,6 +84,16 @@ namespace Service.Operational.Implements
         public async Task Delete(int id)
         {
             await _personBenefitRepository.Delete(id);
+        }
+
+        public async Task<List<PersonBenefit>> GetPersonBenefitsByPersonIdAsync(int personId)
+        {
+            return await _personBenefitRepository.GetPersonBenefitsByPersonIdAsync(personId);
+        }
+
+        public async Task<IEnumerable<UserPersonRoleDto>> GetCollectorsPersonsByFarmIdAsync(int farmId)
+        {
+           return await _personBenefitRepository.GetCollectorsPersonsByFarmIdAsync(farmId);
         }
     }
 }

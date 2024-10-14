@@ -4,6 +4,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Router, RouterLink, RouterLinkActive } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
+import Swal from 'sweetalert2';
 
 @Component({
   standalone: true,
@@ -48,6 +49,13 @@ export class LoginComponent implements OnInit {
 
   login() {
     if (this.loginForm.invalid) {
+      // Mostrar alerta si el formulario es inválido
+      Swal.fire({
+        title: 'Campos incompletos',
+        text: 'Por favor completa todos los campos requeridos.',
+        icon: 'warning',
+        confirmButtonText: 'Aceptar'
+      });
       return;
     }
 
@@ -63,6 +71,7 @@ export class LoginComponent implements OnInit {
             const userId = response.userId; // Aquí obtenemos el userId directamente de la respuesta
             const personId = response.personId; // Obtiene el personId
             const roles = response.roles || [];
+            const farmId = response.farmId;
 
             console.log('UserId:', userId); // Depurar: Verificar el userId
             console.log('PersonId:', personId); // Depurar: Verificar el personId
@@ -75,33 +84,38 @@ export class LoginComponent implements OnInit {
               localStorage.setItem('personId', personId.toString()); // Guardamos el personId
               localStorage.setItem('isLogged', 'true');
               localStorage.setItem('roleId', roles[0]); // Guardamos el primer rol
+              console.log('FarmId:', farmId);
 
               // Verificar si el rol es de recolector y redirigir
-              if (roles[0] === 'recolector') {
-                const farmId = localStorage.getItem('farmId');
-                if (farmId) {
-                  this.router.navigate(['/recolector-dashboard']);
-                } else {
-                  this.router.navigate(['/join-farm']); // Redirigir si no está unido a una finca
-                }
-              } else if (roles[0] === 'admin') {
-                this.router.navigate(['/admin-dashboard']);
-              } else {
-                this.router.navigate(['/usuario-dashboard']);
-              }
-            } else {
-              this.errorMessage = 'Error de autenticación. Intenta nuevamente.';
-              console.error('Error: userId o personId no están presentes en la respuesta');
-            }
+             // Verificar si el rol es de recolector y redirigir
+             // En el método login() de LoginComponent
+if (roles[0] === 'recolector') {
+  const farmId = response.farmId; // Asegúrate de que el farmId esté incluido en la respuesta
+  if (farmId) {
+      localStorage.setItem('farmId', farmId); // Guarda farmId
+      this.router.navigate(['/recolector-dashboard']);
+  } else {
+      this.router.navigate(['/join-farm']); // Redirigir si no está unido a una finca
+  }
+
+          } else if (roles[0] === 'admin') {
+              this.router.navigate(['/admin-dashboard']);
           } else {
-            this.errorMessage = 'Error de autenticación. Intenta nuevamente.';
-            console.error('Error: No se recibió userId en la respuesta');
+              this.router.navigate(['/usuario-dashboard']);
           }
-        },
-        error => {
-          console.error('Error al iniciar sesión:', error);
-          this.errorMessage = 'Error al iniciar sesión. Verifica tus credenciales.';
-        }
-      );
+      } else {
+          this.errorMessage = 'Error de autenticación. Intenta nuevamente.';
+          console.error('Error: userId o personId no están presentes en la respuesta');
+      }
+  } else {
+      this.errorMessage = 'Error de autenticación. Intenta nuevamente.';
+      console.error('Error: No se recibió userId en la respuesta');
+  }
+},
+error => {
+  console.error('Error al iniciar sesión:', error);
+  this.errorMessage = 'Error al iniciar sesión. Verifica tus credenciales.';
+}
+);
   }
 }

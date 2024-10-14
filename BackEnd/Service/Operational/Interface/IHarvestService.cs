@@ -1,4 +1,5 @@
 ﻿using Entity.DTO.Operational;
+using Entity.Model.Operational;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -11,5 +12,6 @@ namespace Service.Operational.Interface
         Task Add(HarvestDto harvestDto);
         Task Update(HarvestDto harvestDto);
         Task Delete(int id);
+        Task<List<Harvest>> GetHarvestsByFarmIdAsync(int farmId);
     }
 }

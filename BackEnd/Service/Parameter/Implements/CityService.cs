@@ -20,8 +20,16 @@ namespace Service.Parameter.Implements
 
         public async Task<IEnumerable<CityDto>> GetAll()
         {
-            var citys = await _cityRepository.GetAll();
-            return _mapper.Map<IEnumerable<CityDto>>(citys);
+            try
+            {
+                var citys = await _cityRepository.GetAll();
+                return _mapper.Map<IEnumerable<CityDto>>(citys);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
 
         public async Task<CityDto> GetById(int id)

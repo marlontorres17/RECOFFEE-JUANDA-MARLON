@@ -47,5 +47,10 @@ namespace Service.Operational.Implements
         {
             await _lotRepository.Delete(id);
         }
+
+        public async Task<List<Lot>> GetLotsByFarmIdAsync(int farmId)
+        {
+            return await _lotRepository.GetLotsByFarmIdAsync(farmId);
+        }
     }
 }

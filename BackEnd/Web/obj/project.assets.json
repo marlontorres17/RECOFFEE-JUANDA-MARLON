@@ -1667,7 +1667,8 @@
           "BCrypt.Net-Next": "4.0.3",
           "Dapper": "2.1.35",
           "Microsoft.EntityFrameworkCore": "8.0.8",
-          "Microsoft.EntityFrameworkCore.SqlServer": "8.0.8"
+          "Microsoft.EntityFrameworkCore.SqlServer": "8.0.8",
+          "SendGrid": "9.29.3"
         },
         "compile": {
           "bin/placeholder/Entity.dll": {}
@@ -1680,7 +1681,9 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
-          "Entity": "1.0.0"
+          "BCrypt.Net-Next": "4.0.3",
+          "Entity": "1.0.0",
+          "SendGrid": "9.29.3"
         },
         "compile": {
           "bin/placeholder/Repository.dll": {}
@@ -1696,7 +1699,8 @@
           "AutoMapper": "13.0.1",
           "BCrypt.Net-Next": "4.0.3",
           "Entity": "1.0.0",
-          "Repository": "1.0.0"
+          "Repository": "1.0.0",
+          "SendGrid": "9.29.3"
         },
         "compile": {
           "bin/placeholder/Service.dll": {}
@@ -1709,7 +1713,9 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
-          "Entity": "1.0.0"
+          "BCrypt.Net-Next": "4.0.3",
+          "Entity": "1.0.0",
+          "SendGrid": "9.29.3"
         },
         "compile": {
           "bin/placeholder/Utilities.dll": {}
@@ -4801,19 +4807,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\marlo\\.nuget\\packages\\": {}
+    "C:\\Users\\JuanDa\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Web\\Web.csproj",
+      "projectUniqueName": "C:\\Users\\JuanDa\\source\\repos\\SecurityApp\\SecurityApp\\Web\\Web.csproj",
       "projectName": "Web",
-      "projectPath": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Web\\Web.csproj",
-      "packagesPath": "C:\\Users\\marlo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Web\\obj\\",
+      "projectPath": "C:\\Users\\JuanDa\\source\\repos\\SecurityApp\\SecurityApp\\Web\\Web.csproj",
+      "packagesPath": "C:\\Users\\JuanDa\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\JuanDa\\source\\repos\\SecurityApp\\SecurityApp\\Web\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\marlo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\JuanDa\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -4828,14 +4834,14 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Entity\\Entity.csproj": {
-              "projectPath": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Entity\\Entity.csproj"
+            "C:\\Users\\JuanDa\\source\\repos\\SecurityApp\\SecurityApp\\Entity\\Entity.csproj": {
+              "projectPath": "C:\\Users\\JuanDa\\source\\repos\\SecurityApp\\SecurityApp\\Entity\\Entity.csproj"
             },
-            "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Service\\Service.csproj": {
-              "projectPath": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Service\\Service.csproj"
+            "C:\\Users\\JuanDa\\source\\repos\\SecurityApp\\SecurityApp\\Service\\Service.csproj": {
+              "projectPath": "C:\\Users\\JuanDa\\source\\repos\\SecurityApp\\SecurityApp\\Service\\Service.csproj"
             },
-            "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Utilities\\Utilities.csproj": {
-              "projectPath": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Utilities\\Utilities.csproj"
+            "C:\\Users\\JuanDa\\source\\repos\\SecurityApp\\SecurityApp\\Utilities\\Utilities.csproj": {
+              "projectPath": "C:\\Users\\JuanDa\\source\\repos\\SecurityApp\\SecurityApp\\Utilities\\Utilities.csproj"
             }
           }
         }
@@ -4897,7 +4903,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

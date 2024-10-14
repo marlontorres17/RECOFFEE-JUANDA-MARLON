@@ -96,6 +96,7 @@ namespace Web.Controller.Implements
             }
         }
 
+
         // Endpoint para solicitar el restablecimiento de contraseña
         public class ForgotPasswordRequest
         {
@@ -139,7 +140,7 @@ namespace Web.Controller.Implements
 
 
 
-        
+
 
     }
 }

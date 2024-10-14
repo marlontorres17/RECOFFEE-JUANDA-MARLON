@@ -8,7 +8,7 @@
       <div class="card-body">
         <h5 class="card-title">{{ farm.name }}</h5>
         <p class="card-text">Descripción: {{ farm.description }}</p>
-        <p class="card-text">Tamaño: {{ farm.sizeMeter }} m²</p>
+        <p class="card-text">Tamaño: {{ farm.sizeMeter }} Hectáreas</p>
         <p class="card-text">Coordenadas: {{ farm.coordinate }}</p>
         <p class="card-text">Código: {{ farm.codeUnique }}</p>
         <p class="card-text">Persona: {{ getPersonName(farm.personId) }}</p>
@@ -17,6 +17,8 @@
         <button class="btn-icon edit" (click)="editFarm(farm)">Modificar</button>
         <button class="btn-icon delete" (click)="deleteFarm(farm.id)">Eliminar</button>
         <button class="btn-icon add-lot" (click)="openLotModal(farm.id)">Agregar Lote</button>
+        <button class="btn-icon new-action" (click)="selectFarm(farm.id)">Seleccionar Finca</button>
+
         
       </div>
     </div>
@@ -41,29 +43,38 @@
           <textarea id="description" [(ngModel)]="farm.description" name="description" class="input-field" required></textarea>
         </div>
         <div class="form-group">
-          <label for="sizeMeter">Tamaño (m²)</label>
-          <input type="number" id="sizeMeter" [(ngModel)]="farm.sizeMeter" name="sizeMeter" class="input-field" required>
-        </div>
+          <label for="sizeMeter">Tamaño en hectáreas</label>
+          <input type="number" id="sizeMeter" [(ngModel)]="farm.sizeMeter" name="sizeMeter" 
+                 class="input-field" required 
+                 step="0.01">
+          <div *ngIf="farm.sizeMeter < 0" class="text-danger">
+              Debe ingresar un valor positivo para hectáreas.
+          </div>
+      </div>
         <div class="form-group">
           <label for="coordinate">Coordenadas</label>
           <input type="text" id="coordinate" [(ngModel)]="farm.coordinate" name="coordinate" class="input-field" required>
         </div>
         <div class="form-group">
           <label for="personId">Persona</label>
-          <select id="personId" [(ngModel)]="farm.personId" name="personId" class="select-field" required>
+          <select id="personId" [(ngModel)]="farm.personId" name="personId" class="select-field" disabled>
             <option *ngFor="let person of persons" [value]="person.id">
-              {{ person.firstName }}  {{ person.secondLastName }} - {{ person.numberDocument }}
+              {{ person.firstName }}  {{ person.secondName }} {{ person.firstLastName }} {{ person.secondLastName }} - {{ person.numberDocument }}
             </option>
           </select>
         </div>
+
         
         
         <div class="form-group">
           <label for="cityId">Ciudad</label>
           <select id="cityId" [(ngModel)]="farm.cityId" name="cityId" class="select-field" required>
-            <option *ngFor="let city of cities" [value]="city.id">{{ city.name }}</option>
+            <option *ngFor="let city of cities" [value]="city.id">
+              {{ getCityName(city.id) }} <!-- Muestra la ciudad junto con el departamento -->
+            </option>
           </select>
         </div>
+        
         <button type="submit" class="btn-submit">{{ farm.id === 0 ? 'Agregar' : 'Actualizar' }} Finca</button>
       </form>
     </div>
@@ -88,9 +99,16 @@
           <textarea id="description" [(ngModel)]="lot.description" name="description" class="input-field" required></textarea>
         </div>
         <div class="form-group">
-          <label for="sizeMeters">Tamaño (m²)</label>
-          <input type="number" id="sizeMeters" [(ngModel)]="lot.sizeMeters" name="sizeMeters" class="input-field" required>
-        </div>
+          <label for="sizeMeters">Tamaño en hectáreas</label>
+          <input type="number" id="sizeMeters" [(ngModel)]="lot.sizeMeters" name="sizeMeters" 
+                 class="input-field" required 
+                 step="0.01">
+          <div *ngIf="lot.sizeMeters < 0" class="text-danger">
+              Debe ingresar un valor positivo para hectáreas.
+          </div>
+      </div>
+      
+      
         <div class="form-group">
           <label for="farmId">Finca</label>
           <input type="text" id="farmId" [value]="farmId" class="input-field" disabled>

@@ -267,6 +267,9 @@ namespace Entity.Migrations
                     b.Property<DateTime?>("CreatedAt")
                         .HasColumnType("datetime2");
 
+                    b.Property<int>("FarmId")
+                        .HasColumnType("int");
+
                     b.Property<int>("PersonId")
                         .HasColumnType("int");
 
@@ -286,6 +289,8 @@ namespace Entity.Migrations
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("FarmId");
 
                     b.HasIndex("PersonId");
 
@@ -549,9 +554,8 @@ namespace Entity.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("NumberDocument")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<long>("NumberDocument")
+                        .HasColumnType("bigint");
 
                     b.Property<string>("SecondLastName")
                         .IsRequired()
@@ -843,11 +847,19 @@ namespace Entity.Migrations
 
             modelBuilder.Entity("Entity.Model.Operational.Liquidation", b =>
                 {
+                    b.HasOne("Entity.Model.Operational.Farm", "Farm")
+                        .WithMany()
+                        .HasForeignKey("FarmId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.HasOne("Entity.Model.Security.Person", "Person")
                         .WithMany()
                         .HasForeignKey("PersonId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("Farm");
 
                     b.Navigation("Person");
                 });

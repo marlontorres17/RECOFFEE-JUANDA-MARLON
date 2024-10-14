@@ -193,3 +193,30 @@
   cursor: pointer;
   margin-top: 10px;
 }
+
+.select-field {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.select-field:focus {
+  border-color: #9c3ce6; /* Color del borde en foco */
+  box-shadow: 0 0 5px rgba(156, 60, 230, 0.5); /* Sombra en foco */
+  outline: none; /* Sin contorno */
+}
+
+
+
+.select-field:hover {
+  border-color: #9c3ce6; /* Cambiar color de borde en hover */
+}
+
+/* Estilo para selectores en un contenedor */
+.input-container {
+  position: relative; /* Posicionar elementos dentro */
+}
+
+

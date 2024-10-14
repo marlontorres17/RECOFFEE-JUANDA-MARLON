@@ -56,5 +56,12 @@ namespace Web.Controller.Implements
             await _collectionDetailService.Delete(id);
             return NoContent();
         }
+
+        [HttpGet("person/{personId}")]
+        public async Task<IActionResult> GetCollectionDetailsByPersonId(int personId)
+        {
+            var collectionDetails = await _collectionDetailService.GetCollectionDetailsByPersonIdAsync(personId);
+            return Ok(collectionDetails);
+        }
     }
 }

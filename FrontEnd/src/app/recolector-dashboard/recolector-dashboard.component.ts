@@ -48,6 +48,6 @@ export class RecolectorDashboardComponent {
 
   logout() {
     localStorage.clear(); 
-    this.router.navigate(['/login']);
+    this.router.navigate(['/landing']);
   }
 }

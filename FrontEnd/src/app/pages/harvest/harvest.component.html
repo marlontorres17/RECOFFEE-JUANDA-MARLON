@@ -52,8 +52,14 @@
       </div>
       <div class="form-group">
         <label for="kiloPrice">Precio por Kilo</label>
-        <input type="number" id="kiloPrice" [(ngModel)]="harvest.kiloPrice" name="kiloPrice" class="input-field" required>
+        <input type="number" id="kiloPrice" [(ngModel)]="harvest.kiloPrice" name="kiloPrice" class="input-field" required
+        step="0.01">
+        <div *ngIf="harvest.kiloPrice < 0" class="text-danger">
+            Debe ingresar un valor positivo para el precio del kilo.
+        </div>>
       </div>
+
+      
       
       <div class="form-group">
         <label for="lotId">Seleccionar Lote</label>

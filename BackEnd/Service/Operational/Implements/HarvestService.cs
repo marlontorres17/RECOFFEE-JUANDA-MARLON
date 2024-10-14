@@ -47,5 +47,10 @@ namespace Service.Operational.Implements
         {
             await _harvestRepository.Delete(id);
         }
+
+        public async Task<List<Harvest>> GetHarvestsByFarmIdAsync(int farmId)
+        {
+            return await _harvestRepository.GetHarvestsByFarmIdAsync(farmId);
+        }
     }
 }

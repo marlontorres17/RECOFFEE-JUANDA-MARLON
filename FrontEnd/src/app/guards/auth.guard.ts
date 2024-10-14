@@ -4,36 +4,35 @@ import { CanActivateFn, Router } from '@angular/router';
 export const authGuard: CanActivateFn = (route, state) => {
   const router = inject(Router);
 
+  // Asegúrate de que esto esté disponible solo en el entorno del navegador
   if (typeof window !== 'undefined') {
+    
+    // Permitir acceso a la página de landing
     if (route.url[0]?.path === 'landing') {
       return true;  
     }
 
+    // Verificar el estado de autenticación
     const isLogged = localStorage.getItem('isLogged') === 'true';
     const roleId = localStorage.getItem('roleId');
-    const farmId = localStorage.getItem('farmId'); // Obtener farmId del localStorage
+    const farmId = localStorage.getItem('farmId');
 
-    // Redirigir si el recolector no está unido a una finca
-    if (roleId === 'recolector' && !farmId) {
-        console.log('Recolector no unido a ninguna finca, redirigiendo a /join-farm');
-        router.navigate(['/join-farm']);
-        return false;
-    }
-    
+if (!isLogged) {
+    console.log('No está logueado, redirigiendo a /login');
+    router.navigate(['/login']);
+    return false;
+}
 
-    if (!isLogged) {
-      console.log('No está logueado, redirigiendo a /login');
-      router.navigate(['/login']);
-      return false;
-    }
+// Verificar si el recolector tiene una finca asociada
+// En el authGuard
+if (roleId === 'recolector' && !farmId) {
+  console.log('Recolector sin finca asociada, redirigiendo a /join-farm');
+  router.navigate(['/join-farm']);
+  return false;
+}
 
-    // Redirigir si el recolector no está unido a una finca
-    if (roleId === 'recolector' && !farmId) {
-      console.log('Recolector no unido a ninguna finca, redirigiendo a /join-farm');
-      router.navigate(['/join-farm']);
-      return false;
-    }
 
+    // Control de acceso por roles
     // Admin dashboard
     if (route.url[0]?.path === 'admin-dashboard' && roleId !== 'admin') {
       console.log('Rol no autorizado, redirigiendo a /login');
@@ -54,7 +53,6 @@ export const authGuard: CanActivateFn = (route, state) => {
       router.navigate(['/login']);
       return false;
     }
-
   } else {
     router.navigate(['/login']);
     return false;

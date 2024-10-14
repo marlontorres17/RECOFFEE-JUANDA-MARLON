@@ -74,6 +74,23 @@
     border: 1px solid #ccc;
     border-radius: 4px;
   }
+
+  .select-field {
+    -webkit-appearance: none; /* Para navegadores WebKit */
+    -moz-appearance: none;    /* Para Firefox */
+    appearance: none;         /* Propiedad estándar */
+    border: 1px solid #ccc;  /* Borde del campo */
+    padding: 8px;            /* Espaciado interno */
+    width: 100%;             /* Ancho completo */
+    border-radius: 4px;      /* Bordes redondeados */
+    padding-right: 30px;     /* Espaciado a la derecha para un icono si lo deseas */
+  }
+  
+  /* Para añadir un fondo personalizado si es necesario */
+  .select-field::after {
+    content: ""; /* Para el pseudo-elemento si deseas añadir un icono */
+  }
+  
   
   .btn-submit {
     background-color: #9c3ce6;

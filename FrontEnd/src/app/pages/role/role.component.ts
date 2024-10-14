@@ -46,6 +46,9 @@ export class RoleComponent implements OnInit {
   }
 
   onSubmit(form: NgForm): void {
+    if (!this.isFormValid()) {
+      return;
+    }
     const roleDto = { ...this.role };
 
     if (this.role.id === 0) {
@@ -53,14 +56,14 @@ export class RoleComponent implements OnInit {
         this.getRoles();  
         form.resetForm();  
         this.resetForm();  
-        Swal.fire('Success', 'Rol creado exitosamente!', 'success');
+        Swal.fire('Éxito', 'Rol creado exitosamente!', 'success');
       });
     } else {
       this.http.put(`${this.apiUrl}/${this.role.id}`, roleDto).subscribe(() => {
         this.getRoles();
         form.resetForm();
         this.resetForm();
-        Swal.fire('Success', 'Rol actualizado exitosamente!', 'success');
+        Swal.fire('Éxito', 'Rol actualizado exitosamente!', 'success');
       });
     }
   }
@@ -82,7 +85,7 @@ export class RoleComponent implements OnInit {
       if (result.isConfirmed) {
         this.http.delete(`${this.apiUrl}/${id}`).subscribe(() => {
           this.getRoles();
-          Swal.fire('Deleted!', 'Rol eliminado.', 'success');
+          Swal.fire('Eliminado!', 'Rol eliminado.', 'success');
         });
       }
     });
@@ -111,5 +114,22 @@ export class RoleComponent implements OnInit {
 
   resetForm(): void {
     this.role = { id: 0, name: '', description: '', state: false };
+  }
+
+   areAllFieldsFilled(): boolean {
+    return (
+      this.role.name.trim() !== '' &&
+      this.role.description.trim() !== '' 
+    );
+  }
+
+  isFormValid(): boolean {
+
+    if (!this.areAllFieldsFilled()) {
+      Swal.fire('Error', 'Por favor, complete todos los campos.', 'error');
+      return false;
+    }
+
+    return true;
   }
 }

@@ -34,7 +34,7 @@ namespace YourNamespace.Controllers
         public IActionResult JoinFarm([FromBody] JoinFarmRequest request)
         {
             // Validar entrada
-            if (string.IsNullOrEmpty(request.IdentificationNumber) || string.IsNullOrEmpty(request.CodigoUnico))
+            if (request.IdentificationNumber <= 0 || string.IsNullOrEmpty(request.CodigoUnico))
             {
                 return BadRequest("Número de identificación y código de finca son requeridos.");
             }
@@ -70,14 +70,21 @@ namespace YourNamespace.Controllers
 
             // Guardar en la base de datos
             _collectorFarmRepository.Add(collectorFarm);
-            return Ok("Te has unido a la finca exitosamente.");
+
+            // Retornar un mensaje de éxito y el ID de la finca
+            return Ok(new
+            {
+                message = "Te has unido a la finca exitosamente.",
+                farmId = farm.Id
+            });
         }
+
     }
 
     // DTO para la solicitud
     public class JoinFarmRequest
     {
-        public string IdentificationNumber { get; set; }
+        public long IdentificationNumber { get; set; }
         public string CodigoUnico { get; set; }
     }
 }

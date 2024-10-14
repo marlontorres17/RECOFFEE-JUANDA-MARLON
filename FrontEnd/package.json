@@ -11,7 +11,7 @@
   },
   "private": true,
   "dependencies": {
-    "@angular/animations": "^18.2.8",
+    "@angular/animations": "^18.2.6",
     "@angular/cdk": "^18.2.6",
     "@angular/common": "^18.2.6",
     "@angular/compiler": "^18.2.6",
@@ -33,11 +33,10 @@
     "cors": "^2.8.5",
     "datatables.net-dt": "^2.1.7",
     "express": "^4.21.0",
-    "ngx-toastr": "^19.0.0",
     "nodemailer": "^6.9.15",
     "popper.js": "^1.16.1",
     "rxjs": "^7.8.1",
-    "sweetalert2": "^11.6.13",
+    "sweetalert2": "^11.14.1",
     "tslib": "^2.7.0",
     "zone.js": "^0.15.0"
   },

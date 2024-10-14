@@ -76,6 +76,9 @@ export class UsleComponent implements OnInit {
   }
 
   onSubmit(form: NgForm): void {
+    if (!this.isFormValid()) {
+      return;
+    }
     const usleDto = { ...this.usle };
 
     if (this.usle.id === 0) {
@@ -83,14 +86,14 @@ export class UsleComponent implements OnInit {
         this.getUsles();
         form.resetForm();
         this.resetForm();
-        Swal.fire('Success', 'User role created successfully', 'success');
+        Swal.fire('Éxito', 'Usuario rol creado exitosamente', 'success');
       });
     } else {
       this.http.put(`${this.apiUrl}/${this.usle.id}`, usleDto).subscribe(() => {
         this.getUsles();
         form.resetForm();
         this.resetForm();
-        Swal.fire('Success', 'User role updated successfully', 'success');
+        Swal.fire('Éxito', 'Usuario rol actualizado exitosamente', 'success');
       });
     }
   }
@@ -117,17 +120,19 @@ export class UsleComponent implements OnInit {
 
   deleteUsle(id: number): void {
     Swal.fire({
-      title: 'Are you sure?',
-      text: 'You won\'t be able to revert this!',
+      title: 'Estás seguro??',
+      text: 'Estás a punto de eliminar este Usuario rol. ¡Esta acción no se puede deshacer!',
       icon: 'warning',
       showCancelButton: true,
-      confirmButtonText: 'Yes, delete it!',
-      cancelButtonText: 'No, cancel!',
+      confirmButtonColor: '#9c3ce6',
+      cancelButtonColor: '#1a0028',
+      confirmButtonText: 'Si, eliminar!',
+      cancelButtonText: 'No, cancelar!'
     }).then((result) => {
       if (result.isConfirmed) {
         this.http.delete(`${this.apiUrl}/${id}`).subscribe(() => {
           this.getUsles();
-          Swal.fire('Deleted!', 'User role has been deleted.', 'success');
+          Swal.fire('Eliminado!', 'Usuario rol eliminado.', 'success');
         });
       }
     });
@@ -156,4 +161,25 @@ export class UsleComponent implements OnInit {
       return `with: ${reason}`;
     }
   }
+
+  isFormValid(): boolean {
+
+    if (!this.areAllFieldsFilled()) {
+      Swal.fire('Error', 'Por favor, complete todos los campos.', 'error');
+      return false;
+    }
+
+    return true;
+  }
+
+  areAllFieldsFilled(): boolean {
+    return (
+      this.usle.roleId != null && // Verifica que no sea null o undefined
+      this.usle.roleId > 0 && // Verifica que no sea 0
+      this.usle.userId != null && // Verifica que no sea null o undefined
+      this.usle.userId > 0 // Verifica que no sea 0
+    );
+  }
+  
+  
 }

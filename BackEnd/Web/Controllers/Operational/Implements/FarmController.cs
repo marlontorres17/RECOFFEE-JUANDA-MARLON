@@ -1,5 +1,7 @@
 ﻿using Entity.DTO.Operational;
+using Entity.Model.Operational;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Service.Operational.Interface;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -61,6 +63,23 @@ namespace Web.Controllers.Operational.Implements
 
             return Ok(farm);
         }
+
+        [HttpGet("person/farm/{personId}")]
+        public async Task<IActionResult> GetFarmsByPersonId(int personId)
+        {
+            var farms = await _farmService.GetFarmsByPersonsIdAsync(personId);
+
+            if (farms == null || !farms.Any())
+            {
+                // Devuelve un array vacío si no hay granjas
+                return Ok(new List<Farm>());
+            }
+
+            // Devuelve la lista de granjas
+            return Ok(farms);
+        }
+
+
 
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(int id)

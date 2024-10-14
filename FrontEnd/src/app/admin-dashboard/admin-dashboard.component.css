@@ -21,7 +21,7 @@ body, html {
 /* Estilo para el sidebar */
 .sidebar {
     width: 400px;
-    background-color: #0f0f0f;
+    background-color: #07030D;
     color: #ffffff;
     display: flex;
     flex-direction: column;
@@ -31,9 +31,23 @@ body, html {
     top: 0;
     left: 0;
     height: 100vh;
-    border-right: 2px solid #0f0f0f;
+    border-right: 2px solid #ffffff;
     z-index: 100;
+    overflow-y: auto; /* Permite el desplazamiento vertical */
 }
+
+.sidebar::-webkit-scrollbar {
+    width: 0; /* Oculta el scrollbar en navegadores Webkit */
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+    background: transparent; /* El thumb del scrollbar será transparente */
+}
+
+.sidebar::-webkit-scrollbar-track {
+    background: transparent; /* El track del scrollbar será transparente */
+}
+
 
 /* Logo centrado y estilo de la línea */
 .logo {
@@ -105,24 +119,21 @@ body, html {
 /* admin-dashboard.component.css */
 /* Estilo para el botón de cierre de sesión */
 .logout-button {
-    background-color: #B34BFF; /* Color rojo */
+    background-color: #B34BFF; /* Color de fondo */
     color: white;
     border: none;
     border-radius: 5px;
-    padding: 10px 20px; /* Espaciado lateral para hacerlo más compacto */
-    font-size: 1.2em;
+    padding: 10px 15px; /* Espaciado lateral */
+    font-size: 1em; /* Tamaño de fuente ajustado */
     cursor: pointer;
-    margin: 0; /* Eliminamos margen para centrar mejor */
-    transition: background-color 0.3s ease;
-    position: absolute; /* Posiciona el botón en la parte inferior del sidebar */
-    bottom: 20px; /* Espacio desde la parte inferior */
-    left: 50%; /* Para centrar el botón horizontalmente */
-    transform: translate(-50%, 0); /* Ajuste para centrar correctamente */
-    width: auto; /* Ancho automático para que no ocupe todo el ancho */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transición suave */
+    width: 100%; /* Hacer que ocupe todo el ancho del contenedor */
+    margin-top: 10px; /* Espacio encima del botón */
 }
 
 .logout-button:hover {
-    background-color: #1a0028; /* Color rojo más oscuro al pasar el ratón */
+    background-color: #1a0028; /* Color de fondo al pasar el ratón */
+    transform: translateY(-2px); /* Efecto de elevación */
 }
 
 /*.content-wrapper{
@@ -131,7 +142,7 @@ body, html {
 
 /* Header adaptado al sidebar */
 .header {
-    background-color: #0f0f0f;
+    background-color: #07030D;
     padding: 10px;
     height: 10%; /* Altura más grande */
     width: calc(100% - 400px); /* Para restar el ancho del sidebar */
@@ -146,7 +157,7 @@ body, html {
     padding: 20px;
     padding-top: 170px; /* Espacio para evitar que el contenido esté debajo del header */
     margin-left: 400px; /* Dejar espacio para el sidebar */
-    background-color: #000000e0;
+    background-color: #161615;
     height: calc(100vh - 150px); /* Ajuste dinámico según la altura del header */
     overflow-y: auto;
 }
@@ -160,7 +171,10 @@ body, html {
     height: 50px;
     object-fit: cover; /* Asegura que la imagen cubra el área sin deformarse */
     border-radius: 50%; /* Hace que la imagen sea redonda */
-  }
+    border: 2px solid #B34BFF; /* Borde que resalta */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra suave */
+}
+
   
 
 .header-content {
@@ -173,15 +187,49 @@ body, html {
     position: relative;
   }
   
-  .profile-menu,
-  .notification-menu {
+  .profile-menu {
     position: absolute;
-    top: 100%; /* Ajusta según necesites */
+    top: 100%; /* Ajusta la posición según sea necesario */
     left: 0;
-    background-color: white;
-    border: 1px solid #ccc;
+    background-color: #1a1a1a; /* Fondo oscuro */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
     z-index: 1000; /* Asegura que esté por encima de otros elementos */
-  }
+    padding: 15px; /* Espaciado interno */
+    width: 200px; /* Ancho fijo del menú */
+}
+
+.profile-menu ul {
+    list-style: none; /* Elimina las viñetas */
+    padding: 0;
+    margin: 0;
+}
+
+.profile-menu li {
+    margin-bottom: 12px; /* Espaciado entre los elementos del menú */
+}
+
+.profile-menu a {
+    color: #ffffff; /* Color de texto blanco */
+    text-decoration: none; /* Sin subrayado */
+    padding: 10px 15px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados en los enlaces */
+    display: block; /* Asegura que el enlace ocupe todo el ancho */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transición suave */
+}
+
+.profile-menu a:hover {
+    background-color: #B34BFF; /* Color de fondo al pasar el ratón */
+    transform: translateY(-2px); /* Efecto de elevación */
+}
+
+/* Estilo para el encabezado del menú */
+.profile-menu h3 {
+    color: #B34BFF; /* Color para el título */
+    font-size: 1.2em; /* Tamaño de fuente para el título */
+    margin-bottom: 10px; /* Espacio debajo del título */
+    text-align: center; /* Centra el texto del encabezado */
+}
   
   .notification-icon {
     position: relative;

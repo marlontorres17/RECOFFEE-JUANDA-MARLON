@@ -47,5 +47,12 @@ namespace Repository.Operational.Implements
                 await _context.SaveChangesAsync();
             }
         }
+
+        public async Task<List<Benefit>> GetBenefitsByFarmIdAsync(int farmId)
+        {
+            return await _context.Set<Benefit>()
+                .Where(b => b.FarmId == farmId)
+                .ToListAsync();
+        }
     }
 }

@@ -56,5 +56,12 @@ namespace Web.Controller.Implements
             await _lotService.Delete(id);
             return NoContent();
         }
+
+        [HttpGet("farm/{farmId}")]
+        public async Task<IActionResult> GetLotsByFarmId(int farmId)
+        {
+            var lots = await _lotService.GetLotsByFarmIdAsync(farmId);
+            return Ok(lots);
+        }
     }
 }

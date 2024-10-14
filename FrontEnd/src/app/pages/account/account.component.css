@@ -144,3 +144,8 @@ select {
         font-size: 16px;
     }
 }
+
+input[type="date"] {
+    pointer-events: none; /* Desactiva cualquier evento del teclado */
+  }
+  

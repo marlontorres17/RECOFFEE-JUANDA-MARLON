@@ -2,6 +2,8 @@
 using Entity.DTO.Operational;
 using Entity.Model.Operational;
 using Repository.Operational.Interface;
+using Repository.Security.Implements;
+using Repository.Security.Interface;
 using Service.Operational.Interface;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,12 +17,14 @@ namespace Service.Operational.Implements
         private readonly ICollectionDetailRepository _collectionDetailRepository;
         private readonly IPersonBenefitRepository _personBenefitRepository;
         private readonly IHarvestRepository _harvestRepository;
+        private readonly IPersonRepository _personRepository;
         private readonly IMapper _mapper;
 
         public LiquidationService(
             ILiquidationRepository liquidationRepository,
             ICollectionDetailRepository collectionDetailRepository,
             IPersonBenefitRepository personBenefitRepository,
+            IPersonRepository personRepository,
             IHarvestRepository harvestRepository,
             IMapper mapper)
         {
@@ -28,7 +32,8 @@ namespace Service.Operational.Implements
             _collectionDetailRepository = collectionDetailRepository;
             _personBenefitRepository = personBenefitRepository;
             _harvestRepository = harvestRepository;
-            _mapper = mapper;
+            _personRepository = personRepository;
+            _mapper = mapper; 
         }
 
         public async Task<IEnumerable<LiquidationDto>> GetAll()
@@ -89,5 +94,26 @@ namespace Service.Operational.Implements
         {
             await _liquidationRepository.Delete(id);
         }
+
+        public async Task<List<Liquidation>> GetLiquidationsByPersonIdAsync(int personId)
+        {
+            return await _liquidationRepository.GetLiquidationsByPersonIdAsync(personId);
+
+        }
+         public async Task<IEnumerable<LiquidationDto>> GetLiquidationsByFarmIdAsync(int farmId)
+        {
+            var liquidations = await _liquidationRepository.GetLiquidationsByFarmIdAsync(farmId);
+
+            if (liquidations == null || !liquidations.Any())
+            {
+                throw new Exception("No se encontraron liquidaciones para esta finca."); // Manejo de la ausencia de datos
+            }
+
+            // Mapeamos las liquidaciones a LiquidationDto
+            return _mapper.Map<IEnumerable<LiquidationDto>>(liquidations);
+        }
+
+
+
     }
 }

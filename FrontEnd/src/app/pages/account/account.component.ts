@@ -168,4 +168,8 @@ export class AccountComponent implements OnInit {
       );
     }
   }
+  disableManualInput(event: KeyboardEvent): void {
+    event.preventDefault(); // Esto previene cualquier entrada manual
+  }
+  
 }

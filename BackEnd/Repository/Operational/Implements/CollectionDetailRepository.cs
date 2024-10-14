@@ -47,5 +47,13 @@ namespace Repository.Operational.Implements
                 await _context.SaveChangesAsync();
             }
         }
+
+        public async Task<List<CollectionDetail>> GetCollectionDetailsByPersonIdAsync(int personId)
+        {
+            return await _context.Set<CollectionDetail>()
+                .Where(cd => cd.PersonId == personId)
+                .Include(cd => cd.Harvest)
+                .ToListAsync();
+        }
     }
 }

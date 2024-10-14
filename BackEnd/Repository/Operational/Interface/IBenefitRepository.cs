@@ -11,5 +11,7 @@ namespace Repository.Operational.Interface
         Task Add(Benefit benefit);
         Task Update(Benefit benefit);
         Task Delete(int id);
+
+        Task<List<Benefit>> GetBenefitsByFarmIdAsync(int farmId);
     }
 }

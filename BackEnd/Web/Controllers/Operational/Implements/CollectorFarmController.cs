@@ -86,6 +86,25 @@ namespace Web.Controllers.Operational.Implements
             return Ok(farm);
         }
 
+        [HttpGet("person/farm/{personId}")]
+        public async Task<IActionResult> GetCollectorFarmsByPersonId(int personId)
+        {
+            var collectorFarms = await _collectorFarmService.GetCollectorFarmsByPersonIdAsync(personId);
+            return Ok(collectorFarms);
+        }
+
+        [HttpGet("farm/person/{personId}")]
+        public async Task<IActionResult> GetFarmByPersonIdU(int personId)
+        {
+            var collectorFarm = await _collectorFarmService.GetFarmByPersonIdAsync(personId);
+
+            if (collectorFarm == null)
+            {
+                return NotFound("No se encontró la finca asociada a la persona.");
+            }
+
+            return Ok(collectorFarm);
+        }
 
     }
 }

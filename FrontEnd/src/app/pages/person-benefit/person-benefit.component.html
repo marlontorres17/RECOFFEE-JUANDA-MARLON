@@ -1,6 +1,6 @@
 <div class="header">
     <h2 class="title">Beneficios de Persona</h2>
-    <button class="btn-new" (click)="openModal()">Agregar Nuevo Beneficio de Persona</button>
+    <button class="btn-new" (click)="openModal()" *ngIf="userRole !== 'recolector'">Agregar Nuevo Beneficio de Persona</button>
   </div>
   
   <div class="table-wrapper">
@@ -25,10 +25,10 @@
                 <td>{{ getBenefitName(personBenefit.benefitId) }}</td>
                 <td><input type="checkbox" [checked]="personBenefit.state" disabled /></td>
                 <td>
-                    <button class="btn-icon edit" (click)="editPersonBenefit(personBenefit)">
+                    <button class="btn-icon edit" (click)="editPersonBenefit(personBenefit)" *ngIf="userRole !== 'recolector'">
                         <i class="fas fa-edit"></i>
                     </button>
-                    <button class="btn-icon delete" (click)="deletePersonBenefit(personBenefit.id)">
+                    <button class="btn-icon delete" (click)="deletePersonBenefit(personBenefit.id)" *ngIf="userRole !== 'recolector'">
                         <i class="fas fa-trash-alt"></i>
                     </button>
                 </td>
@@ -52,12 +52,17 @@
         <form #personBenefitForm="ngForm" (ngSubmit)="onSubmit(personBenefitForm)" class="person-benefit-form">
             <div class="form-group">
                 <label for="date">Fecha</label>
-                <input type="date" id="date" [(ngModel)]="personBenefit.date" name="date" class="input-field" required>
+                <input type="date" id="date" [value]="personBenefit.date" class="input-field" required readonly>
             </div>
             <div class="form-group">
                 <label for="amount">Cantidad</label>
-                <input type="number" id="amount" [(ngModel)]="personBenefit.amount" name="amount" class="input-field" required (change)="updatePrice()">
+                <input type="number" id="amount" [(ngModel)]="personBenefit.amount" name="amount" class="input-field" required 
+                step="0.01" (change)="updatePrice()">
+                <div *ngIf="personBenefit.amount < 0" class="text-danger">
+                    Debe ingresar un valor positivo para la cantidad.
+                </div>
             </div>
+
             <div class="form-group">
                 <label for="personId">Seleccionar Persona</label>
                 <select id="personId" [(ngModel)]="personBenefit.personId" name="personId" class="select-field" required>

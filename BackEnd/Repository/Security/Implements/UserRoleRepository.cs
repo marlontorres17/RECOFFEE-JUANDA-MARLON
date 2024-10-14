@@ -73,5 +73,6 @@ namespace Repository.Security.Implements
                 .FirstOrDefaultAsync(ur => ur.UserId == userId);
         }
 
+
     }
 }

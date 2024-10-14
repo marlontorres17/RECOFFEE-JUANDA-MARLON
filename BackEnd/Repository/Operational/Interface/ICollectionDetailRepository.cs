@@ -11,5 +11,6 @@ namespace Repository.Operational.Interface
         Task Add(CollectionDetail collectionDetail);
         Task Update(CollectionDetail collectionDetail);
         Task Delete(int id);
+        Task<List<CollectionDetail>> GetCollectionDetailsByPersonIdAsync(int personId);
     }
 }

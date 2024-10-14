@@ -1,0 +1,31 @@
+<div class="header">
+    <h2 class="title">Beneficios de Persona</h2>
+</div>
+
+<div class="table-wrapper">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Fecha</th>
+                <th>Precio</th>
+                <th>Cantidad</th>
+                <th>Persona</th>
+                <th>Beneficio</th>
+                <th>Estado</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let personBenefit of personBenefits">
+                <td>{{ personBenefit.date | date }}</td>
+                <td>{{ personBenefit.price }}</td>
+                <td>{{ personBenefit.amount }}</td>
+                <td>{{ getPersonName(personBenefit.personId) }}</td>
+                <td>{{ getBenefitName(personBenefit.benefitId) }}</td>
+                <td><input type="checkbox" [checked]="personBenefit.state" disabled /></td>
+            </tr>
+            <tr *ngIf="personBenefits.length === 0">
+                <td colspan="6" class="no-results">No se encontraron beneficios de persona</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

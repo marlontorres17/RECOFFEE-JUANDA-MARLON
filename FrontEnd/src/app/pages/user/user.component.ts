@@ -27,6 +27,8 @@ export class UserComponent implements OnInit {
   private apiUrl = 'http://localhost:9191/api/User';
   private personApiUrl = 'http://localhost:9191/api/Person';
 
+  passwordInvalid = false;
+
   @ViewChild('userModal') userModal!: TemplateRef<any>;
 
   constructor(private http: HttpClient, private cdr: ChangeDetectorRef, private modalService: NgbModal) {}
@@ -61,6 +63,10 @@ export class UserComponent implements OnInit {
   }
 
   onSubmit(form: NgForm): void {
+
+    if (!this.isFormValid()) {
+      return;
+    }
     const userDto = { ...this.user };
 
     if (this.user.id === 0) {
@@ -68,16 +74,21 @@ export class UserComponent implements OnInit {
         this.getUsers();
         form.resetForm();
         this.resetForm();
-        Swal.fire('Success', 'Usuario creado exitosamente', 'success');
+        Swal.fire('Éxito', 'Usuario creado exitosamente', 'success');
       });
     } else {
       this.http.put(`${this.apiUrl}/${this.user.id}`, userDto).subscribe(() => {
         this.getUsers();
         form.resetForm();
         this.resetForm();
-        Swal.fire('Success', 'Usuario actualizado exitosamente', 'success');
+        Swal.fire('Éxito', 'Usuario actualizado exitosamente', 'success');
       });
     }
+  }
+
+  validatePassword(password: string): boolean {
+    const passwordPattern = /^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*()_\-+=<>?{}[\]~]).{8,}$/;
+    return passwordPattern.test(password);
   }
 
   openModal(user: any = { id: 0, userName: '', password: '', personId: 0, state: true }): void {
@@ -105,7 +116,7 @@ export class UserComponent implements OnInit {
       if (result.isConfirmed) {
         this.http.delete(`${this.apiUrl}/${id}`).subscribe(() => {
           this.getUsers();
-          Swal.fire('Deleted!', 'User has been deleted.', 'success');
+          Swal.fire('Eliminado!', 'Usuario eliminado.', 'success');
         });
       }
     });
@@ -128,5 +139,33 @@ export class UserComponent implements OnInit {
     } else {
       return `with: ${reason}`;
     }
+  }
+
+  isFormValid(): boolean {
+
+    if (!this.areAllFieldsFilled()) {
+      Swal.fire('Error', 'Por favor, complete todos los campos.', 'error');
+      return false;
+    }
+
+    if (!this.validatePassword(this.user.password)) {
+      Swal.fire('Error', 'La contraseña debe tener al menos 8 caracteres, con al menos una mayúscula, una minúscula, un número y un carácter especial.', 'error');
+      return false;
+    }
+
+    if (this.user.userName.length > 20) {
+      Swal.fire('Error', 'El nombre de usuario no puede exceder los 20 caracteres.', 'error');
+      return false;
+    }
+
+    return true;
+  }
+
+  areAllFieldsFilled(): boolean {
+    return (
+      this.user.userName.trim() !== '' &&
+      this.user.password.trim() !== '' &&
+      this.user.personId.trim() !== ''
+    );
   }
 }

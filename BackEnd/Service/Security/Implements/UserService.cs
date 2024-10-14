@@ -16,17 +16,17 @@ namespace Service.Security.Implements
     public class UserService : IUserService
     {
         private readonly IUserRepository _userRepository;
-     
+
         private readonly IPersonRepository _personRepository; // Añadir repositorio de personas
         private readonly IUserRoleRepository _userRoleRepository; // Repositorio para UserRole
         private readonly IMapper _mapper;
         private readonly IEmailService _emailService;
 
         public UserService(IUserRepository userRepository, IPersonRepository personRepository, IUserRoleRepository userRoleRepository,
-            IMapper mapper, IEmailService emailService)
+           IMapper mapper, IEmailService emailService)
         {
             _userRepository = userRepository;
-            
+
             _personRepository = personRepository; // Inicializar repositorio de personas
             _userRoleRepository = userRoleRepository; // Inicializar repositorio de UserRole
             _mapper = mapper;
@@ -48,16 +48,13 @@ namespace Service.Security.Implements
         public async Task Add(UserDto userDto)
         {
             var user = _mapper.Map<User>(userDto);
-
-            // Hashear la contraseña antes de guardarla
-            user.Password = HashPassword(userDto.Password);
-
             await _userRepository.Add(user);
         }
 
         public async Task Update(UserDto userDto)
         {
             var user = _mapper.Map<User>(userDto);
+            user.Password = HashPassword(userDto.Password);
             await _userRepository.Update(user);
         }
 

@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 20px;  
 }
 
 .title {
@@ -32,6 +32,35 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 10px; /* Bordes redondeados */
 }
+
+.select-field {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #9c3ce6; /* Borde morado */
+  border-radius: 5px; /* Bordes redondeados */
+  appearance: none; /* Eliminar el estilo por defecto del navegador */
+  -webkit-appearance: none; /* Safari */
+  -moz-appearance: none; /* Firefox */
+  position: relative; /* Para permitir la posición absoluta del icono */
+}
+
+/* Agregar un icono a la derecha */
+.select-field::after {
+  content: "▼"; /* Puedes cambiarlo por un icono más adecuado */
+  position: absolute;
+  right: 10px; /* Ajusta según sea necesario */
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none; /* Evitar que el icono interfiera con el clic */
+}
+
+/* Efecto en focus */
+.select-field:focus {
+  border-color: #9c3ce6; /* Cambia el color del borde al enfocar */
+  box-shadow: 0 0 5px rgba(156, 60, 230, 0.5); /* Sombra morada al enfocar */
+  outline: none; /* Sin contorno adicional */
+}
+
 
 .table {
   width: 100%;
@@ -119,6 +148,7 @@
 
 .form-group {
   margin-bottom: 20px;
+  position: relative;
 }
 
 .input-container {
@@ -139,10 +169,27 @@
   transition: border-color 0.3s, box-shadow 0.3s;
 }
 
+.input-field {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #9c3ce6; /* Borde morado */
+  border-radius: 5px; /* Bordes redondeados */
+  color: #000000; /* Texto blanco */
+  transition: border-color 0.3s, box-shadow 0.3s; /* Transiciones suaves */
+  appearance: none; /* Eliminar el estilo por defecto del navegador */
+  -webkit-appearance: none; /* Safari */
+  -moz-appearance: none; /* Firefox */
+}
+
 .input-field:focus {
-  border-color: #9c3ce6;
-  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
-  outline: none;
+  border-color: #9c3ce6; /* Cambia el color del borde al enfocar */
+  box-shadow: 0 0 5px rgba(156, 60, 230, 0.5); /* Sombra morada al enfocar */
+  outline: none; /* Sin contorno adicional */
+}
+
+/* Para ajustar los estilos del desplegable en algunos navegadores */
+.input-field option {
+  color: #000000; /* Texto blanco */
 }
 
 .error-message {
@@ -187,9 +234,50 @@
   transform: scale(1.05);
 }
 
-.checkbox-field {
-  width: 20px;
-  height: 20px;
+/* Estilo para el campo de entrada de ciudad */
+.city-input {
+  padding: 10px;
+  width: 100%; /* Asegurarse de que ocupe el 100% del espacio disponible */
+  border: 1px solid #9c3ce6;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Estilo para el dropdown de las ciudades */
+.city-dropdown {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  max-height: 200px; /* Limitar la altura máxima del dropdown */
+  overflow-y: auto; /* Agregar scroll si hay muchas ciudades */
+  background-color: #1a0028;
+  border: 1px solid #9c3ce6;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: absolute; /* Posicionar la lista debajo del input */
+  top: 100%; /* Colocar la lista justo debajo del input */
+  left: 0; /* Alinearla con el borde izquierdo del input */
+  width: 100%; /* Igualar el ancho al del input */
+  z-index: 1000; /* Para que se muestre por encima de otros elementos */
+}
+
+.city-dropdown li {
+  padding: 10px;
   cursor: pointer;
-  margin-top: 10px;
+  transition: background-color 0.3s;
+  color: #ffffff;
+}
+
+.city-dropdown li:hover {
+  background-color: #9c3ce6;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }

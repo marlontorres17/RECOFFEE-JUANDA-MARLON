@@ -39,8 +39,9 @@ export class LotComponent implements OnInit {
   constructor(private http: HttpClient, private cdr: ChangeDetectorRef, private modalService: NgbModal) {}
 
   ngOnInit(): void {
-    this.getLots();
+    
     this.getFarms();
+    this.loadLotsByFarm();
   }
 
   getLots(): void {
@@ -73,24 +74,41 @@ export class LotComponent implements OnInit {
   }
 
   onSubmit(form: NgForm): void {
+    if (this.lot.sizeMeters < 0) {
+      Swal.fire({
+        icon: 'error',
+        title: 'Error',
+        text: 'No se permite ingresar valores negativos para el tamaño.',
+      });
+      return; // Salir de la función si el valor es negativo
+    }
     const lotDto = { ...this.lot };
 
-    if (this.lot.id === 0) {
-      this.http.post(this.apiUrl, lotDto).subscribe(() => {
-        this.getLots();
-        form.resetForm();
-        this.resetForm();
-        Swal.fire('Success', 'Lot created successfully', 'success');
-      });
-    } else {
-      this.http.put(`${this.apiUrl}/${this.lot.id}`, lotDto).subscribe(() => {
-        this.getLots();
-        form.resetForm();
-        this.resetForm();
-        Swal.fire('Success', 'Lot updated successfully', 'success');
-      });
+    // Validación del tamaño
+    if (lotDto.sizeMeters < 0 || lotDto.sizeMeters > 200) {
+        Swal.fire('Error', 'El tamaño debe estar entre 0 y 200 hectáreas.', 'error');
+        return;
     }
-  }
+
+    if (this.lot.id === 0) {
+        this.http.post(this.apiUrl, lotDto).subscribe(() => {
+            this.getLots();
+            form.resetForm();
+            this.resetForm();
+            Swal.fire('Éxito', 'Lote creado con éxito', 'success');
+        });
+    } else {
+        this.http.put(`${this.apiUrl}/${this.lot.id}`, lotDto).subscribe(() => {
+            this.getLots();
+            form.resetForm();
+            this.resetForm();
+            Swal.fire('Éxito', 'Lote actualizado con éxito', 'success');
+        });
+    }
+}
+
+
+
 
   openModal(lot: any = { id: 0, state: true, name: '', description: '', sizeMeters: '', farmId: 0 }): void {
     this.lot = { ...lot };
@@ -107,18 +125,19 @@ export class LotComponent implements OnInit {
 
   deleteLot(id: number): void {
     Swal.fire({
-      title: 'Are you sure?',
-      text: 'You won\'t be able to revert this!',
+      title: 'Estás seguro??',
+      text: 'Estás a punto de eliminar este lote. ¡Esta acción no se puede deshacer!',
       icon: 'warning',
       showCancelButton: true,
-      confirmButtonColor: '#d33',
-      cancelButtonColor: '#3085d6',
-      confirmButtonText: 'Yes, delete it!'
+      confirmButtonColor: '#9c3ce6',
+      cancelButtonColor: '#1a0028',
+      confirmButtonText: 'Si, eliminar!',
+      cancelButtonText: 'No, cancelar!'
     }).then((result) => {
       if (result.isConfirmed) {
         this.http.delete(`${this.apiUrl}/${id}`).subscribe(() => {
           this.getLots();
-          Swal.fire('Deleted!', 'Lot has been deleted.', 'success');
+          Swal.fire('Eliminado!', 'Lote eliminado.', 'success');
         });
       }
     });
@@ -135,6 +154,23 @@ export class LotComponent implements OnInit {
       return 'by clicking on a backdrop';
     } else {
       return `with: ${reason}`;
+    }
+  }
+
+  loadLotsByFarm(): void {
+    const farmId = localStorage.getItem('farmId'); // Obtener el farmId del localStorage
+    if (farmId) {
+      this.http.get<any[]>(`${this.apiUrl}/farm/${farmId}`).subscribe(
+        (response) => {
+          this.lots = response; // Asigna el array a la propiedad 'lots'
+          this.cdr.detectChanges(); // Detecta cambios en la vista
+        },
+        (error) => {
+          console.error('Error fetching lots by farm:', error);
+        }
+      );
+    } else {
+      console.warn('No farmId found in localStorage.');
     }
   }
 }

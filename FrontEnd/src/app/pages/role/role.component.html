@@ -62,7 +62,7 @@
           Descripción es requerida.
         </div>
       </div>
-      <div class="form-group">
+      <div class="form-group" *ngIf="role.id !== 0">
         <label for="state">Estado</label>
         <input type="checkbox" id="state" [(ngModel)]="role.state" name="state" class="checkbox-field">
       </div>

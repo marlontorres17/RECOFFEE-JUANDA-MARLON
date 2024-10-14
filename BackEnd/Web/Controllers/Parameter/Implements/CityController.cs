@@ -22,8 +22,16 @@ namespace Web.Controller.Implements
         [HttpGet]
         public async Task<ActionResult<IEnumerable<CityDto>>> GetAll()
         {
-            var citys = await _cityService.GetAll();
-            return Ok(citys);
+            try
+            {
+                var citys = await _cityService.GetAll();
+                return Ok(citys);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
 
         [HttpGet("{id}")]

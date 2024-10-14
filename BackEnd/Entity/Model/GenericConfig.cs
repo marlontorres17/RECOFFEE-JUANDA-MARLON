@@ -46,7 +46,7 @@ namespace YourNamespace.Configurations
             // Definir el índice único para UserName y establecer longitud máxima
             builder.Property(u => u.UserName)
                 .IsRequired() // Indica que el campo es obligatorio
-                .HasMaxLength(20); // Limita la longitud del UserName a 50 caracteres
+                .HasMaxLength(20); // Limita la longitud del UserName a 20 caracteres
 
             builder.HasIndex(u => u.UserName).IsUnique();
         }

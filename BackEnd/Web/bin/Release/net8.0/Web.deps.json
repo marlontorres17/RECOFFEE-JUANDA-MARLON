@@ -965,24 +965,21 @@
           "BCrypt.Net-Next": "4.0.3",
           "Dapper": "2.1.35",
           "Microsoft.EntityFrameworkCore": "8.0.8",
-          "Microsoft.EntityFrameworkCore.SqlServer": "8.0.8"
+          "Microsoft.EntityFrameworkCore.SqlServer": "8.0.8",
+          "SendGrid": "9.29.3"
         },
         "runtime": {
-          "Entity.dll": {
-            "assemblyVersion": "1.0.0",
-            "fileVersion": "1.0.0.0"
-          }
+          "Entity.dll": {}
         }
       },
       "Repository/1.0.0": {
         "dependencies": {
-          "Entity": "1.0.0"
+          "BCrypt.Net-Next": "4.0.3",
+          "Entity": "1.0.0",
+          "SendGrid": "9.29.3"
         },
         "runtime": {
-          "Repository.dll": {
-            "assemblyVersion": "1.0.0",
-            "fileVersion": "1.0.0.0"
-          }
+          "Repository.dll": {}
         }
       },
       "Service/1.0.0": {
@@ -990,24 +987,21 @@
           "AutoMapper": "13.0.1",
           "BCrypt.Net-Next": "4.0.3",
           "Entity": "1.0.0",
-          "Repository": "1.0.0"
+          "Repository": "1.0.0",
+          "SendGrid": "9.29.3"
         },
         "runtime": {
-          "Service.dll": {
-            "assemblyVersion": "1.0.0",
-            "fileVersion": "1.0.0.0"
-          }
+          "Service.dll": {}
         }
       },
       "Utilities/1.0.0": {
         "dependencies": {
-          "Entity": "1.0.0"
+          "BCrypt.Net-Next": "4.0.3",
+          "Entity": "1.0.0",
+          "SendGrid": "9.29.3"
         },
         "runtime": {
-          "Utilities.dll": {
-            "assemblyVersion": "1.0.0",
-            "fileVersion": "1.0.0.0"
-          }
+          "Utilities.dll": {}
         }
       }
     }

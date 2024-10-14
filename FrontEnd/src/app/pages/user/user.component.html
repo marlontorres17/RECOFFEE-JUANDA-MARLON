@@ -61,7 +61,8 @@
           <option *ngFor="let person of persons" [value]="person.id">{{ person.firstName }} {{ person.firstLastName }}</option>
         </select>
       </div>
-      <div class="form-group">
+      
+      <div class="form-group" *ngIf="user.id !== 0">
         <label for="state">Activo</label>
         <input type="checkbox" id="state" [(ngModel)]="user.state" name="state" class="checkbox-field">
       </div>

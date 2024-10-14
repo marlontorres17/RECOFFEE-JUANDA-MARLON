@@ -21,8 +21,8 @@
         </thead>
         <tbody>
           <tr *ngFor="let person of persons">
-            <td>{{ person.firstName }} </td>
-            <td>{{ person.secondLastName }}</td>
+            <td>{{ person.firstName }} {{ person.secondName }}  </td>
+            <td> {{ person.firstLastName }} {{ person.secondLastName }}</td>
             <td>{{ person.email }}</td>
             <td>{{ person.dateOfBirth | date: 'dd/MM/yyyy' }}</td>
             <td>{{ person.gender }}</td>
@@ -75,26 +75,47 @@
             <label for="dateOfBirth">Fecha de Nacimiento</label>
             <input type="date" id="dateOfBirth" [(ngModel)]="person.dateOfBirth" name="dateOfBirth" class="input-field" required>
           </div>
+          
           <div class="form-group">
             <label for="gender">Género</label>
-            <input type="text" id="gender" [(ngModel)]="person.gender" name="gender" class="input-field" required>
+            <select type="text" id="gender" [(ngModel)]="person.gender" name="gender" class="input-field" required>
+              <option value="MASCULINO">Masculino</option>
+              <option value="FEMENINO">Femenino</option>
+            </select>
+
           </div>
           <div class="form-group">
             <label for="city">Ciudad</label>
-            <input type="text" id="city" [(ngModel)]="selectedCity" name="city" class="input-field" (input)="filterCities()" autocomplete="off" required>
-            <ul *ngIf="filteredCities.length > 0">
-              <li *ngFor="let city of filteredCities" (click)="selectCity(city)">{{ city.name }}</li>
+            <input type="text" id="city" 
+                   [(ngModel)]="selectedCity" 
+                   name="city" 
+                   class="input-field city-input" 
+                   (input)="filterCities()" 
+                   (focus)="showDropdown = true" 
+                   (blur)="onBlur()" 
+                   autocomplete="off" required>
+            <ul class="city-dropdown" *ngIf="showDropdown && filteredCities.length > 0">
+              <li *ngFor="let city of filteredCities" 
+                  (click)="selectCity(city)">
+                {{ city.name }}
+              </li>
             </ul>
           </div>
+          
+          
           <div class="form-group">
             <label for="typeDocument">Tipo de Documento</label>
-            <input type="text" id="typeDocument" [(ngModel)]="person.typeDocument" name="typeDocument" class="input-field" required>
-          </div>
+            <select id="typeDocument" [(ngModel)]="person.typeDocument" name="typeDocument" class="input-field" required>
+              <option value="CC">Cédula de Ciudadanía (CC)</option>
+              <option value="TI">Tarjeta de Identidad (TI)</option>
+            </select>
+          </div>          
+          
           <div class="form-group">
             <label for="numberDocument">Número de Documento</label>
             <input type="text" id="numberDocument" [(ngModel)]="person.numberDocument" name="numberDocument" class="input-field" required>
           </div>
-          <div class="form-group">
+          <div class="form-group" *ngIf="person.id !== 0">
             <label for="state">Estado</label>
             <input type="checkbox" id="state" [(ngModel)]="person.state" name="state" class="checkbox-field">
             <label for="state">Activo</label>

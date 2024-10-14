@@ -21,7 +21,7 @@ body, html {
 /* Estilo para el sidebar */
 .sidebar {
     width: 400px;
-    background-color: #0f0f0f;
+    background-color: #07030D;
     color: #ffffff;
     display: flex;
     flex-direction: column;
@@ -31,7 +31,7 @@ body, html {
     top: 0;
     left: 0;
     height: 100vh;
-    border-right: 2px solid #0f0f0f;
+    border-right: 2px solid #ffffff;
     z-index: 100;
 }
 
@@ -131,7 +131,7 @@ body, html {
 
 /* Header adaptado al sidebar */
 .header {
-    background-color: #0f0f0f;
+    background-color: #07030D;
     padding: 10px;
     height: 10%; /* Altura más grande */
     width: calc(100% - 400px); /* Para restar el ancho del sidebar */
@@ -146,7 +146,7 @@ body, html {
     padding: 20px;
     padding-top: 170px; /* Espacio para evitar que el contenido esté debajo del header */
     margin-left: 400px; /* Dejar espacio para el sidebar */
-    background-color: #000000e0;
+    background-color: #161615;
     height: calc(100vh - 150px); /* Ajuste dinámico según la altura del header */
     overflow-y: auto;
 }

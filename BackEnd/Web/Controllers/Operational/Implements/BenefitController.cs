@@ -56,5 +56,12 @@ namespace Web.Controller.Implements
             await _benefitService.Delete(id);
             return NoContent();
         }
+
+        [HttpGet("farm/{farmId}")]
+        public async Task<IActionResult> GetBenefitsByFarmId(int farmId)
+        {
+            var benefits = await _benefitService.GetBenefitsByFarmIdAsync(farmId);
+            return Ok(benefits);
+        }
     }
 }

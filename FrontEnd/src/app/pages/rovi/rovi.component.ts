@@ -76,6 +76,9 @@ export class RoviComponent implements OnInit {
   }
 
   onSubmit(form: NgForm): void {
+    if (!this.isFormValid()) {
+      return;
+    }
     const roviDto = { ...this.rovi };
 
     if (this.rovi.id === 0) {
@@ -157,5 +160,24 @@ export class RoviComponent implements OnInit {
     } else {
       return `with: ${reason}`;
     }
+  }
+
+  isFormValid(): boolean {
+
+    if (!this.areAllFieldsFilled()) {
+      Swal.fire('Error', 'Por favor, complete todos los campos.', 'error');
+      return false;
+    }
+
+    return true;
+  }
+
+  areAllFieldsFilled(): boolean {
+    return (
+      this.rovi.roleId != null && // Verifica que no sea null o undefined
+      this.rovi.roleId > 0 && // Verifica que no sea 0
+      this.rovi.viewId != null && // Verifica que no sea null o undefined
+      this.rovi.viewId > 0 // Verifica que no sea 0
+    );
   }
 }

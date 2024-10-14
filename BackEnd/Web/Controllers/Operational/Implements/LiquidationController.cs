@@ -1,5 +1,6 @@
 ﻿using Entity.DTO.Operational;
 using Microsoft.AspNetCore.Mvc;
+using Service.Operational.Implements;
 using Service.Operational.Interface;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -54,6 +55,27 @@ namespace Web.Controller.Implements
         {
             await _liquidationService.Delete(id);
             return NoContent();
+        }
+
+        [HttpGet("person/{personId}")]
+        public async Task<IActionResult> GetLiquidationsByPersonId(int personId)
+        {
+            var liquidations = await _liquidationService.GetLiquidationsByPersonIdAsync(personId);
+            return Ok(liquidations);
+        }
+
+        [HttpGet("farm/{farmId}")]
+        public async Task<IActionResult> GetLiquidationsByFarmId(int farmId)
+        {
+            try
+            {
+                var liquidations = await _liquidationService.GetLiquidationsByFarmIdAsync(farmId);
+                return Ok(liquidations);
+            }
+            catch (Exception ex)
+            {
+                return NotFound(ex.Message);
+            }
         }
     }
 }

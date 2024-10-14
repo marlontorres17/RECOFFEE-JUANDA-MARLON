@@ -14,7 +14,7 @@ namespace Repository.Security.Interface
         Task Add(Person person);
         Task Update(Person person);
         Task Delete(int id);
-        Person GetByIdentificationNumber(string identificationNumber);
+        Person GetByIdentificationNumber(long identificationNumber);
 
         Task<IEnumerable<Person>> GetAdmins();
     }

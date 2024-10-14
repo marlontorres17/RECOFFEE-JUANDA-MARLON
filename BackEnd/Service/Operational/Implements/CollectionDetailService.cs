@@ -47,5 +47,10 @@ namespace Service.Operational.Implements
         {
             await _collectionDetailRepository.Delete(id);
         }
+
+        public async Task<List<CollectionDetail>> GetCollectionDetailsByPersonIdAsync(int personId)
+        {
+            return await _collectionDetailRepository.GetCollectionDetailsByPersonIdAsync(personId);
+        }
     }
 }

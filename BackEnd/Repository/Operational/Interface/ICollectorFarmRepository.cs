@@ -19,5 +19,8 @@ namespace Repository.Operational.Interface
         Task<IEnumerable<CollectorDto>> GetCollectorsByFarmCode(string farmCode);
 
         Task<Farm> GetFarmByPersonIdAsync(int personId);
+        Task<List<CollectorFarm>> GetCollectorFarmsByPersonIdAsync(int personId);
+
+        Task<IEnumerable<CollectorFarm>> GetCollectorFarmsByPersonIdAsyncU(int personId);
     }
 }

@@ -61,6 +61,9 @@ export class CityComponent implements OnInit {
   }
 
   onSubmit(form: NgForm): void {
+    if(!this.isFormValid){
+      return
+    }
     const cityDto = { ...this.city };
 
     if (this.city.id === 0) {
@@ -68,14 +71,14 @@ export class CityComponent implements OnInit {
         this.getCities();
         form.resetForm();
         this.resetForm();
-        Swal.fire('Success', 'Ciudad creada exitosamente', 'success');
+        Swal.fire('Éxito', 'Ciudad creada exitosamente', 'success');
       });
     } else {
       this.http.put(`${this.apiUrl}/${this.city.id}`, cityDto).subscribe(() => {
         this.getCities();
         form.resetForm();
         this.resetForm();
-        Swal.fire('Success', 'Ciudad actualizada exitosamente', 'success');
+        Swal.fire('Éxito', 'Ciudad actualizada exitosamente', 'success');
       });
     }
   }
@@ -107,7 +110,7 @@ export class CityComponent implements OnInit {
       if (result.isConfirmed) {
         this.http.delete(`${this.apiUrl}/${id}`).subscribe(() => {
           this.getCities();
-          Swal.fire('Deleted!', 'Ciudad eliminada.', 'success');
+          Swal.fire('Eliminada!', 'Ciudad eliminada.', 'success');
         });
       }
     });
@@ -130,5 +133,25 @@ export class CityComponent implements OnInit {
   getDepartmentName(departmentId: number): string {
     const department = this.departments.find(d => d.id === departmentId);
     return department ? department.name : 'N/A';
+  }
+
+  areAllFieldsFilled(): boolean {
+    return (
+      this.city.name.trim() !== '' &&
+      this.city.description.trim() !== '' &&
+      this.city.departmentId != null && // Verifica que no sea null o undefined
+      this.city.departmentId > 0 &&
+      this.city.coordinate.trim() !== ''
+    );
+  }
+
+  isFormValid(): boolean {
+
+    if (!this.areAllFieldsFilled()) {
+      Swal.fire('Error', 'Por favor, complete todos los campos.', 'error');
+      return false;
+    }
+
+    return true;
   }
 }

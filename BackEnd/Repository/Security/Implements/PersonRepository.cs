@@ -50,7 +50,7 @@ namespace Repository.Security.Implements
                 await _context.SaveChangesAsync();
             }
         }
-        public Person GetByIdentificationNumber(string identificationNumber)
+        public Person GetByIdentificationNumber(long identificationNumber)
         {
             return _context.persons
                 .FirstOrDefault(p => p.NumberDocument == identificationNumber);

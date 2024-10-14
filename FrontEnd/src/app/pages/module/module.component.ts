@@ -46,6 +46,9 @@ export class ModuleComponent implements OnInit {
   }
 
   onSubmit(form: NgForm): void {
+    if (!this.isFormValid()) {
+      return;
+    }
     const moduleDto = { ...this.module };
 
     if (this.module.id === 0) {
@@ -53,14 +56,14 @@ export class ModuleComponent implements OnInit {
         this.getModules();  
         form.resetForm();  
         this.resetForm();  
-        Swal.fire('Success', 'Modulo creado exitosamente!', 'success');
+        Swal.fire('Éxito', 'Modulo creado exitosamente!', 'success');
       });
     } else {
       this.http.put(`${this.apiUrl}/${this.module.id}`, moduleDto).subscribe(() => {
         this.getModules();
         form.resetForm();
         this.resetForm();
-        Swal.fire('Success', 'Modulo actualizado exitosamente!', 'success');
+        Swal.fire('Éxito', 'Modulo actualizado exitosamente!', 'success');
       });
     }
   }
@@ -92,7 +95,7 @@ export class ModuleComponent implements OnInit {
       if (result.isConfirmed) {
         this.http.delete(`${this.apiUrl}/${id}`).subscribe(() => {
           this.getModules();
-          Swal.fire('Deleted!', 'Modulo eliminado.', 'success');
+          Swal.fire('Eliminado!', 'Modulo eliminado.', 'success');
         });
       }
     });
@@ -110,5 +113,23 @@ export class ModuleComponent implements OnInit {
     } else {
       return `with: ${reason}`;
     }
+  }
+
+  areAllFieldsFilled(): boolean {
+    return (
+      this.module.name.trim() !== '' &&
+      this.module.description.trim() !== '' &&
+      this.module.code.trim() !== ''
+    );
+  }
+
+  isFormValid(): boolean {
+
+    if (!this.areAllFieldsFilled()) {
+      Swal.fire('Error', 'Por favor, complete todos los campos.', 'error');
+      return false;
+    }
+
+    return true;
   }
 }

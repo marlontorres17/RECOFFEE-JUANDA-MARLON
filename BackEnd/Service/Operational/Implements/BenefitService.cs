@@ -47,5 +47,10 @@ namespace Service.Operational.Implements
         {
             await _benefitRepository.Delete(id);
         }
+
+        public async Task<List<Benefit>> GetBenefitsByFarmIdAsync(int farmId)
+        {
+            return await _benefitRepository.GetBenefitsByFarmIdAsync(farmId);
+        }
     }
 }

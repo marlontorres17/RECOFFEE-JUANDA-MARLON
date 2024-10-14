@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using Entity.Model.Operational;
 using Repository.Operational.Interface;
+using Entity.DTO.Operational;
 
 
 namespace Repository.Operational.Implements
@@ -63,6 +64,13 @@ namespace Repository.Operational.Implements
                 .FirstOrDefaultAsync(f => f.PersonId == personId);
         }
 
+     
 
+        public async Task<List<Farm>> GetFarmsByPersonsIdAsync(int personId)
+        {
+            return await _context.farms
+     .Where(f => f.PersonId == personId) // Filtra por PersonId
+     .ToListAsync();
+        }
     }
 }

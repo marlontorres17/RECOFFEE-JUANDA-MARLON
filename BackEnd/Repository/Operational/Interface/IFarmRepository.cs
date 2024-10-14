@@ -1,4 +1,5 @@
-﻿using Entity.Model.Operational;
+﻿using Entity.DTO.Operational;
+using Entity.Model.Operational;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -15,5 +16,7 @@ namespace Repository.Operational.Interface
         Farm GetByCodigoUnico(string codigoUnico);
 
         Task<Farm> GetFarmByPersonIdAsync(int personId);
+
+        Task<List<Farm>> GetFarmsByPersonsIdAsync(int personId);
     }
 }

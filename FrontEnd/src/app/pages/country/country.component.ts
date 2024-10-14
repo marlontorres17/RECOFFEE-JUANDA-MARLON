@@ -46,6 +46,9 @@ export class CountryComponent implements OnInit {
   }
 
   onSubmit(form: NgForm): void {
+    if (!this.isFormValid()) {
+      return;
+    }
     const countryDto = { ...this.country };
 
     if (this.country.id === 0) {
@@ -53,14 +56,14 @@ export class CountryComponent implements OnInit {
         this.getCountries();
         form.resetForm();
         this.resetForm();
-        Swal.fire('Success', 'País creado exitosamente', 'success');
+        Swal.fire('Éxito', 'País creado exitosamente', 'success');
       });
     } else {
       this.http.put(`${this.apiUrl}/${this.country.id}`, countryDto).subscribe(() => {
         this.getCountries();
         form.resetForm();
         this.resetForm();
-        Swal.fire('Success', 'País actualizad exitosamente', 'success');
+        Swal.fire('Éxito', 'País actualizad exitosamente', 'success');
       });
     }
   }
@@ -92,7 +95,7 @@ export class CountryComponent implements OnInit {
       if (result.isConfirmed) {
         this.http.delete(`${this.apiUrl}/${id}`).subscribe(() => {
           this.getCountries();
-          Swal.fire('Deleted!', 'Country has been deleted.', 'success');
+          Swal.fire('Eliminado!', 'País eliminado.', 'success');
         });
       }
     });
@@ -110,5 +113,22 @@ export class CountryComponent implements OnInit {
     } else {
       return `with: ${reason}`;
     }
+  }
+  areAllFieldsFilled(): boolean {
+    return (
+      this.country.name.trim() !== '' &&
+      this.country.description.trim() !== '' &&
+      this.country.code.trim() !== ''
+    );
+  }
+
+  isFormValid(): boolean {
+
+    if (!this.areAllFieldsFilled()) {
+      Swal.fire('Error', 'Por favor, complete todos los campos.', 'error');
+      return false;
+    }
+
+    return true;
   }
 }

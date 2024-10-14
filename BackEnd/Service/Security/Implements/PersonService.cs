@@ -50,5 +50,19 @@ namespace Service.Security.Implements
         {
             return await _personRepository.GetAdmins();
         }
+
+        public bool IsEligibleForAgeRestriction(DateTime dateOfBirth)
+        {
+            var age = CalculateAge(dateOfBirth);
+            return age >= 14;
+        }
+
+        public int CalculateAge(DateTime birthDate)
+        {
+            var today = DateTime.Today;
+            var age = today.Year - birthDate.Year;
+            if (birthDate > today.AddYears(-age)) age--;
+            return age;
+        }
     }
 }

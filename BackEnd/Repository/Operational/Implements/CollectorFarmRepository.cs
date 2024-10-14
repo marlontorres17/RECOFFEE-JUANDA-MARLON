@@ -85,6 +85,21 @@ namespace Repository.Operational.Implements
         .FirstOrDefaultAsync();
         }
 
+        public async Task<List<CollectorFarm>> GetCollectorFarmsByPersonIdAsync(int personId)
+        {
+            return await _context.Set<CollectorFarm>()
+                .Where(cf => cf.PersonId == personId)
+                .Include(cf => cf.Farm)
+                .ToListAsync();
+        }
+
+        public async Task<IEnumerable<CollectorFarm>> GetCollectorFarmsByPersonIdAsyncU(int personId)
+        {
+            return await _context.collectorFarms
+                .Where(cf => cf.PersonId == personId)
+                .ToListAsync();
+        }
+
 
     }
 }

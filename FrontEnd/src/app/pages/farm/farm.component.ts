@@ -28,7 +28,7 @@ export class FarmComponent implements OnInit {
     description: '',
     sizeMeter: 0,
     coordinate: '',
-  
+    codeUnique: '',
     personId: 0,
     cityId: 0
   };
@@ -44,7 +44,7 @@ export class FarmComponent implements OnInit {
   constructor(private http: HttpClient, private cdr: ChangeDetectorRef, private modalService: NgbModal) {}
 
   ngOnInit(): void {
-    this.getFarms();
+    this.loadFarmsForCurrentPerson();
     this.getPersons();
     this.getCities();
   }
@@ -97,25 +97,29 @@ export class FarmComponent implements OnInit {
 
   onSubmit(form: NgForm): void {
     const farmDto = { ...this.farm };
+ const personId = localStorage.getItem('personId');
+
+    if (personId) {
+      farmDto.personId = +personId; // Establecer el personId al DTO de la finca
+    }
 
     if (this.farm.id === 0) {
       this.http.post(this.apiUrl, farmDto).subscribe(() => {
-        this.getFarms();
+        this.loadFarmsForCurrentPerson(); // Recargar las fincas después de crear
         form.resetForm();
         this.resetForm();
-        Swal.fire('Success', 'Farm created successfully', 'success');
+        Swal.fire('Éxito', 'Finca creada exitosamente', 'success');
       });
     } else {
       this.http.put(`${this.apiUrl}/${this.farm.id}`, farmDto).subscribe(() => {
-        this.getFarms();
+        this.loadFarmsForCurrentPerson(); // Recargar las fincas después de modificar
         form.resetForm();
         this.resetForm();
-        Swal.fire('Success', 'Farm updated successfully', 'success');
+        Swal.fire('Éxito', 'Finca actualizada exitosamente', 'success');
       });
     }
   }
-
-  openModal(farm: any = { id: 0, state: true, name: '', description: '', sizeMeter: 0, coordinate: '', personId: 0, cityId: 0 }): void {
+  openModal(farm: any = { id: 0, state: true, name: '', description: '', sizeMeter: 0, coordinate: '', codeUnique: '', personId: 0, cityId: 0 }): void {
     this.farm = { ...farm };
     this.modalService.open(this.farmModal).result.then((result) => {
       this.closeResult = `Closed with: ${result}`;
@@ -142,7 +146,7 @@ export class FarmComponent implements OnInit {
       if (result.isConfirmed) {
         this.http.delete(`${this.apiUrl}/${id}`).subscribe(() => {
           this.getFarms();
-          Swal.fire('Deleted!', 'Farm has been deleted.', 'success');
+          Swal.fire('Eliminada!', 'Finca eliminada.', 'success');
         });
       }
     });
@@ -161,4 +165,27 @@ export class FarmComponent implements OnInit {
       return `with: ${reason}`;
     }
   }
+
+  loadFarmsForCurrentPerson(): void {
+    const personId = localStorage.getItem('personId'); // Obtener el personId del localStorage
+    if (personId) {
+      this.http.get<any[]>(`${this.apiUrl}/person/farm/${personId}`).subscribe(
+        (response) => {
+          // Aquí verificamos si la respuesta es un array o un objeto
+          if (Array.isArray(response)) {
+            this.farms = response; // Si es un array, asignamos directamente
+          } else {
+            this.farms = [response]; // Si es un objeto, lo convertimos en un array
+          }
+          this.cdr.detectChanges();
+        },
+        (error) => {
+          console.error('Error fetching farms:', error);
+        }
+      );
+    } else {
+      console.warn('No personId found in localStorage.');
+    }
+}
+
 }

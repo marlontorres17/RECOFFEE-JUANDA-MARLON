@@ -15,6 +15,8 @@ namespace Service.Operational.Interface
 
         Task<Farm> GetFarmByPersonIdAsync(int personId);
 
+        Task<List<Farm>> GetFarmsByPersonsIdAsync(int personId);
+
 
 
     }

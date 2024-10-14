@@ -11,5 +11,6 @@ namespace Repository.Operational.Interface
         Task Add(Lot lot);
         Task Update(Lot lot);
         Task Delete(int id);
+        Task<List<Lot>> GetLotsByFarmIdAsync(int farmId);
     }
 }

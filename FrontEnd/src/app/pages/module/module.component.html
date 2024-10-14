@@ -74,7 +74,7 @@
           El código es obligatorio.
         </div>
       </div>
-      <div class="form-group">
+      <div class="form-group" *ngIf="module.id !== 0">
         <label for="state">Activo</label>
         <input type="checkbox" id="state" [(ngModel)]="module.state" name="state" class="checkbox-field">
       </div>

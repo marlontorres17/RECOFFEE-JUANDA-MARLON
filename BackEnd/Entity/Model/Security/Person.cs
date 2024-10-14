@@ -20,7 +20,7 @@ namespace Entity.Model.Security
         public int CityId { get; set; }
         public City City { get; set; }
         public string TypeDocument { get; set; }
-        public string NumberDocument { get; set; }
+        public long NumberDocument { get; set; }
        
 
 

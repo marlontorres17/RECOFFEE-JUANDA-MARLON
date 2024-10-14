@@ -422,22 +422,6 @@
     ]
   },
   {
-    "ContainingType": "Web.Controllers.Operational.Implements.CollectorFarmController",
-    "Method": "GetFarmByPersonId",
-    "RelativePath": "api/CollectorFarm/person/{personId}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "personId",
-        "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
     "ContainingType": "Web.Controller.Implements.CountryController",
     "Method": "GetAll",
     "RelativePath": "api/Country",
@@ -636,22 +620,6 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Web.Controllers.Operational.Implements.EmailController",
-    "Method": "SendMailAsync",
-    "RelativePath": "api/Email",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "emailDto",
-        "Type": "Entity.DTO.Operational.EmailDto",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
     "ContainingType": "Web.Controllers.Operational.Implements.FarmController",
     "Method": "GetAll",
     "RelativePath": "api/Farm",
@@ -744,22 +712,6 @@
     "Parameters": [
       {
         "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Web.Controllers.Operational.Implements.FarmController",
-    "Method": "GetFarmByPersonId",
-    "RelativePath": "api/Farm/person/{personId}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "personId",
         "Type": "System.Int32",
         "IsRequired": true
       }
@@ -1294,16 +1246,6 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Web.Controller.Implements.PersonController",
-    "Method": "GetAdminPersons",
-    "RelativePath": "api/Person/admins",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
     "ContainingType": "Web.Controller.Implements.PersonBenefitController",
     "Method": "GetAll",
     "RelativePath": "api/PersonBenefit",
@@ -1701,68 +1643,15 @@
   },
   {
     "ContainingType": "Web.Controller.Implements.UserController",
-    "Method": "UpdateUserRole",
-    "RelativePath": "api/User/{id}/role",
-    "HttpMethod": "PUT",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      },
-      {
-        "Name": "newRoleName",
-        "Type": "System.String",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Web.Controller.Implements.UserController",
-    "Method": "ForgotPassword",
-    "RelativePath": "api/User/forgot-password",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "request",
-        "Type": "Web.Controller.Implements.UserController\u002BForgotPasswordRequest",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Web.Controller.Implements.UserController",
-    "Method": "AddUserAndPerson",
+    "Method": "Register",
     "RelativePath": "api/User/register",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "userAndPersonDto",
+        "Name": "userPersonRoleDto",
         "Type": "Entity.DTO.UserPersonRoleDto",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Web.Controller.Implements.UserController",
-    "Method": "ResetPassword",
-    "RelativePath": "api/User/reset-password",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "model",
-        "Type": "Entity.DTO.Operational.ResetPasswordDto",
         "IsRequired": true
       }
     ],

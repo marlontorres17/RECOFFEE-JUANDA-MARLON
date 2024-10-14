@@ -57,5 +57,16 @@ namespace Service.Operational.Implements
         {
             return await _collectorFarmRepository.GetFarmByPersonIdAsync(personId);
         }
+
+        public async Task<List<CollectorFarm>> GetCollectorFarmsByPersonIdAsync(int personId)
+        {
+            return await _collectorFarmRepository.GetCollectorFarmsByPersonIdAsync(personId);
+        }
+
+        public async Task<IEnumerable<CollectorFarmDto>> GetCollectorFarmsByPersonIdAsyncU(int personId)
+        {
+            var collectorFarms = await _collectorFarmRepository.GetCollectorFarmsByPersonIdAsync(personId);
+            return _mapper.Map<IEnumerable<CollectorFarmDto>>(collectorFarms);
+        }
     }
 }

@@ -1,4 +1,5 @@
-﻿using Entity.DTO.Operational;
+﻿using Entity.DTO;
+using Entity.DTO.Operational;
 using Microsoft.AspNetCore.Mvc;
 using Service.Operational.Interface;
 using System.Collections.Generic;
@@ -56,5 +57,30 @@ namespace Web.Controller.Implements
             await _personBenefitService.Delete(id);
             return NoContent();
         }
+        [HttpGet("person/{personId}")]
+        public async Task<IActionResult> GetPersonBenefitsByPersonId(int personId)
+        {
+            var personBenefits = await _personBenefitService.GetPersonBenefitsByPersonIdAsync(personId);
+            return Ok(personBenefits);
+        }
+
+        [HttpGet("farm/{farmId}")]
+        public async Task<ActionResult<IEnumerable<UserPersonRoleDto>>> GetCollectorsByFarmId(int farmId)
+        {
+            if (farmId <= 0)
+            {
+                return BadRequest("El ID de la finca debe ser mayor que cero.");
+            }
+
+            var collectors = await _personBenefitService.GetCollectorsPersonsByFarmIdAsync(farmId);
+
+            if (collectors == null || !collectors.Any())
+            {
+                return NotFound("No se encontraron recolectores para esta finca.");
+            }
+
+            return Ok(collectors);
+        }
+
     }
 }

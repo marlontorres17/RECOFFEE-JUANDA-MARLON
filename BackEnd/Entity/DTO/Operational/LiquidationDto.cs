@@ -18,5 +18,7 @@ namespace Entity.DTO.Operational
 
         public int PersonId { get; set; }
 
+        public int FarmId { get; set; }
+
     }
 }

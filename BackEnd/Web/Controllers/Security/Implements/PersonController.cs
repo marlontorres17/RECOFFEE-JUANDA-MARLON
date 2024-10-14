@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 
 using Web.Controllers.Security.Interface;
 using Service.Security.Interface;
+using Entity.Model.Security;
 
 namespace Web.Controller.Implements
 {
@@ -64,6 +65,40 @@ namespace Web.Controller.Implements
             var adminPersons = await _personService.GetAdmins();
             return Ok(adminPersons);
         }
+
+        [HttpPost("check-age")]
+        public IActionResult CheckAge([FromBody] PersonDto personDto)
+        {
+            if (personDto == null || personDto.DateOfBirth == DateTime.MinValue)
+            {
+                return BadRequest("Invalid data.");
+            }
+
+            var today = DateTime.Today;
+
+            if (personDto.DateOfBirth > today)
+            {
+                return BadRequest("La fecha de nacimiento no puede ser futura.");
+            }
+
+            var age = _personService.CalculateAge(personDto.DateOfBirth);
+            if (age > 85)
+            {
+                return BadRequest("La persona no puede tener más de 85 años.");
+            }
+
+            // Log para depurar la edad
+            Console.WriteLine($"Edad calculada: {age}");
+
+            var isEligible = _personService.IsEligibleForAgeRestriction(personDto.DateOfBirth);
+
+            // Log para depurar elegibilidad
+            Console.WriteLine($"Elegibilidad: {isEligible}");
+
+            return Ok(new { IsEligible = isEligible });
+        }
+
+
 
     }
 }

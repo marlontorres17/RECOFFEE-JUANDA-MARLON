@@ -30,6 +30,7 @@ import { CollectorFarmComponent } from './pages/collector-farm/collector-farm.co
 import { LandingComponent } from './pages/landing/landing.component';
 import { HomeUsuarioComponent } from './pages/home-usuario/home-usuario.component';
 import { UsuarioDashboardComponent } from './usuario-dashboard/usuario-dashboard.component';
+import { BenefitPersonRecolectorComponent } from './pages/benefit-person-recolector/benefit-person-recolector.component';
 import { ResetPasswordComponent } from './pages/reset-password/reset-password.component';
 import { AccountComponent } from './pages/account/account.component';
 
@@ -71,11 +72,10 @@ export const routes: Routes = [
     children: [
       { path: 'homeRecolector', component: HomeRecolectorComponent },
       { path: 'benefit', component: BenefitComponent },
-      { path: 'person-benefit', component: PersonBenefitComponent },
+      { path: 'person-benefit', component: BenefitPersonRecolectorComponent },
       { path: 'liquidation', component: LiquidationComponent },
       { path: 'account', component: AccountComponent },
       { path: '', redirectTo: 'homeRecolector', pathMatch: 'full' }
-      
     ]
   },
 
@@ -93,7 +93,6 @@ export const routes: Routes = [
   {path: 'landing', component: LandingComponent},
   { path: 'register-user', component: RegisterUserComponent },
   { path: 'reset-password', component: ResetPasswordComponent },
-   
   { path: 'login', component: LoginComponent },
   { path: '', redirectTo: '/landing', pathMatch: 'full' },  
   { path: '**', redirectTo: '/landing' } 

@@ -58,8 +58,13 @@
       </div>
       <div class="form-group">
         <label for="cost">Costo</label>
-        <input type="text" id="cost" [(ngModel)]="benefit.cost" name="cost" class="input-field" required>
+        <input type="number" id="cost" [(ngModel)]="benefit.cost" name="cost" class="input-field" required
+        step="0.01">
+        <div *ngIf="benefit.cost < 0" class="text-danger">
+            Debe ingresar un valor positivo para el precio.
+        </div>
       </div>
+
       <div class="form-group">
         <label for="farmId">Seleccionar Finca</label>
         <select id="farmId" [(ngModel)]="benefit.farmId" name="farmId" class="select-field" required>

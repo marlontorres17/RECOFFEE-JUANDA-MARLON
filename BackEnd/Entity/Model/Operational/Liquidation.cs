@@ -16,6 +16,8 @@ namespace Entity.Model.Operational
         public double? TotalBenefit { get; set; }
         public double? TotalPay {  get; set; }
 
+        public int FarmId { get; set; }
+        public Farm Farm { get; set; }
         public int PersonId { get; set; }
         public Person Person { get; set; }
 

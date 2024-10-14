@@ -61,6 +61,9 @@ export class ViewComponent implements OnInit {
   }
 
   onSubmit(form: NgForm): void {
+    if (!this.isFormValid()) {
+      return;
+    }
     const viewDto = { ...this.view };
 
     if (this.view.id === 0) {
@@ -68,14 +71,14 @@ export class ViewComponent implements OnInit {
         this.getViews();
         form.resetForm();
         this.resetForm();
-        Swal.fire('Success', 'Vista Creada exitosamente', 'success');
+        Swal.fire('Éxito', 'Vista Creada exitosamente', 'success');
       });
     } else {
       this.http.put(`${this.apiUrl}/${this.view.id}`, viewDto).subscribe(() => {
         this.getViews();
         form.resetForm();
         this.resetForm();
-        Swal.fire('Success', 'Vista actualizada exitosamente', 'success');
+        Swal.fire('Éxito', 'Vista actualizada exitosamente', 'success');
       });
     }
   }
@@ -107,7 +110,7 @@ export class ViewComponent implements OnInit {
       if (result.isConfirmed) {
         this.http.delete(`${this.apiUrl}/${id}`).subscribe(() => {
           this.getViews();
-          Swal.fire('Deleted!', 'Vista eliminada.', 'success');
+          Swal.fire('Eliminada!', 'Vista eliminada.', 'success');
         });
       }
     });
@@ -130,5 +133,23 @@ export class ViewComponent implements OnInit {
   getModuleName(moduleId: number): string {
     const module = this.modules.find(m => m.id === moduleId);
     return module ? module.name : 'N/A';
+  }
+
+  areAllFieldsFilled(): boolean {
+    return (
+      this.view.name.trim() !== '' &&
+      this.view.description.trim() !== '' &&
+      this.view.moduleId.trim() !== ''
+    );
+  }
+
+  isFormValid(): boolean {
+
+    if (!this.areAllFieldsFilled()) {
+      Swal.fire('Error', 'Por favor, complete todos los campos.', 'error');
+      return false;
+    }
+
+    return true;
   }
 }

@@ -57,9 +57,15 @@
         <textarea id="description" [(ngModel)]="lot.description" name="description" class="input-field" required></textarea>
       </div>
       <div class="form-group">
-        <label for="sizeMeters">Tamaño (m²)</label>
-        <input type="text" id="sizeMeters" [(ngModel)]="lot.sizeMeters" name="sizeMeters" class="input-field" required>
-      </div>
+        <label for="sizeMeters">Tamaño en hectáreas</label>
+        <input type="number" id="sizeMeters" [(ngModel)]="lot.sizeMeters" name="sizeMeters" 
+               class="input-field" required 
+               step="0.01">
+        <div *ngIf="lot.sizeMeters < 0" class="text-danger">
+            Debe ingresar un valor positivo para hectáreas.
+        </div>
+    </div>
+    
       <div class="form-group">
         <label for="farmId">Finca</label>
         <select id="farmId" [(ngModel)]="lot.farmId" name="farmId" class="select-field" required>

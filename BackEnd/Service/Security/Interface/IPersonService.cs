@@ -16,5 +16,11 @@ namespace Service.Security.Interface
         Task Update(PersonDto personDto);
         Task Delete(int id);
         Task<IEnumerable<Person>> GetAdmins();
+
+        bool IsEligibleForAgeRestriction(DateTime dateOfBirth);
+
+        int CalculateAge(DateTime birthDate);
+
+
     }
 }

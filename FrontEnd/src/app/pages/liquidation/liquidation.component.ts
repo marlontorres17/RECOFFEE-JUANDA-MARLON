@@ -73,14 +73,14 @@ export class LiquidationComponent implements OnInit {
             this.getLiquidations();
             form.resetForm();
             this.resetForm();
-            Swal.fire('Success', 'Liquidation created successfully', 'success');
+            Swal.fire('Éxito', 'Liquidación creada exitosamente', 'success');
         });
     } else {
         this.http.put(`${this.apiUrl}/${this.liquidation.id}`, liquidationDto).subscribe(() => {
             this.getLiquidations();
             form.resetForm();
             this.resetForm();
-            Swal.fire('Success', 'Liquidation updated successfully', 'success');
+            Swal.fire('Éxito', 'Liquidación actualizada exitosamente', 'success');
         });
     }
 }
@@ -100,18 +100,19 @@ export class LiquidationComponent implements OnInit {
 
   deleteLiquidation(id: number): void {
     Swal.fire({
-      title: 'Are you sure?',
-      text: 'You won\'t be able to revert this!',
+      title: 'Estás seguro??',
+      text: 'Estás a punto de eliminar esta liquidación. ¡Esta acción no se puede deshacer!',
       icon: 'warning',
       showCancelButton: true,
-      confirmButtonColor: '#d33',
-      cancelButtonColor: '#3085d6',
-      confirmButtonText: 'Yes, delete it!'
+      confirmButtonColor: '#9c3ce6',
+      cancelButtonColor: '#1a0028',
+      confirmButtonText: 'Si, eliminar!',
+      cancelButtonText: 'No, cancelar!'
     }).then((result) => {
       if (result.isConfirmed) {
         this.http.delete(`${this.apiUrl}/${id}`).subscribe(() => {
           this.getLiquidations();
-          Swal.fire('Deleted!', 'Liquidation has been deleted.', 'success');
+          Swal.fire('Eliminada!', 'Liquidaciion eliminada.', 'success');
         });
       }
     });

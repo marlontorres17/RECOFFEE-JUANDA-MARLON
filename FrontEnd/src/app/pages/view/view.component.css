@@ -51,7 +51,8 @@
   }
 }
 
-.table th, .table td {
+.table th,
+.table td {
   padding: 15px;
   text-align: left;
 }
@@ -63,14 +64,14 @@
 }
 
 .table th {
-  background-color: #1a0028; 
+  background-color: #1a0028;
   color: white;
   font-weight: bold;
   text-transform: uppercase;
 }
 
 .table tr:last-child td {
-  border-bottom: none; 
+  border-bottom: none;
 }
 
 .table tr:hover {
@@ -78,11 +79,13 @@
   cursor: pointer;
 }
 
-.table th:first-child, .table td:first-child {
+.table th:first-child,
+.table td:first-child {
   border-top-left-radius: 10px;
 }
 
-.table th:last-child, .table td:last-child {
+.table th:last-child,
+.table td:last-child {
   border-top-right-radius: 10px;
 }
 
@@ -131,7 +134,8 @@
   color: #9c3ce6;
 }
 
-.input-field, .checkbox-field {
+.input-field,
+.checkbox-field {
   width: 100%;
   padding: 10px;
   border: 1px solid #ccc;
@@ -192,4 +196,60 @@
   height: 20px;
   cursor: pointer;
   margin-top: 10px;
+}
+
+/* Estilo para el campo de entrada de ciudad */
+.city-input {
+  padding: 10px;
+  width: 100%; /* Asegurarse de que ocupe el 100% del espacio disponible */
+  border: 1px solid #9c3ce6;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Estilo para el dropdown de las ciudades */
+.city-dropdown {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  max-height: 200px; /* Limitar la altura máxima del dropdown */
+  overflow-y: auto; /* Agregar scroll si hay muchas ciudades */
+  border: 1px solid #9c3ce6;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: absolute; /* Posicionar la lista debajo del input */
+  top: 100%; /* Colocar la lista justo debajo del input */
+  left: 0; /* Alinearla con el borde izquierdo del input */
+  width: 100%; /* Igualar el ancho al del input */
+  z-index: 1000; /* Para que se muestre por encima de otros elementos */
+}
+
+.city-dropdown li {
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  color: #ffffff;
+}
+
+.city-dropdown li:hover {
+  background-color: #9c3ce6;
+}
+
+.select-field {
+  width: 100%; /* Ocupa el 100% del ancho disponible */
+  padding: 10px; /* Espaciado interno */
+  border: 1px solid #9c3ce6; /* Borde morado */
+  border-radius: 5px; /* Bordes redondeados */
+  transition: border-color 0.3s, box-shadow 0.3s; /* Transiciones suaves */
+  appearance: none; /* Eliminar el estilo por defecto del navegador */
+  -webkit-appearance: none; /* Safari */
+  -moz-appearance: none; /* Firefox */
+}
+
+/* Para cambiar el borde y agregar sombra al enfocar */
+.select-field:focus {
+  border-color: #9c3ce6; /* Cambia el color del borde al enfocar */
+  box-shadow: 0 0 5px rgba(156, 60, 230, 0.5); /* Sombra morada al enfocar */
+  outline: none; /* Sin contorno adicional */
 }

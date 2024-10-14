@@ -11,5 +11,6 @@ namespace Repository.Operational.Interface
         Task Add(Harvest harvest);
         Task Update(Harvest harvest);
         Task Delete(int id);
+        Task<List<Harvest>> GetHarvestsByFarmIdAsync(int farmId);
     }
 }

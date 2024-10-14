@@ -83,14 +83,14 @@ export class CollectionDetailComponent implements OnInit {
         this.getCollectionDetails();
         form.resetForm();
         this.resetForm();
-        Swal.fire('Success', 'Collection detail created successfully', 'success');
+        Swal.fire('Éxito', 'Detalle de la recolección creado exitosamente', 'success');
       });
     } else {
       this.http.put(`${this.collectionDetailApiUrl}/${this.collectionDetail.id}`, collectionDetailDto).subscribe(() => {
         this.getCollectionDetails();
         form.resetForm();
         this.resetForm();
-        Swal.fire('Success', 'Collection detail updated successfully', 'success');
+        Swal.fire('Éxito', 'Detalle de la recolección actualizado exitosamente', 'success');
       });
     }
   }
@@ -110,18 +110,19 @@ export class CollectionDetailComponent implements OnInit {
 
   deleteCollectionDetail(id: number): void {
     Swal.fire({
-      title: 'Are you sure?',
-      text: 'You won\'t be able to revert this!',
+      title: 'Estás seguro??',
+      text: 'Estás a punto de eliminar esta liquidación. ¡Esta acción no se puede deshacer!',
       icon: 'warning',
       showCancelButton: true,
-      confirmButtonColor: '#d33',
-      cancelButtonColor: '#3085d6',
-      confirmButtonText: 'Yes, delete it!'
+      confirmButtonColor: '#9c3ce6',
+      cancelButtonColor: '#1a0028',
+      confirmButtonText: 'Si, eliminar!',
+      cancelButtonText: 'No, cancelar!'
     }).then((result) => {
       if (result.isConfirmed) {
         this.http.delete(`${this.collectionDetailApiUrl}/${id}`).subscribe(() => {
           this.getCollectionDetails();
-          Swal.fire('Deleted!', 'Collection detail has been deleted.', 'success');
+          Swal.fire('Eliminado!', 'Detalle de la recolección eliminado.', 'success');
         });
       }
     });

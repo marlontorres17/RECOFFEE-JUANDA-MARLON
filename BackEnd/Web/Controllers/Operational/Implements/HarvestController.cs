@@ -56,5 +56,12 @@ namespace Web.Controller.Implements
             await _harvestService.Delete(id);
             return NoContent();
         }
+
+        [HttpGet("farm/{farmId}")]
+        public async Task<IActionResult> GetHarvestsByFarmId(int farmId)
+        {
+            var harvests = await _harvestService.GetHarvestsByFarmIdAsync(farmId);
+            return Ok(harvests);
+        }
     }
 }
