@@ -717,7 +717,10 @@
           "SendGrid": "9.29.3"
         },
         "runtime": {
-          "Entity.dll": {}
+          "Entity.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "Repository/1.0.0": {
@@ -727,7 +730,10 @@
           "SendGrid": "9.29.3"
         },
         "runtime": {
-          "Repository.dll": {}
+          "Repository.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "Service/1.0.0": {
@@ -739,7 +745,10 @@
           "SendGrid": "9.29.3"
         },
         "runtime": {
-          "Service.dll": {}
+          "Service.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "Utilities/1.0.0": {
@@ -749,7 +758,10 @@
           "SendGrid": "9.29.3"
         },
         "runtime": {
-          "Utilities.dll": {}
+          "Utilities.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }

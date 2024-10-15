@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\JuanDa\\source\\repos\\SecurityApp\\SecurityApp\\Utilities\\Utilities.csproj": {}
+    "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Utilities\\Utilities.csproj": {}
   },
   "projects": {
-    "C:\\Users\\JuanDa\\source\\repos\\SecurityApp\\SecurityApp\\Entity\\Entity.csproj": {
+    "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Entity\\Entity.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\JuanDa\\source\\repos\\SecurityApp\\SecurityApp\\Entity\\Entity.csproj",
+        "projectUniqueName": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Entity\\Entity.csproj",
         "projectName": "Entity",
-        "projectPath": "C:\\Users\\JuanDa\\source\\repos\\SecurityApp\\SecurityApp\\Entity\\Entity.csproj",
-        "packagesPath": "C:\\Users\\JuanDa\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\JuanDa\\source\\repos\\SecurityApp\\SecurityApp\\Entity\\obj\\",
+        "projectPath": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Entity\\Entity.csproj",
+        "packagesPath": "C:\\Users\\marlo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Entity\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\JuanDa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\marlo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -99,21 +99,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\JuanDa\\source\\repos\\SecurityApp\\SecurityApp\\Utilities\\Utilities.csproj": {
+    "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Utilities\\Utilities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\JuanDa\\source\\repos\\SecurityApp\\SecurityApp\\Utilities\\Utilities.csproj",
+        "projectUniqueName": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Utilities\\Utilities.csproj",
         "projectName": "Utilities",
-        "projectPath": "C:\\Users\\JuanDa\\source\\repos\\SecurityApp\\SecurityApp\\Utilities\\Utilities.csproj",
-        "packagesPath": "C:\\Users\\JuanDa\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\JuanDa\\source\\repos\\SecurityApp\\SecurityApp\\Utilities\\obj\\",
+        "projectPath": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Utilities\\Utilities.csproj",
+        "packagesPath": "C:\\Users\\marlo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Utilities\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\JuanDa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\marlo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -128,8 +128,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\JuanDa\\source\\repos\\SecurityApp\\SecurityApp\\Entity\\Entity.csproj": {
-                "projectPath": "C:\\Users\\JuanDa\\source\\repos\\SecurityApp\\SecurityApp\\Entity\\Entity.csproj"
+              "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Entity\\Entity.csproj": {
+                "projectPath": "C:\\Users\\marlo\\Documents\\Git\\RECOFFEE-JUANDA-MARLON\\BackEnd\\Entity\\Entity.csproj"
               }
             }
           }
@@ -174,7 +174,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

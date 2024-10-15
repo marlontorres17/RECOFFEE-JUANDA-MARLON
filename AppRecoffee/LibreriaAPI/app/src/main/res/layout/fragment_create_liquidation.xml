@@ -58,6 +58,23 @@
                 android:padding="12dp"
                 android:layout_marginBottom="16dp" />
 
+            <!-- Spinner para seleccionar la Finca -->
+            <TextView
+                android:id="@+id/textView_farm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Finca:"
+                android:textColor="#F0F0F0"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/spinner_farm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="12dp"
+                android:layout_marginBottom="16dp" />
+
             <!-- Botón Crear Liquidación -->
             <Button
                 android:id="@+id/btn_create_liquidation"
