@@ -1,0 +1,71 @@
+<div class="header">
+  <h2 class="title">Roles de Usuario</h2>
+  <button class="btn-new" (click)="openModal()">Agregar Nuevo Rol de Usuario</button>
+</div>
+
+<div class="table-wrapper">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Usuario</th>
+        <th>Rol</th>
+        <th>Estado</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let usle of usles">
+        <td>{{ getUserName(usle.userId) }}</td>
+        <td>{{ getRoleName(usle.roleId) }}</td>
+        <td><input type="checkbox" [checked]="usle.state" disabled /></td>
+        <td>
+          <button class="btn-icon edit" (click)="editUsle(usle)">
+            <i class="fas fa-edit"></i>
+          </button>
+          <button class="btn-icon delete" (click)="deleteUsle(usle.id)">
+            <i class="fas fa-trash-alt"></i>
+          </button>
+        </td>
+      </tr>
+      <tr *ngIf="usles.length === 0">
+        <td colspan="4" class="no-results">No se encontraron roles de usuario</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- Modal -->
+<ng-template #usleModal let-modal>
+  <div class="modal-header">
+    <h5 class="modal-title">Formulario de Rol de Usuario</h5>
+    <button type="button" class="close" (click)="modal.dismiss('Cross click')">
+      <span>&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <form #usleForm="ngForm" (ngSubmit)="onSubmit(usleForm)" class="usle-form">
+      <div class="form-group">
+        <label for="userId">Seleccionar Usuario</label>
+        <select id="userId" [(ngModel)]="usle.userId" name="userId" class="select-field" required>
+          <option value="" disabled selected>Selecciona un usuario</option>
+          <option *ngFor="let user of users" [value]="user.id">{{ user.userName }}</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="roleId">Seleccionar Rol</label>
+        <select id="roleId" [(ngModel)]="usle.roleId" name="roleId" class="select-field" required>
+          <option value="" disabled selected>Selecciona un rol</option>
+          <option *ngFor="let role of roles" [value]="role.id">{{ role.name }}</option>
+        </select>
+      </div>
+      <div class="form-group" *ngIf="usle.id !== 0">
+        <label for="state">Activo</label>
+        <input type="checkbox" id="state" [(ngModel)]="usle.state" name="state" class="checkbox-field">
+      </div>
+      <div class="modal-footer">
+        <button type="submit" class="btn btn-primary">{{ usle.id === 0 ? 'Crear' : 'Actualizar' }}</button>
+        <button type="button" class="btn btn-secondary" (click)="modal.dismiss('Cancel')">Cancelar</button>
+      </div>
+    </form>
+  </div>
+</ng-template>

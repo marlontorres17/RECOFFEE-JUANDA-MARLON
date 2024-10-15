@@ -1,0 +1,59 @@
+<div class="header">
+    <h2 class="title">Liquidaciones</h2>
+  </div>
+  
+  <div class="table-wrapper">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Total Kilos</th>
+          <th>Total Beneficio</th>
+          <th>Total a Pagar</th>
+          <th>Persona</th>
+          <th>Estado</th>
+          
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let liquidation of liquidations">
+          <td>{{ liquidation.totalKilo }}</td>
+          <td>{{ liquidation.totalBenefit }}</td>
+          <td>{{ liquidation.totalPay }}</td>
+          <td>{{ getPersonName(liquidation.personId) }}</td>
+          <td><input type="checkbox" [checked]="liquidation.state" disabled /></td>
+        </tr>
+        <tr *ngIf="liquidations.length === 0">
+          <td colspan="10" class="no-results">No se encontraron liquidaciones</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+  <!-- Modal -->
+  <ng-template #liquidationModal let-modal>
+    <div class="modal-header">
+      <h5 class="modal-title">Formulario de Liquidación</h5>
+      <button type="button" class="close" (click)="modal.dismiss('Cross click')">
+        <span>&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <form #liquidationForm="ngForm" (ngSubmit)="onSubmit(liquidationForm)" class="liquidation-form">
+        
+        <div class="form-group">
+          <label for="personId">Seleccionar Persona</label>
+          <select id="personId" [(ngModel)]="liquidation.personId" name="personId" class="select-field" required>
+            <option value="" disabled selected>Seleccionar una persona</option>
+            <option *ngFor="let person of persons" [value]="person.id">{{ person.firstName }} {{ person.firstLastName }}</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <div class="col" *ngIf="liquidation.id !== 0">
+          <label for="state">Activo</label>
+          <input type="checkbox" id="state" [(ngModel)]="liquidation.state" name="state" class="checkbox-field">
+        </div>
+      </div>
+      </form>
+    </div>
+  </ng-template>
+  

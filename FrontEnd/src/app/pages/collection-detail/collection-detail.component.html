@@ -1,0 +1,87 @@
+<div class="header">
+  <h2 class="title">Detalles de la Recolección</h2>
+  <button class="btn-new" (click)="openModal()">Agregar Nuevo Detalle de Recolección</button>
+</div>
+
+<div class="table-wrapper">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Kilo</th>
+        <th>Etapa</th>
+        <th>Persona</th>
+        <th>Cosecha</th>
+        <th>Estado</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let collectionDetail of collectionDetails">
+        <td>{{ collectionDetail.kilo }}</td>
+        <td>{{ collectionDetail.stage }}</td>
+        <td>{{ getPersonName(collectionDetail.personId) }}</td>
+        <td>{{ getHarvestStage(collectionDetail.harvestId) }}</td>
+        
+        <td><input type="checkbox" [checked]="collectionDetail.state" disabled /></td>
+        <td>
+          <button class="btn-icon edit" (click)="editCollectionDetail(collectionDetail)">
+            <i class="fas fa-edit"></i>
+          </button>
+          <button class="btn-icon delete" (click)="deleteCollectionDetail(collectionDetail.id)">
+            <i class="fas fa-trash-alt"></i>
+          </button>
+        </td>
+      </tr>
+      <tr *ngIf="collectionDetails.length === 0">
+        <td colspan="7" class="no-results">No se encontraron detalles de recolección</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- Modal -->
+<ng-template #collectionDetailModal let-modal>
+  <div class="modal-header">
+    <h5 class="modal-title">Formulario de Detalle de Recolección</h5>
+    <button type="button" class="close" (click)="modal.dismiss('Cross click')">
+      <span>&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <form #collectionDetailForm="ngForm" (ngSubmit)="onSubmit(collectionDetailForm)" class="collection-detail-form">
+      <div class="form-group">
+        <label for="kilo">Kilo</label>
+        <input type="text" id="kilo" [(ngModel)]="collectionDetail.kilo" name="kilo" class="input-field" required>
+      </div>
+      <div class="form-group">
+        <label for="stage">Etapa</label>
+        <select id="stage" [(ngModel)]="collectionDetail.stage" name="stage" class="select-field" required>
+          <option value="" disabled selected>Seleccionar una etapa</option>
+          <option value="mañana">Mañana</option>
+          <option value="mediodia">Mediodía</option>
+          <option value="tarde">Tarde</option>
+        </select>
+      </div>
+      
+
+      <div class="form-group">
+        <label for="personId">Seleccionar Persona</label>
+        <select id="personId" [(ngModel)]="collectionDetail.personId" name="personId" class="select-field" required>
+          <option value="" disabled selected>Seleccionar una persona</option>
+          <option *ngFor="let person of persons" [value]="person.id">{{ person.firstName }} {{ person.firstLastName }}</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="harvestId">Seleccionar Cosecha</label>
+        <select id="harvestId" [(ngModel)]="collectionDetail.harvestId" name="harvestId" class="select-field" required>
+          <option value="" disabled selected>Seleccionar una cosecha</option>
+          <option *ngFor="let harvest of harvests" [value]="harvest.id">{{ harvest.date }}</option>
+        </select>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn-cancel" (click)="modal.dismiss()">Cancelar</button>
+        <button type="submit" class="btn-submit">Guardar</button>
+      </div>
+    </form>
+  </div>
+</ng-template>

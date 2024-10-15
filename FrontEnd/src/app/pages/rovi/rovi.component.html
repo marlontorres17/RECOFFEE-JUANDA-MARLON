@@ -1,0 +1,71 @@
+<div class="header">
+  <h2 class="title">Vistas de Rol</h2>
+  <button class="btn-new" (click)="openModal()">Agregar Nueva Vista de Rol</button>
+</div>
+
+<div class="table-wrapper">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Rol</th>
+        <th>Vista</th>
+        <th>Estado</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let rovi of rovis">
+        <td>{{ getRoleName(rovi.roleId) }}</td>
+        <td>{{ getViewName(rovi.viewId) }}</td>
+        <td><input type="checkbox" [checked]="rovi.state" disabled /></td>
+        <td>
+          <button class="btn-icon edit" (click)="editRovi(rovi)">
+            <i class="fas fa-edit"></i>
+          </button>
+          <button class="btn-icon delete" (click)="deleteRovi(rovi.id)">
+            <i class="fas fa-trash-alt"></i>
+          </button>
+        </td>
+      </tr>
+      <tr *ngIf="rovis.length === 0">
+        <td colspan="4" class="no-results">No se encontraron vistas de rol</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- Modal -->
+<ng-template #roviModal let-modal>
+  <div class="modal-header">
+    <h5 class="modal-title">Formulario de Vista de Rol</h5>
+    <button type="button" class="close" (click)="modal.dismiss('Cross click')">
+      <span>&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <form #roviForm="ngForm" (ngSubmit)="onSubmit(roviForm)" class="rovi-form">
+      <div class="form-group">
+        <label for="roleId">Seleccionar Rol</label>
+        <select id="roleId" [(ngModel)]="rovi.roleId" name="roleId" class="select-field" required>
+          <option value="" disabled selected>Selecciona un rol</option>
+          <option *ngFor="let role of roles" [value]="role.id">{{ role.name }}</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="viewId">Seleccionar Vista</label>
+        <select id="viewId" [(ngModel)]="rovi.viewId" name="viewId" class="select-field" required>
+          <option value="" disabled selected>Selecciona una vista</option>
+          <option *ngFor="let view of views" [value]="view.id">{{ view.name }}</option>
+        </select>
+      </div>
+      <div class="form-group" *ngIf="rovi.id !== 0">
+        <label for="state">Activo</label>
+        <input type="checkbox" id="state" [(ngModel)]="rovi.state" name="state" class="checkbox-field">
+      </div>
+      <div class="modal-footer">
+        <button type="submit" class="btn btn-primary">{{ rovi.id === 0 ? 'Crear' : 'Actualizar' }}</button>
+        <button type="button" class="btn btn-secondary" (click)="modal.dismiss('Cancel')">Cancelar</button>
+      </div>
+    </form>
+  </div>
+</ng-template>

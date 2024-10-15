@@ -1,0 +1,78 @@
+<div class="header">
+  <h2 class="title">Lotes</h2>
+  <button class="btn-new" (click)="openModal()">Añadir Nuevo Lote</button>
+</div>
+
+<div class="table-wrapper">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Descripción</th>
+        <th>Tamaño (m²)</th>
+        <th>Finca</th>
+        <th>Estado</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let lot of lots">
+        <td>{{ lot.name }}</td>
+        <td>{{ lot.description }}</td>
+        <td>{{ lot.sizeMeters }}</td>
+        <td>{{ getFarmName(lot.farmId) }}</td>
+        <td><input type="checkbox" [checked]="lot.state" disabled /></td>
+        <td>
+          <button class="btn-icon edit" (click)="editLot(lot)">
+            <i class="fas fa-edit"></i>
+          </button>
+          <button class="btn-icon delete" (click)="deleteLot(lot.id)">
+            <i class="fas fa-trash-alt"></i>
+          </button>
+        </td>
+      </tr>
+      <tr *ngIf="lots.length === 0">
+        <td colspan="6" class="no-results">No se encontraron lotes</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- Modal -->
+<ng-template #lotModal let-modal>
+  <div class="modal-header">
+    <h5 class="modal-title">Formulario de Lote</h5>
+    <button type="button" class="close" (click)="modal.dismiss('Cross click')">
+      <span>&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <form #lotForm="ngForm" (ngSubmit)="onSubmit(lotForm)" class="lot-form">
+      <div class="form-group">
+        <label for="name">Nombre</label>
+        <input type="text" id="name" [(ngModel)]="lot.name" name="name" class="input-field" required>
+      </div>
+      <div class="form-group">
+        <label for="description">Descripción</label>
+        <textarea id="description" [(ngModel)]="lot.description" name="description" class="input-field" required></textarea>
+      </div>
+      <div class="form-group">
+        <label for="sizeMeters">Tamaño en hectáreas</label>
+        <input type="number" id="sizeMeters" [(ngModel)]="lot.sizeMeters" name="sizeMeters" 
+               class="input-field" required 
+               step="0.01">
+        <div *ngIf="lot.sizeMeters < 0" class="text-danger">
+            Debe ingresar un valor positivo para hectáreas.
+        </div>
+    </div>
+    
+      <div class="form-group">
+        <label for="farmId">Finca</label>
+        <select id="farmId" [(ngModel)]="lot.farmId" name="farmId" class="select-field" required>
+          <option *ngFor="let farm of farms" [value]="farm.id">{{ farm.name }}</option>
+        </select>
+      </div>
+      <button type="submit" class="btn-submit">{{ lot.id === 0 ? 'Añadir' : 'Actualizar' }} Lote</button>
+    </form>
+  </div>
+</ng-template>

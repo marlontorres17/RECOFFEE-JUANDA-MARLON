@@ -1,0 +1,246 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header */
+header {
+    background: #0f001a;
+    padding: 20px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    list-style: none;
+}
+
+.nav-links li {
+    display: inline;
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #B34BFF;
+}
+
+.btn-primary {
+    background-color: #B34BFF;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #9e3fdd;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 500px 0;
+    background-image: url('../../assets/images/man_cafe.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    color: #fff;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+@font-face {
+    font-family: 'BebasNeue'; 
+    src: url('../../assets/fonts/BebasNeue-Regular.ttf') format('truetype'); /* Ruta del archivo de la fuente */
+  }
+
+.hero-text {
+    max-width: 50%;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-text h1 {
+    font-family: 'BebasNeue', sans-serif;
+    font-size: 70px;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+/* Features Section */
+.features {
+    background-color: #0f001a;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.features h2 {
+    color: #B34BFF;
+    margin-bottom: 40px;
+}
+
+.feature-cards {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.card {
+    background-color: #1a0028;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 30%;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card h3 {
+    color: #B34BFF;
+    margin-bottom: 15px;
+}
+
+.card p {
+    color: #fff;
+}
+
+/* About Us Section */
+.about {
+    background: url('../../assets/images/recolectando.jpg') no-repeat center center/cover; /* Imagen de fondo */
+    padding: 50px 0;
+    text-align: center;
+    position: relative; /* Agregado para el uso del pseudo-elemento */
+}
+
+
+
+.about::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.336); /* Aumentar la opacidad para hacerla más oscura */
+    z-index: 1; /* Asegura que el overlay esté encima de la imagen */
+}
+
+.about .about-card {
+    background-color: #1a0028;
+    border-radius: 10px;
+    padding: 40px;
+    display: inline-block;
+    color: #fff;
+    position: relative; /* Para que el contenido esté encima del overlay */
+    z-index: 2; /* Asegura que el texto esté encima del overlay */
+}
+
+.about h2 {
+    color: #B34BFF;
+    margin-bottom: 40px;
+}
+
+/* Contact Section */
+.contact {
+    background-color: #0f001a;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.contact h2 {
+    color: #B34BFF;
+    margin-bottom: 40px;
+}
+
+.contact form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact input,
+.contact textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #B34BFF;
+    border-radius: 5px;
+    background-color: #1a0028;
+    color: #fff;
+}
+
+.contact button {
+    padding: 10px 20px;
+    background-color: #B34BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Footer */
+footer {
+    background-color: #0f001a;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer .social-icons img {
+    width: 30px;
+    margin: 0 10px;
+}
+
+.logo {
+    width: 150px;
+    height: auto;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .feature-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+}

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/crearFinca"
+        android:icon="@drawable/add_svgrepo_com"
+    android:title="Crear Finca" />
+
+    <item
+        android:id="@+id/recolecciones"
+        android:icon="@drawable/coffee"
+    android:title="Recolecciones" />
+
+    <item
+        android:id="@+id/lot"
+        android:icon="@drawable/coffee"
+        android:title="lotes" />
+
+    <item
+        android:id="@+id/collection"
+        android:icon="@drawable/coffee"
+        android:title="detalles recoleccion" />
+
+    <item
+        android:id="@+id/benefit"
+        android:icon="@drawable/coffee"
+        android:title="servicios" />
+    <item
+        android:id="@+id/personBenefit"
+        android:icon="@drawable/coffee"
+        android:title="asignar servicio" />
+    <item
+        android:id="@+id/liquidation"
+        android:icon="@drawable/coffee"
+        android:title="crear liquidación" />
+
+    <item
+        android:id="@+id/verLiquidation"
+        android:icon="@drawable/coffee"
+        android:title="ver liquidaciónes" />
+    <item
+        android:id="@+id/verHarvest"
+        android:icon="@drawable/coffee"
+        android:title="ver recolecciones" />
+    <item
+        android:id="@+id/verPersonBenefit"
+        android:icon="@drawable/coffee"
+        android:title="ver servicios x persona" />
+
+    <item
+        android:id="@+id/verBenefit"
+        android:icon="@drawable/coffee"
+        android:title="ver servicios" />
+    <item
+        android:id="@+id/verCollectionDetail"
+        android:icon="@drawable/coffee"
+        android:title="ver detalles de la recoleccion" />
+    <item
+        android:id="@+id/verLot"
+        android:icon="@drawable/coffee"
+        android:title="ver lotes" />
+
+    <item
+        android:id="@+id/verFarm"
+        android:icon="@drawable/coffee"
+        android:title="ver fincas" />
+</menu>
